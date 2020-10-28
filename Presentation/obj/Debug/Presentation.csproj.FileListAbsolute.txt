@@ -17,3 +17,4 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentat
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\bin\Debug\Common.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\bin\Debug\Common.pdb
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\obj\Debug\Presentation.formCajero.resources
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\obj\Debug\Presentation.FormRegisterStore.resources

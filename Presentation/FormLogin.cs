@@ -32,7 +32,7 @@ namespace Presentation
                         FormAdmin admin = new FormAdmin();
                         FormCajero cajero = new FormCajero();
 
-                        if (UserLoginCache.position == "administrator")
+                        if (UserLoginCache.position == "Administrator")
                         {
                             admin.Show();
                             admin.FormClosed += logout;
@@ -69,6 +69,11 @@ namespace Presentation
             lblError.Visible = false;
             this.Show();
             txtUser.Focus();
+        }
+
+        private void txtPass_TextChanged(object sender, EventArgs e)
+        {
+            txtPass.UseSystemPasswordChar = true;
         }
     }
 }

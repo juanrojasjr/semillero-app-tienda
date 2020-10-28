@@ -14,5 +14,10 @@ namespace Domain
         {
             return userDao.Login(user, pass);
         }
+
+        public bool dataStore()
+        {
+            return userDao.dataStore();
+        }
     }
 }

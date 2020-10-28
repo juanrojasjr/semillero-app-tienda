@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace Presentation
 {
@@ -22,6 +23,11 @@ namespace Presentation
             if (MessageBox.Show("¿Seguro que quiere cerrar sesión?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
+        }
+
+        private void loadUserData()
+        {
+
         }
     }
 }
