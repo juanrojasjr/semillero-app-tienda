@@ -1,0 +1,9 @@
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\bin\Debug\DataAccess.dll
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\bin\Debug\DataAccess.pdb
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\obj\Debug\DataAccess.csprojAssemblyReference.cache
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\obj\Debug\DataAccess.dll
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\obj\Debug\DataAccess.pdb
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\bin\Debug\Common.dll
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\bin\Debug\Common.pdb
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete

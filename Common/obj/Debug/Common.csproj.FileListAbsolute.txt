@@ -1,0 +1,6 @@
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\bin\Debug\Common.dll
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\bin\Debug\Common.pdb
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.csprojAssemblyReference.cache
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.dll
+D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.pdb
