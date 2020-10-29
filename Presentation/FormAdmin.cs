@@ -23,5 +23,10 @@ namespace Presentation
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 this.Close();
         }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

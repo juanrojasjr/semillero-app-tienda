@@ -4,3 +4,8 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\ob
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Common\obj\Debug\Common.pdb
+C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Common\bin\Debug\Common.dll
+C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Common\bin\Debug\Common.pdb
+C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Common\obj\Debug\Common.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Common\obj\Debug\Common.dll
+C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Common\obj\Debug\Common.pdb

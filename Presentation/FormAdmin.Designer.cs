@@ -133,6 +133,7 @@
             this.Controls.Add(this.button5);
             this.Name = "FormAdmin";
             this.Text = "Panel administrador";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
