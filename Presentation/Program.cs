@@ -17,7 +17,7 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormProductos());
+            Application.Run(new FormLogin());
 
             //UserModel store = new UserModel();
             //var valStore = store.dataStore();
