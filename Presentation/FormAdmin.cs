@@ -28,5 +28,13 @@ namespace Presentation
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormProductos fmp = new FormProductos();
+
+            fmp.Show();
+            this.Hide();
+        }
     }
 }

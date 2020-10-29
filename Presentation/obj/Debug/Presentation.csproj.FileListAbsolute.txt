@@ -39,3 +39,4 @@ C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Presentation\obj\Debug\
 C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Presentation\obj\Debug\Presentation.exe
 C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Presentation\obj\Debug\Presentation.pdb
 C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormProductos.resources
+C:\Users\USUARIO\Desktop\Semillero2\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormAgregarProducto.resources

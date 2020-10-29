@@ -68,6 +68,7 @@
             this.btn_addproduct.TabIndex = 29;
             this.btn_addproduct.Text = "Guardar Producto";
             this.btn_addproduct.UseVisualStyleBackColor = true;
+            this.btn_addproduct.Click += new System.EventHandler(this.btn_addproduct_Click);
             // 
             // txt_unidprod
             // 
@@ -173,6 +174,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::Presentation.Properties.Resources.previous2;
             this.btnBack.Location = new System.Drawing.Point(3, 3);
             this.btnBack.Name = "btnBack";
@@ -180,6 +182,7 @@
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnBack.TabIndex = 2;
             this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lbl_regresar
             // 
@@ -217,6 +220,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAgregarProducto";
             this.Text = "FormAgregarProducto";
+            this.Load += new System.EventHandler(this.FormAgregarProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();

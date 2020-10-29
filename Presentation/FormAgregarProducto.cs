@@ -16,5 +16,26 @@ namespace Presentation
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            FormProductos fmp = new FormProductos();
+
+            fmp.Show();
+            this.Hide();
+        }
+
+        private void btn_addproduct_Click(object sender, EventArgs e)
+        {
+            FormProductos fmp = new FormProductos();
+            
+            fmp.Show();
+            this.Hide();
+        }
+
+        private void FormAgregarProducto_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
