@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblError = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,7 +37,6 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(465, 333);
             this.panel1.TabIndex = 0;
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblError.Image = global::Presentation.Properties.Resources.error;
+            this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblError.Location = new System.Drawing.Point(67, 182);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(124, 16);
+            this.lblError.TabIndex = 6;
+            this.lblError.Text = "        Error message";
+            this.lblError.Visible = false;
             // 
             // btnLogin
             // 
@@ -128,26 +142,12 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
-            this.pictureBox1.Location = new System.Drawing.Point(80, 94);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 97);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblError.Image = global::Presentation.Properties.Resources.error;
-            this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(67, 182);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(124, 16);
-            this.lblError.TabIndex = 6;
-            this.lblError.Text = "        Error message";
-            this.lblError.Visible = false;
             // 
             // FormLogin
             // 
