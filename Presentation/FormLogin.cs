@@ -80,11 +80,7 @@ namespace Presentation
         private void FormLogin_Load(object sender, EventArgs e)
         {
             lblNameStore.Text = DataStore.namestore;
-        }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        }        
 
         private void btnCloseApp_Click(object sender, EventArgs e)
         {
@@ -110,15 +106,20 @@ namespace Presentation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+        #region 'Funcion para arrastrar la ventana'
+            [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+            private extern static void ReleaseCapture();
+            [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+            private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+            private void panel1_MouseDown(object sender, MouseEventArgs e)
+            {
+                ReleaseCapture();
+                SendMessage(this.Handle, 0x112, 0xf012, 0);
+            }
+        #endregion
+
+        private void lblNameStore_Click(object sender, EventArgs e){}
+        private void label1_Click(object sender, EventArgs e){}
     }
 }

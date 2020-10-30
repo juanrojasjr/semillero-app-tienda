@@ -27,6 +27,12 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@address", address);
                     command.CommandType = CommandType.Text;
 
+                    //Cargar datos obtenidos en la clase/caché
+                    DataStore.namestore = namestore;
+                    DataStore.nameowner = nameowner;
+                    DataStore.phone = phone;
+                    DataStore.address = address;
+
                     return command.ExecuteNonQuery();
                 }
             }
