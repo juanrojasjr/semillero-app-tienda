@@ -1,2 +1,5 @@
 #Omitir archivo de conexión a base de datos
 DataAccess/ConnectionToSql.cs
+
+#Omitir carpetas Debug
+Debug/*
