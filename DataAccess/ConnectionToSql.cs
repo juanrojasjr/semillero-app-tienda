@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
+
 namespace DataAccess
 {
     public abstract class ConnectionToSql
     {
-        private readonly string connectionString;
+        public readonly string connectionString;
         public ConnectionToSql()
         {
             connectionString = "Server =.\\SQLExpress;DataBase=MyCompany; integrated security=true";
