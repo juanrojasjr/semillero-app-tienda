@@ -29,21 +29,33 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblError = new System.Windows.Forms.Label();
             this.btnLogin = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblNameStore = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnResApp = new System.Windows.Forms.PictureBox();
+            this.btnMinApp = new System.Windows.Forms.PictureBox();
+            this.btnMaxApp = new System.Windows.Forms.PictureBox();
+            this.btnCloseApp = new System.Windows.Forms.PictureBox();
+            this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnResApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaxApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.btnMinApp);
+            this.panel1.Controls.Add(this.btnResApp);
+            this.panel1.Controls.Add(this.btnMaxApp);
+            this.panel1.Controls.Add(this.btnCloseApp);
             this.panel1.Controls.Add(this.lblError);
             this.panel1.Controls.Add(this.btnLogin);
             this.panel1.Controls.Add(this.label2);
@@ -54,20 +66,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(465, 333);
             this.panel1.TabIndex = 0;
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblError.Image = global::Presentation.Properties.Resources.error;
-            this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(69, 194);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(124, 16);
-            this.lblError.TabIndex = 6;
-            this.lblError.Text = "        Error message";
-            this.lblError.Visible = false;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // btnLogin
             // 
@@ -126,16 +125,6 @@
             this.txtUser.Size = new System.Drawing.Size(342, 27);
             this.txtUser.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 73);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblNameStore
             // 
             this.lblNameStore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -149,23 +138,107 @@
             this.lblNameStore.Text = "Nombre de la tienda";
             this.lblNameStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 73);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 128);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnResApp
+            // 
+            this.btnResApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnResApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnResApp.Image = global::Presentation.Properties.Resources.restaurar_icon;
+            this.btnResApp.Location = new System.Drawing.Point(404, 6);
+            this.btnResApp.Name = "btnResApp";
+            this.btnResApp.Size = new System.Drawing.Size(24, 24);
+            this.btnResApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnResApp.TabIndex = 10;
+            this.btnResApp.TabStop = false;
+            this.btnResApp.Visible = false;
+            this.btnResApp.Click += new System.EventHandler(this.btnResApp_Click);
+            // 
+            // btnMinApp
+            // 
+            this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
+            this.btnMinApp.Location = new System.Drawing.Point(404, 6);
+            this.btnMinApp.Name = "btnMinApp";
+            this.btnMinApp.Size = new System.Drawing.Size(24, 24);
+            this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinApp.TabIndex = 9;
+            this.btnMinApp.TabStop = false;
+            this.btnMinApp.Click += new System.EventHandler(this.btnMinApp_Click);
+            // 
+            // btnMaxApp
+            // 
+            this.btnMaxApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaxApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMaxApp.Image = global::Presentation.Properties.Resources.maximisize_icon;
+            this.btnMaxApp.Location = new System.Drawing.Point(404, 6);
+            this.btnMaxApp.Name = "btnMaxApp";
+            this.btnMaxApp.Size = new System.Drawing.Size(24, 24);
+            this.btnMaxApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMaxApp.TabIndex = 8;
+            this.btnMaxApp.TabStop = false;
+            this.btnMaxApp.Visible = false;
+            this.btnMaxApp.Click += new System.EventHandler(this.btnMaxApp_Click);
+            // 
+            // btnCloseApp
+            // 
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
+            this.btnCloseApp.Location = new System.Drawing.Point(434, 6);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
+            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnCloseApp.TabIndex = 7;
+            this.btnCloseApp.TabStop = false;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+            // 
+            // lblError
+            // 
+            this.lblError.AutoSize = true;
+            this.lblError.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.lblError.Image = global::Presentation.Properties.Resources.error;
+            this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblError.Location = new System.Drawing.Point(69, 194);
+            this.lblError.Name = "lblError";
+            this.lblError.Size = new System.Drawing.Size(124, 16);
+            this.lblError.TabIndex = 6;
+            this.lblError.Text = "        Error message";
+            this.lblError.Visible = false;
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(761, 330);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblNameStore);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnResApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaxApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,6 +255,10 @@
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblNameStore;
+        private System.Windows.Forms.PictureBox btnCloseApp;
+        private System.Windows.Forms.PictureBox btnMinApp;
+        private System.Windows.Forms.PictureBox btnMaxApp;
+        private System.Windows.Forms.PictureBox btnResApp;
     }
 }
 

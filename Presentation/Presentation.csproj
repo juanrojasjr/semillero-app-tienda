@@ -168,5 +168,17 @@
   <ItemGroup>
     <None Include="Resources\add1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximisize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
