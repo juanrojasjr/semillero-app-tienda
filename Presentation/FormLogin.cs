@@ -76,9 +76,15 @@ namespace Presentation
             txtPass.UseSystemPasswordChar = true;
         }
 
+<<<<<<< HEAD
         private void label1_Click(object sender, EventArgs e)
         {
 
+=======
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+            lblNameStore.Text = DataStore.namestore;
+>>>>>>> 9e6f1f27ed12a4cbb256882d99715679822e4fcb
         }
     }
 }
