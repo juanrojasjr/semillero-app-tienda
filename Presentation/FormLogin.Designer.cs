@@ -137,14 +137,16 @@
             // 
             // lblNameStore
             // 
-            this.lblNameStore.AutoSize = true;
+            this.lblNameStore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNameStore.Font = new System.Drawing.Font("Lobster 1.4", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameStore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.lblNameStore.Location = new System.Drawing.Point(38, 212);
             this.lblNameStore.Name = "lblNameStore";
-            this.lblNameStore.Size = new System.Drawing.Size(224, 34);
+            this.lblNameStore.Size = new System.Drawing.Size(201, 34);
             this.lblNameStore.TabIndex = 2;
             this.lblNameStore.Text = "Nombre de la tienda";
+            this.lblNameStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 
