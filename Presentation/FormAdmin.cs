@@ -21,7 +21,12 @@ namespace Presentation
         {
             if (MessageBox.Show("¿Seguro que quiere cerrar sesión?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
+            {
+                FormLogin fmLogin = new FormLogin();
+                fmLogin.Show();
+                this.Hide();
+            }
+                
         }
 
         private void button5_Click(object sender, EventArgs e)
