@@ -62,12 +62,6 @@
             this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblError.Image = global::Presentation.Properties.Resources.error;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
-=======
-
-            this.lblError.Location = new System.Drawing.Point(67, 182);
-
->>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
             this.lblError.Location = new System.Drawing.Point(69, 194);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(124, 16);
@@ -135,11 +129,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
-<<<<<<< HEAD
-=======
-            this.pictureBox1.Location = new System.Drawing.Point(76, 97);
->>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
-            this.pictureBox1.Location = new System.Drawing.Point(76, 73);
+            this.pictureBox1.Location = new System.Drawing.qPoint(76, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
