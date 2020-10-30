@@ -19,6 +19,7 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentat
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\obj\Debug\Presentation.formCajero.resources
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\obj\Debug\Presentation.FormRegisterStore.resources
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.exe.config
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.exe
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.pdb
@@ -40,6 +41,8 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Presen
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.exe
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.pdb
 =======
+=======
+>>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.exe.config
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.exe
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.pdb
@@ -51,6 +54,7 @@ C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\b
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\DataAccess.pdb
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormAdmin.resources
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormAgregarProveedor.resources
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormCajero.resources
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormLogin.resources
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormProveedores.resources
@@ -61,5 +65,8 @@ C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\o
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.exe
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.pdb
+<<<<<<< HEAD
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormAgregarProveedor.resources
 >>>>>>> e87317568625944de4d2c0aa544a9ab4cca07823
+=======
+>>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238

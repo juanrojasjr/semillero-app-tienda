@@ -62,6 +62,12 @@
             this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblError.Image = global::Presentation.Properties.Resources.error;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+<<<<<<< HEAD
+=======
+
+            this.lblError.Location = new System.Drawing.Point(67, 182);
+
+>>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
             this.lblError.Location = new System.Drawing.Point(69, 194);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(124, 16);
@@ -129,6 +135,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
+<<<<<<< HEAD
+=======
+            this.pictureBox1.Location = new System.Drawing.Point(76, 97);
+>>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
             this.pictureBox1.Location = new System.Drawing.Point(76, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
@@ -138,14 +148,16 @@
             // 
             // lblNameStore
             // 
-            this.lblNameStore.AutoSize = true;
+            this.lblNameStore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNameStore.Font = new System.Drawing.Font("Lobster 1.4", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNameStore.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.lblNameStore.Location = new System.Drawing.Point(38, 212);
             this.lblNameStore.Name = "lblNameStore";
-            this.lblNameStore.Size = new System.Drawing.Size(224, 34);
+            this.lblNameStore.Size = new System.Drawing.Size(201, 34);
             this.lblNameStore.TabIndex = 2;
             this.lblNameStore.Text = "Nombre de la tienda";
+            this.lblNameStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormLogin
             // 

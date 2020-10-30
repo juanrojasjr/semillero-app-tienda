@@ -10,6 +10,7 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\ob
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\bin\Debug\Common.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\bin\Debug\Common.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.pdb
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\bin\Debug\Common.dll
@@ -22,6 +23,8 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.pdb
 =======
+=======
+>>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.dll
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.pdb
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Common.dll
@@ -33,4 +36,7 @@ C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Deb
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.csproj.CopyComplete
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.dll
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.pdb
+<<<<<<< HEAD
 >>>>>>> e87317568625944de4d2c0aa544a9ab4cca07823
+=======
+>>>>>>> eee838a7c4b6d82faf97a1c3c0ab856ff0fef238
