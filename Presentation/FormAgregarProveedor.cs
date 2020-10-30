@@ -10,21 +10,24 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class FormAdmin : Form
+    public partial class FormAgregarProveedor : Form
     {
-        public FormAdmin()
+        public FormAgregarProveedor()
         {
             InitializeComponent();
         }
 
-        private void btnLogout_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Seguro que quiere cerrar sesión?", "Warning",
-                MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
+
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
         {
             FormProveedores fmprv = new FormProveedores();
             fmprv.Show();

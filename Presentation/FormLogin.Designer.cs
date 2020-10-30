@@ -115,6 +115,7 @@
             this.label1.Size = new System.Drawing.Size(145, 19);
             this.label1.TabIndex = 2;
             this.label1.Text = "Nombre de usuario";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtPass
             // 
