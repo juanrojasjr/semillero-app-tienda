@@ -180,5 +180,11 @@
   <ItemGroup>
     <None Include="Resources\restaurar-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgLoginForm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rogelio.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
