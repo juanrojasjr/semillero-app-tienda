@@ -18,6 +18,15 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentat
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\bin\Debug\Common.pdb
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\obj\Debug\Presentation.formCajero.resources
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Presentation\obj\Debug\Presentation.FormRegisterStore.resources
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.exe
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Presentation.pdb
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Common.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Domain.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\DataAccess.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Common.pdb
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\Domain.pdb
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\bin\Debug\DataAccess.pdb
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.csprojAssemblyReference.cache
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormAdmin.resources
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.FormAgregarProveedor.resources
@@ -28,3 +37,6 @@ C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\o
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.csproj.GenerateResource.cache
 C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.csproj.CopyComplete
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.exe
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Presentation\obj\Debug\Presentation.pdb

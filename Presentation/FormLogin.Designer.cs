@@ -36,10 +36,8 @@
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-<<<<<<< HEAD
-=======
+
             this.lblNameStore = new System.Windows.Forms.Label();
->>>>>>> 9e6f1f27ed12a4cbb256882d99715679822e4fcb
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -65,11 +63,10 @@
             this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblError.Image = global::Presentation.Properties.Resources.error;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-<<<<<<< HEAD
+
             this.lblError.Location = new System.Drawing.Point(67, 182);
-=======
+
             this.lblError.Location = new System.Drawing.Point(69, 194);
->>>>>>> 9e6f1f27ed12a4cbb256882d99715679822e4fcb
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(124, 16);
             this.lblError.TabIndex = 6;
@@ -136,19 +133,14 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
-<<<<<<< HEAD
             this.pictureBox1.Location = new System.Drawing.Point(76, 97);
-=======
             this.pictureBox1.Location = new System.Drawing.Point(76, 73);
->>>>>>> 9e6f1f27ed12a4cbb256882d99715679822e4fcb
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-<<<<<<< HEAD
-=======
             // lblNameStore
             // 
             this.lblNameStore.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -162,7 +154,6 @@
             this.lblNameStore.Text = "Nombre de la tienda";
             this.lblNameStore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
->>>>>>> 9e6f1f27ed12a4cbb256882d99715679822e4fcb
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
