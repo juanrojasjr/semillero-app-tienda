@@ -9,6 +9,7 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\ob
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\obj\Debug\Domain.pdb
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\bin\Debug\Common.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\AppSemilleroFinal\Domain\bin\Debug\Common.pdb
+<<<<<<< HEAD
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.pdb
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\bin\Debug\Common.dll
@@ -20,3 +21,16 @@ D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.csproj.CopyComplete
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.dll
 D:\Users\JuanRojasJR\Documents\Universidad\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.pdb
+=======
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Domain.pdb
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Common.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\DataAccess.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\Common.pdb
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\bin\Debug\DataAccess.pdb
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.csprojAssemblyReference.cache
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.csproj.CopyComplete
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.dll
+C:\Users\andre\OneDrive\Escritorio\Semillero\semillero-app-tienda\Domain\obj\Debug\Domain.pdb
+>>>>>>> e87317568625944de4d2c0aa544a9ab4cca07823
