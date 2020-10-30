@@ -129,7 +129,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Presentation.Properties.Resources.store;
-            this.pictureBox1.Location = new System.Drawing.qPoint(76, 73);
+            this.pictureBox1.Location = new System.Drawing.Point(76, 73);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 128);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
