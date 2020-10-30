@@ -3,10 +3,7 @@ DataAccess/ConnectionToSql.cs
 
 #Omitir carpetas Debugs
 Presentation/obj/Debug/*
-Presentation/bin/Debug/*
 Domain/obj/Debug/*
-Domain/bin/Debug/*
 DataAccess/obj/Debug/*
-DataAccess/bin/Debug/*
 Common/obj/Debug/*
 .vs/
