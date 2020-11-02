@@ -35,5 +35,18 @@ namespace Presentation
             fmprv.Show();
             this.Hide();
         }
+
+        private void FormAdmin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormProductos fmp = new FormProductos();
+
+            fmp.Show();
+            this.Hide();
+        }
     }
 }

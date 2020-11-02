@@ -58,6 +58,12 @@
     <Compile Include="FormAgregarProveedor.Designer.cs">
       <DependentUpon>FormAgregarProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarProducto.Designer.cs">
+      <DependentUpon>FormAgregarProducto.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCajero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     <Compile Include="FormProveedores.Designer.cs">
       <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProductos.Designer.cs">
+      <DependentUpon>FormProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormRegisterStore.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,9 @@
     <EmbeddedResource Include="FormAgregarProveedor.resx">
       <DependentUpon>FormAgregarProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarProducto.resx">
+      <DependentUpon>FormAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCajero.resx">
       <DependentUpon>FormCajero.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProveedores.resx">
       <DependentUpon>FormProveedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProductos.resx">
+      <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterStore.resx">
       <DependentUpon>FormRegisterStore.cs</DependentUpon>
@@ -185,6 +203,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rogelio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\loupe.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

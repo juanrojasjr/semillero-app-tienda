@@ -60,6 +60,7 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "Inventario";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -134,6 +135,7 @@
             this.Controls.Add(this.button5);
             this.Name = "FormAdmin";
             this.Text = "Panel administrador";
+            this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
