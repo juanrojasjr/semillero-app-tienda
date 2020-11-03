@@ -8,11 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
+using Domain;
 
 namespace Presentation
 {
     public partial class FormCajero : Form
     {
+
+        DataCajero products = new DataCajero();
+
         public FormCajero()
         {
             InitializeComponent();
@@ -33,6 +37,27 @@ namespace Presentation
         private void btnCloseApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void FormCajero_Load(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = products.getProducts("coca");
+        }
+
+        private void txtBusqueda_Enter(object sender, EventArgs e)
+        {
+            consultar(txtBusqueda.Text);
+        }
+
+        private void consultar(string data)
+        {
+            //llama los produsctos que ya están en la base de datos
+            dataGridView1.DataSource = products.getProducts(data);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            consultar(txtBusqueda.Text);
         }
     }
 }

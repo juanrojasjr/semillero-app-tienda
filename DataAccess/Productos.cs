@@ -22,8 +22,8 @@ namespace DataAccess
                 {
                     command.Connection = connection;
                     command.CommandText = "insert into productos values ('Gaseosa', '3 litros', 'Big Cola', 2000, 3000, 13)";
-                    command.Parameters.AddWithValue("@user", user);
-                    command.Parameters.AddWithValue("@pass", pass);
+                    //command.Parameters.AddWithValue("@user", user);
+                    //command.Parameters.AddWithValue("@pass", pass);
 
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
