@@ -14,8 +14,7 @@ namespace Presentation
 {
     public partial class FormCajero : Form
     {
-
-        DataCajero products = new DataCajero();
+        int count = 0;
 
         public FormCajero()
         {
@@ -41,23 +40,66 @@ namespace Presentation
 
         private void FormCajero_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = products.getProducts("coca");
         }
 
-        private void txtBusqueda_Enter(object sender, EventArgs e)
+        private void Cargar()
         {
-            consultar(txtBusqueda.Text);
+            ModelEntity.MyCompanyEntities db = new ModelEntity.MyCompanyEntities();
+            var lst = (from d in db.Products
+                        select new ModelEntity.
+                        {
+                            IdProduct = d.IdProduct,
+                            Ref = d.Ref,
+                            Nombre = d.Nombre,
+                            PriceSale = (int)d.PriceSale
+                        }).AsQueryable();
+
+            if (!txtSearch.Text.Trim().Equals("") || !txtRef.Text.Trim().Equals(""))
+            {
+                lst = lst.Where(d => d.Nombre.Contains(txtSearch.Text));
+                //incluye los resultados en el DataGridView
+                dataGridView1.DataSource = lst.ToList();
+                //MessageBox.Show(lst.ToList().Count.ToString());
+
+                if (lst.ToList().Count == 1)
+                {
+                    addListViewItems("1", dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
+                        dataGridView1.CurrentRow.Cells["Ref"].Value.ToString(),
+                        dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
+                    int price = Int32.Parse(dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
+                    sumTotal(price);
+                }
+                else if (lst.ToList().Count > 1)
+                {
+                    dataGridView1.CurrentCell = null;
+                }
+            }
         }
 
-        private void consultar(string data)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //llama los produsctos que ya están en la base de datos
-            dataGridView1.DataSource = products.getProducts(data);
+            addListViewItems("1", dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
+                                dataGridView1.CurrentRow.Cells["Ref"].Value.ToString(),
+                                dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
+            int price = Int32.Parse(dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
+            sumTotal(price);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addListViewItems(string cant, string Nombre, string refe, string price)
         {
-            consultar(txtBusqueda.Text);
+            ListViewItem lista = new ListViewItem(cant);
+            lista.SubItems.Add(Nombre);
+            lista.SubItems.Add(refe);
+            lista.SubItems.Add(price);
+            listView1.Items.Add(lista);
         }
+
+        private void sumTotal(int price)
+        {
+            count += price;
+            lblPriceTotal.Text = count.ToString();
+            lblPriceTotal.Visible = true;
+        }
+
     }
 }

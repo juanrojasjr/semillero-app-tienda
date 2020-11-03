@@ -34,13 +34,17 @@
             this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.lblPriceTotal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.txtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConsult = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtRef = new System.Windows.Forms.TextBox();
+            this.listView1 = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
@@ -120,20 +124,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Total a pagar";
             // 
-            // lblPrice
+            // lblPriceTotal
             // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.Location = new System.Drawing.Point(316, 42);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(52, 19);
-            this.lblPrice.TabIndex = 1;
-            this.lblPrice.Text = "Valor";
+            this.lblPriceTotal.AutoSize = true;
+            this.lblPriceTotal.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPriceTotal.Location = new System.Drawing.Point(316, 42);
+            this.lblPriceTotal.Name = "lblPriceTotal";
+            this.lblPriceTotal.Size = new System.Drawing.Size(52, 19);
+            this.lblPriceTotal.TabIndex = 1;
+            this.lblPriceTotal.Text = "Valor";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.panel3.Controls.Add(this.lblPrice);
+            this.panel3.Controls.Add(this.lblPriceTotal);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 500);
@@ -141,14 +145,13 @@
             this.panel3.Size = new System.Drawing.Size(720, 100);
             this.panel3.TabIndex = 6;
             // 
-            // txtBusqueda
+            // txtSearch
             // 
-            this.txtBusqueda.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBusqueda.Location = new System.Drawing.Point(16, 44);
-            this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(598, 33);
-            this.txtBusqueda.TabIndex = 7;
-            this.txtBusqueda.Enter += new System.EventHandler(this.txtBusqueda_Enter);
+            this.txtSearch.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(16, 44);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(248, 33);
+            this.txtSearch.TabIndex = 7;
             // 
             // label2
             // 
@@ -157,40 +160,81 @@
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label2.Location = new System.Drawing.Point(12, 22);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(349, 19);
+            this.label2.Size = new System.Drawing.Size(180, 19);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Escriba el nombre o número de referencia";
+            this.label2.Text = "Nombre del producto";
             // 
             // dataGridView1
             // 
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 141);
+            this.dataGridView1.Location = new System.Drawing.Point(16, 162);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(720, 359);
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(679, 160);
             this.dataGridView1.TabIndex = 9;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.txtRef);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.btnConsult);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.txtBusqueda);
+            this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 47);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(720, 100);
             this.panel4.TabIndex = 10;
             // 
-            // button1
+            // btnConsult
             // 
-            this.button1.Location = new System.Drawing.Point(620, 52);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnConsult.Location = new System.Drawing.Point(620, 52);
+            this.btnConsult.Name = "btnConsult";
+            this.btnConsult.Size = new System.Drawing.Size(75, 23);
+            this.btnConsult.TabIndex = 9;
+            this.btnConsult.Text = "Buscar";
+            this.btnConsult.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label3.Location = new System.Drawing.Point(300, 44);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(19, 19);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "o";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label4.Location = new System.Drawing.Point(351, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(186, 19);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Número de referencia";
+            // 
+            // txtRef
+            // 
+            this.txtRef.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRef.Location = new System.Drawing.Point(355, 44);
+            this.txtRef.Name = "txtRef";
+            this.txtRef.Size = new System.Drawing.Size(213, 33);
+            this.txtRef.TabIndex = 11;
+            // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(16, 328);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(679, 155);
+            this.listView1.TabIndex = 11;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // FormCajero
             // 
@@ -198,6 +242,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel3);
@@ -231,12 +276,16 @@
         private System.Windows.Forms.PictureBox btnCloseApp;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lblPrice;
+        private System.Windows.Forms.Label lblPriceTotal;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConsult;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtRef;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listView1;
     }
 }
