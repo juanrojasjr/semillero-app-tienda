@@ -48,5 +48,15 @@ namespace Presentation
             fmp.Show();
             this.Hide();
         }
+
+        private void btnCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinApp_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
     }
 }
