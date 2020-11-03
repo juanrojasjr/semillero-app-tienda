@@ -11,7 +11,7 @@ using Microsoft.SqlServer.Server;
 
 namespace DataAccess
 {
-    class productos : ConnectionToSql
+    class Productos : ConnectionToSql
     {
         public bool AgregarProd(string nombre_producto, string descripcion, string marca, double precio_fabrica, double precio_venta, int unidades)
         {

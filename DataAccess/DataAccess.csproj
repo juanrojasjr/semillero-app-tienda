@@ -42,11 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionToSql.cs" />
-<<<<<<< HEAD
     <Compile Include="FunDataStore.cs" />
-=======
-    <Compile Include="productos.cs" />
->>>>>>> a9bdc06221a5bf7b186f1d6e9970efa38e6600f9
+    <Compile Include="Productos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDao.cs" />
   </ItemGroup>
