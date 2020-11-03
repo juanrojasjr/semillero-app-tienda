@@ -17,12 +17,10 @@ namespace Domain
         }
 
         FunDataStore store = new FunDataStore();
-
         public bool dataStore()
         {
             return store.getDataStore();
         }
-
         public int addDataStore(string namestore, string nameowner, string phone, string address)
         {
             return store.addDataStore(namestore, nameowner, phone, address);

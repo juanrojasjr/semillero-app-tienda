@@ -25,9 +25,14 @@ namespace Presentation
                 this.Close();
         }
 
-        private void loadUserData()
+        private void btnMinApp_Click(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Minimized;
+        }
 
+        private void btnCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
