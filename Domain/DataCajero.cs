@@ -11,13 +11,10 @@ namespace Domain
 {
     public class DataCajero
     {
-        private FunCajero products = new FunCajero();
-
-        public DataTable getProducts(string data)
+        FunCajero ca = new FunCajero();
+        public List<datos> funcion(string value)
         {
-            DataTable tabla = new DataTable();
-            tabla = products.getProduct(data);
-            return tabla;
+            return ca.Get(value);
         }
     }
 }

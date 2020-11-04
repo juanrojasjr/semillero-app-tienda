@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="InputKey">
+      <HintPath>..\..\..\..\..\..\..\Instaladores\InputKey\InputKey.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -147,6 +150,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{9e8dff0c-5f6b-4826-83a8-d307ef2b7a53}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{DF4E6446-191D-4D4A-80B1-B88D4A359589}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{8cb15191-1175-4899-856f-abcce3900e85}</Project>

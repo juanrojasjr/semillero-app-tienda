@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Common.Cache;
 using Domain;
+using Microsoft.VisualBasic;
+using InputKey;
 
 namespace Presentation
 {
@@ -44,45 +46,41 @@ namespace Presentation
 
         private void Cargar()
         {
-            ModelEntity.MyCompanyEntities db = new ModelEntity.MyCompanyEntities();
-            var lst = (from d in db.Products
-                        select new ModelEntity.
-                        {
-                            IdProduct = d.IdProduct,
-                            Ref = d.Ref,
-                            Nombre = d.Nombre,
-                            PriceSale = (int)d.PriceSale
-                        }).AsQueryable();
+            DataCajero oDataCajero = new DataCajero();
 
             if (!txtSearch.Text.Trim().Equals("") || !txtRef.Text.Trim().Equals(""))
             {
-                lst = lst.Where(d => d.Nombre.Contains(txtSearch.Text));
-                //incluye los resultados en el DataGridView
-                dataGridView1.DataSource = lst.ToList();
-                //MessageBox.Show(lst.ToList().Count.ToString());
-
-                if (lst.ToList().Count == 1)
+                dataGridView1.DataSource = oDataCajero.funcion(txtSearch.Text);
+                if (dataGridView1.RowCount == 1)
                 {
-                    addListViewItems("1", dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
+                    int quatity = Int32.Parse(InputDialog.mostrar("Introduzca la cantidad", "Cantidad"));
+                    if (quatity < 1) { quatity = 1; };
+                    string sQuatity = quatity.ToString();
+                    addListViewItems(sQuatity, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
                         dataGridView1.CurrentRow.Cells["Ref"].Value.ToString(),
                         dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
                     int price = Int32.Parse(dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
-                    sumTotal(price);
+                    int op = price * quatity;
+                    sumTotal(op);
                 }
-                else if (lst.ToList().Count > 1)
+                else if (dataGridView1.RowCount > 1)
                 {
                     dataGridView1.CurrentCell = null;
                 }
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            addListViewItems("1", dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
+            int quatity = Int32.Parse(InputDialog.mostrar("Introduzca la cantidad", "Cantidad"));
+            if (quatity < 1) { quatity = 1; };
+            string sQuatity = quatity.ToString();
+            addListViewItems(sQuatity, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
                                 dataGridView1.CurrentRow.Cells["Ref"].Value.ToString(),
                                 dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
             int price = Int32.Parse(dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
-            sumTotal(price);
+            int op = price * quatity;
+            sumTotal(op);
         }
 
         private void addListViewItems(string cant, string Nombre, string refe, string price)
@@ -101,5 +99,11 @@ namespace Presentation
             lblPriceTotal.Visible = true;
         }
 
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            Cargar();
+            txtRef.Clear();
+            txtSearch.Clear();
+        }
     }
 }
