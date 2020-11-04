@@ -17,17 +17,19 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
-            UserModel store = new UserModel();
-            var valStore = store.dataStore();
-            if (valStore)
-            {
-                Application.Run(new FormLogin());
-            }
-            else
-            {
-                Application.Run(new FormRegisterStore());
-            }
+
+            Application.Run(new FormAdmin());
+
+            //UserModel store = new UserModel();
+            //var valStore = store.dataStore();
+            //if (valStore)
+            //{
+            //    Application.Run(new FormLogin());
+            //}
+            //else
+            //{
+            //    Application.Run(new FormRegisterStore());
+            //}
         }
     }
 }

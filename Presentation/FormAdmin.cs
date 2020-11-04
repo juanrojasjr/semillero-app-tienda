@@ -48,5 +48,12 @@ namespace Presentation
             fmp.Show();
             this.Hide();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormUsuarios users = new FormUsuarios();
+            users.Show();
+            this.Hide();
+        }
     }
 }

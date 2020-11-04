@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             this.SuspendLayout();
@@ -51,6 +51,17 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 5);
             this.panel1.Size = new System.Drawing.Size(822, 47);
             this.panel1.TabIndex = 3;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
+            this.btnLogout.Location = new System.Drawing.Point(7, 7);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(32, 32);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // button1
             // 
@@ -105,19 +116,9 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(209, 134);
             this.button6.TabIndex = 7;
-            this.button6.Text = "Reportes";
+            this.button6.Text = "Usuarios";
             this.button6.UseVisualStyleBackColor = true;
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
-            this.btnLogout.Location = new System.Drawing.Point(7, 7);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(32, 32);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FormAdmin
             // 
