@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnLogout = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnMinApp = new System.Windows.Forms.PictureBox();
-            this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnConsultItem = new System.Windows.Forms.Button();
+            this.btnDeleteItem = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPriceTotal = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -49,31 +50,18 @@
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colRef = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnDeleteItem = new System.Windows.Forms.Button();
-            this.btnConsultItem = new System.Windows.Forms.Button();
-            this.btnPayment = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            this.btnMinApp = new System.Windows.Forms.PictureBox();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnLogout
-            // 
-            this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
-            this.btnLogout.Location = new System.Drawing.Point(10, 10);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(32, 32);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // panel1
             // 
@@ -84,39 +72,11 @@
             this.panel1.Controls.Add(this.btnCloseApp);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 7);
             this.panel1.Size = new System.Drawing.Size(1123, 53);
             this.panel1.TabIndex = 4;
-            // 
-            // btnMinApp
-            // 
-            this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
-            this.btnMinApp.Location = new System.Drawing.Point(1057, 18);
-            this.btnMinApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnMinApp.Name = "btnMinApp";
-            this.btnMinApp.Size = new System.Drawing.Size(24, 24);
-            this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinApp.TabIndex = 11;
-            this.btnMinApp.TabStop = false;
-            this.btnMinApp.Click += new System.EventHandler(this.btnMinApp_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
-            this.btnCloseApp.Location = new System.Drawing.Point(1089, 18);
-            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
-            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnCloseApp.TabIndex = 10;
-            this.btnCloseApp.TabStop = false;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // panel2
             // 
@@ -127,10 +87,76 @@
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(873, 53);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(250, 682);
             this.panel2.TabIndex = 5;
+            // 
+            // btnPayment
+            // 
+            this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnPayment.FlatAppearance.BorderSize = 0;
+            this.btnPayment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnPayment.Location = new System.Drawing.Point(60, 234);
+            this.btnPayment.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(148, 34);
+            this.btnPayment.TabIndex = 15;
+            this.btnPayment.Text = "Pagar";
+            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
+            // btnConsultItem
+            // 
+            this.btnConsultItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnConsultItem.FlatAppearance.BorderSize = 0;
+            this.btnConsultItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnConsultItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnConsultItem.Location = new System.Drawing.Point(60, 170);
+            this.btnConsultItem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultItem.Name = "btnConsultItem";
+            this.btnConsultItem.Size = new System.Drawing.Size(148, 34);
+            this.btnConsultItem.TabIndex = 14;
+            this.btnConsultItem.Text = "Averiguar";
+            this.btnConsultItem.UseVisualStyleBackColor = false;
+            this.btnConsultItem.Click += new System.EventHandler(this.btnConsultItem_Click);
+            // 
+            // btnDeleteItem
+            // 
+            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnDeleteItem.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnDeleteItem.FlatAppearance.BorderSize = 0;
+            this.btnDeleteItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnDeleteItem.Location = new System.Drawing.Point(60, 103);
+            this.btnDeleteItem.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDeleteItem.Name = "btnDeleteItem";
+            this.btnDeleteItem.Size = new System.Drawing.Size(148, 34);
+            this.btnDeleteItem.TabIndex = 13;
+            this.btnDeleteItem.Text = "Borrar item";
+            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnDeleteItem.Click += new System.EventHandler(this.btnDeleteItem_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnCancel.Location = new System.Drawing.Point(60, 38);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(148, 34);
+            this.btnCancel.TabIndex = 12;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label1
             // 
@@ -162,7 +188,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 642);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(873, 93);
             this.panel3.TabIndex = 6;
@@ -171,7 +197,7 @@
             // 
             this.txtSearch.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(19, 39);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(211, 33);
             this.txtSearch.TabIndex = 7;
@@ -195,7 +221,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dataGridView1.Location = new System.Drawing.Point(19, 165);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
@@ -213,7 +239,7 @@
             this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(0, 53);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(873, 94);
             this.panel4.TabIndex = 10;
@@ -234,7 +260,7 @@
             // 
             this.txtRef.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRef.Location = new System.Drawing.Point(265, 39);
-            this.txtRef.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRef.Margin = new System.Windows.Forms.Padding(4);
             this.txtRef.Name = "txtRef";
             this.txtRef.Size = new System.Drawing.Size(200, 33);
             this.txtRef.TabIndex = 11;
@@ -258,7 +284,7 @@
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.btnConsult.Location = new System.Drawing.Point(478, 39);
-            this.btnConsult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnConsult.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(112, 34);
             this.btnConsult.TabIndex = 9;
@@ -278,7 +304,7 @@
             this.listView1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(19, 339);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(840, 293);
             this.listView1.TabIndex = 11;
@@ -305,67 +331,45 @@
             this.colPrice.Text = "Precio";
             this.colPrice.Width = 58;
             // 
-            // btnCancel
+            // btnMinApp
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnCancel.FlatAppearance.BorderSize = 0;
-            this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnCancel.Location = new System.Drawing.Point(60, 38);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(148, 34);
-            this.btnCancel.TabIndex = 12;
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
+            this.btnMinApp.Location = new System.Drawing.Point(1057, 18);
+            this.btnMinApp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMinApp.Name = "btnMinApp";
+            this.btnMinApp.Size = new System.Drawing.Size(24, 24);
+            this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinApp.TabIndex = 11;
+            this.btnMinApp.TabStop = false;
+            this.btnMinApp.Click += new System.EventHandler(this.btnMinApp_Click);
             // 
-            // btnDeleteItem
+            // btnLogout
             // 
-            this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.btnDeleteItem.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnDeleteItem.FlatAppearance.BorderSize = 0;
-            this.btnDeleteItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnDeleteItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDeleteItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnDeleteItem.Location = new System.Drawing.Point(60, 103);
-            this.btnDeleteItem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDeleteItem.Name = "btnDeleteItem";
-            this.btnDeleteItem.Size = new System.Drawing.Size(148, 34);
-            this.btnDeleteItem.TabIndex = 13;
-            this.btnDeleteItem.Text = "Borrar item";
-            this.btnDeleteItem.UseVisualStyleBackColor = false;
+            this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
+            this.btnLogout.Location = new System.Drawing.Point(10, 10);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(32, 32);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnConsultItem
+            // btnCloseApp
             // 
-            this.btnConsultItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.btnConsultItem.FlatAppearance.BorderSize = 0;
-            this.btnConsultItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnConsultItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultItem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnConsultItem.Location = new System.Drawing.Point(60, 170);
-            this.btnConsultItem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnConsultItem.Name = "btnConsultItem";
-            this.btnConsultItem.Size = new System.Drawing.Size(148, 34);
-            this.btnConsultItem.TabIndex = 14;
-            this.btnConsultItem.Text = "Averiguar";
-            this.btnConsultItem.UseVisualStyleBackColor = false;
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.btnPayment.FlatAppearance.BorderSize = 0;
-            this.btnPayment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnPayment.Location = new System.Drawing.Point(60, 234);
-            this.btnPayment.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(148, 34);
-            this.btnPayment.TabIndex = 15;
-            this.btnPayment.Text = "Pagar";
-            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
+            this.btnCloseApp.Location = new System.Drawing.Point(1089, 18);
+            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
+            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnCloseApp.TabIndex = 10;
+            this.btnCloseApp.TabStop = false;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // FormCajero
             // 
@@ -381,22 +385,22 @@
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCajero";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Caja";
             this.Load += new System.EventHandler(this.FormCajero_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,10 +19,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    //command.CommandText = "SELECT * FROM Products";
                     command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%"+value+"%'";
-                    //command.Parameters.AddWithValue("@name", "co");
-                    //command.Parameters["@name"].Value = "co";
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
                     while (leer.Read())
@@ -38,28 +35,6 @@ namespace DataAccess
             }
             return data;
         }
-        //public DataTable getProduct(string data)
-        //{
-        //    SqlDataReader leer;
-        //    DataTable tabla = new DataTable();
-
-        //    using (var connection = GetConnection())
-        //    {
-        //        connection.Open();
-        //        using (var command = new SqlCommand())
-        //        {
-        //            command.Connection = connection;
-        //            command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%@name%'";
-        //            //command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%co%'";
-        //            command.Parameters.AddWithValue("@name", data);
-        //            command.CommandType = CommandType.Text;
-        //            leer = command.ExecuteReader();
-        //            tabla.Load(leer);
-
-        //            return tabla;                    
-        //        }
-        //    }
-        //}
     }
 
     public class datos

@@ -73,6 +73,18 @@
     <Compile Include="FormCajero.Designer.cs">
       <DependentUpon>FormCajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCajeroAveriguar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajeroAveriguar.Designer.cs">
+      <DependentUpon>FormCajeroAveriguar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCajeroPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajeroPago.Designer.cs">
+      <DependentUpon>FormCajeroPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCajero.resx">
       <DependentUpon>FormCajero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajeroAveriguar.resx">
+      <DependentUpon>FormCajeroAveriguar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajeroPago.resx">
+      <DependentUpon>FormCajeroPago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -222,6 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
