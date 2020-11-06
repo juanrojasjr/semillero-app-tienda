@@ -53,33 +53,41 @@ namespace Presentation
                 DataGridViewColumn col = dataGridView1.Columns[0];
                 col.Visible = false;
 
-                if (dataGridView1.RowCount == 1)
-                {
-                    actionItem();
-                }
-                else if (dataGridView1.RowCount > 1)
+                if (dataGridView1.RowCount > 1)
                 {
                     dataGridView1.CurrentCell = null;
+                    //string sQuatity = popupQuantity();
+                    //actionItem(sQuatity);
                 }
+                //else if (dataGridView1.RowCount > 1)
+                //{
+                //}
             }
         }
 
-        private void actionItem()
+        private void actionItem(string sQuatity)
         {
-            int quatity = Int32.Parse(InputDialog.mostrar("Introduzca la cantidad", "Cantidad"));
-            if (quatity < 1) { quatity = 1; };
-            string sQuatity = quatity.ToString();
             addListViewItems(sQuatity, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
                 dataGridView1.CurrentRow.Cells["Ref"].Value.ToString(),
                 dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
             int price = Int32.Parse(dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
-            int op = price * quatity;
+            int iQuantity = Int32.Parse(sQuatity);
+            int op = price * iQuantity;
             sumTotal(op);
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            actionItem();
+            string sQuatity = popupQuantity();
+            actionItem(sQuatity);
+        }
+
+        private string popupQuantity()
+        {
+            int quatity = Int32.Parse(InputDialog.mostrar("Introduzca la cantidad", "Cantidad"));
+            if (quatity < 1) { quatity = 1; };
+            string sQuatity = quatity.ToString();
+            return sQuatity;
         }
 
         private void addListViewItems(string cant, string Nombre, string refe, string price)
@@ -137,8 +145,10 @@ namespace Presentation
         {
             FormCajeroPago oFormCajeroPago = new FormCajeroPago();
             oFormCajeroPago.lblPriceTotal.Text = lblPriceTotal.Text;
+            oFormCajeroPago.list = listView1;
+            //oFormCajeroPago.ShowDialog();
             oFormCajeroPago.Show();
-            oFormCajeroPago.FormClosed += btnCancel_Click;
+            //oFormCajeroPago.FormClosed += btnCancel_Click;
         }
     }
 }

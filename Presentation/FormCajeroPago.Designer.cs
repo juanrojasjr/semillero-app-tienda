@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ImgPrint = new System.Windows.Forms.PictureBox();
+            this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.txtRecep = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -36,8 +38,6 @@
             this.lblPriceTotal = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblChange = new System.Windows.Forms.Label();
-            this.ImgPrint = new System.Windows.Forms.PictureBox();
-            this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.btnPayment = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -58,6 +58,32 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 7);
             this.panel1.Size = new System.Drawing.Size(383, 51);
             this.panel1.TabIndex = 5;
+            // 
+            // ImgPrint
+            // 
+            this.ImgPrint.Image = global::Presentation.Properties.Resources.printer;
+            this.ImgPrint.Location = new System.Drawing.Point(9, 9);
+            this.ImgPrint.Name = "ImgPrint";
+            this.ImgPrint.Size = new System.Drawing.Size(32, 32);
+            this.ImgPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.ImgPrint.TabIndex = 11;
+            this.ImgPrint.TabStop = false;
+            this.ImgPrint.Visible = false;
+            this.ImgPrint.Click += new System.EventHandler(this.ImgPrint_Click);
+            // 
+            // btnCloseApp
+            // 
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
+            this.btnCloseApp.Location = new System.Drawing.Point(349, 13);
+            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
+            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnCloseApp.TabIndex = 10;
+            this.btnCloseApp.TabStop = false;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // txtRecep
             // 
@@ -132,35 +158,9 @@
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(231, 23);
             this.lblChange.TabIndex = 12;
-            this.lblChange.Text = "Total a pagar";
+            this.lblChange.Text = "Cambio";
             this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblChange.Visible = false;
-            // 
-            // ImgPrint
-            // 
-            this.ImgPrint.Image = global::Presentation.Properties.Resources.printer;
-            this.ImgPrint.Location = new System.Drawing.Point(9, 9);
-            this.ImgPrint.Name = "ImgPrint";
-            this.ImgPrint.Size = new System.Drawing.Size(32, 32);
-            this.ImgPrint.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.ImgPrint.TabIndex = 11;
-            this.ImgPrint.TabStop = false;
-            this.ImgPrint.Visible = false;
-            this.ImgPrint.Click += new System.EventHandler(this.ImgPrint_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
-            this.btnCloseApp.Location = new System.Drawing.Point(349, 13);
-            this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
-            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnCloseApp.TabIndex = 10;
-            this.btnCloseApp.TabStop = false;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // btnPayment
             // 
