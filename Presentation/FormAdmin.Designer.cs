@@ -36,8 +36,11 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+<<<<<<< HEAD
             this.btnMinApp = new System.Windows.Forms.PictureBox();
             this.btnCloseApp = new System.Windows.Forms.PictureBox();
+=======
+>>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
@@ -58,6 +61,17 @@
             this.panel1.Size = new System.Drawing.Size(822, 47);
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
+            this.btnLogout.Location = new System.Drawing.Point(7, 7);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(32, 32);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnLogout
             // 
@@ -166,6 +180,7 @@
             this.button6.Size = new System.Drawing.Size(209, 134);
             this.button6.TabIndex = 7;
             this.button6.Text = "Usuarios";
+<<<<<<< HEAD
             this.button6.UseVisualStyleBackColor = false;
             // 
             // btnMinApp
@@ -193,6 +208,10 @@
             this.btnCloseApp.TabIndex = 10;
             this.btnCloseApp.TabStop = false;
             this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+=======
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+>>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
             // 
             // FormAdmin
             // 

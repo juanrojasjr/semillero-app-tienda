@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="ConnectionToSql.cs" />
     <Compile Include="FunCajero.cs" />
+    <Compile Include="DataProviders.cs" />
     <Compile Include="FunDataStore.cs" />
     <Compile Include="Productos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -43,5 +43,88 @@ namespace DataAccess
                 }
             }
         }
+<<<<<<< HEAD
+=======
+
+        SqlDataReader view;
+        DataTable tabla = new DataTable();
+
+        public DataTable Mostrar()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Users";
+                    view = command.ExecuteReader();
+                    tabla.Load(view);
+                    return tabla;
+                }
+            }
+        }
+
+        public int insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Users VALUES (@LoginName, @UserPass, @FirstName, @LastName, @Position, @Email)";
+                    command.Parameters.AddWithValue("@LoginName", LoginName);
+                    command.Parameters.AddWithValue("@UserPass", UserPass);
+                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@LastName", LastName);
+                    command.Parameters.AddWithValue("@Position", Position);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.CommandType = CommandType.Text;
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public int Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Users SET LoginName=@LoginName,UserPass=@UserPass,FirstName=@FirstName,LastName=@LastName,Position=@Position,Email=@Email WHERE UserID = @UserID";
+                    command.Parameters.AddWithValue("@LoginName", LoginName);
+                    command.Parameters.AddWithValue("@UserPass", UserPass);
+                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@LastName", LastName);
+                    command.Parameters.AddWithValue("@Position", Position);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    command.CommandType = CommandType.Text;
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public int Eliminar(int UserID)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "DELETE FROM Users WHERE UserID = @UserID";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
+
+>>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
     }
 }

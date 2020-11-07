@@ -49,6 +49,7 @@ namespace Presentation
             this.Hide();
         }
 
+<<<<<<< HEAD
         private void btnCloseApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -62,6 +63,13 @@ namespace Presentation
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+=======
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormUsuarios users = new FormUsuarios();
+            users.Show();
+            this.Hide();
+>>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
         }
     }
 }

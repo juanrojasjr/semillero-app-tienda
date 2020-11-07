@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormProveedores
+    partial class FormUsuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.txtProv = new System.Windows.Forms.TextBox();
-            this.labelProv = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.PictureBox();
             this.btnMinApp = new System.Windows.Forms.PictureBox();
@@ -45,8 +38,10 @@
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.btnMaxApp = new System.Windows.Forms.PictureBox();
             this.btnCloseApp = new System.Windows.Forms.PictureBox();
+            this.labelProv = new System.Windows.Forms.Label();
+            this.txtProv = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
@@ -55,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaxApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -72,78 +68,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 48);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
-            this.dataGridView1.Location = new System.Drawing.Point(24, 129);
-            this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Size = new System.Drawing.Size(752, 300);
-            this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // txtProv
-            // 
-            this.txtProv.BackColor = System.Drawing.Color.White;
-            this.txtProv.Location = new System.Drawing.Point(24, 91);
-            this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(243, 20);
-            this.txtProv.TabIndex = 5;
-            // 
-            // labelProv
-            // 
-            this.labelProv.AutoSize = true;
-            this.labelProv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelProv.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelProv.Location = new System.Drawing.Point(20, 63);
-            this.labelProv.Name = "labelProv";
-            this.labelProv.Size = new System.Drawing.Size(247, 19);
-            this.labelProv.TabIndex = 6;
-            this.labelProv.Text = "Ingrese el nombre del proveedor ";
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(324, 63);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(243, 19);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Ingrese el nombre de la empresa";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(328, 91);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(239, 20);
-            this.textBox1.TabIndex = 7;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(284, 63);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 19);
-            this.label2.TabIndex = 9;
-            this.label2.Text = "o";
+            this.panel1.TabIndex = 4;
             // 
             // btnEditar
             // 
@@ -241,28 +166,57 @@
             this.btnCloseApp.TabStop = false;
             this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
-            // FormProveedores
+            // labelProv
+            // 
+            this.labelProv.AutoSize = true;
+            this.labelProv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProv.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labelProv.Location = new System.Drawing.Point(22, 62);
+            this.labelProv.Name = "labelProv";
+            this.labelProv.Size = new System.Drawing.Size(222, 19);
+            this.labelProv.TabIndex = 12;
+            this.labelProv.Text = "Ingrese el nombre del usuario";
+            // 
+            // txtProv
+            // 
+            this.txtProv.BackColor = System.Drawing.Color.White;
+            this.txtProv.Location = new System.Drawing.Point(26, 90);
+            this.txtProv.Name = "txtProv";
+            this.txtProv.Size = new System.Drawing.Size(243, 20);
+            this.txtProv.TabIndex = 11;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
+            this.dataGridView1.Location = new System.Drawing.Point(26, 128);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.Size = new System.Drawing.Size(752, 300);
+            this.dataGridView1.TabIndex = 10;
+            // 
+            // FormUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.labelProv);
             this.Controls.Add(this.txtProv);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.MaximizeBox = false;
-            this.Name = "FormProveedores";
+            this.Name = "FormUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProveedores";
-            this.Load += new System.EventHandler(this.FormProveedores_Load);
+            this.Text = "FormUsuarios";
+            this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();
@@ -271,6 +225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaxApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,20 +234,16 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox btnBack;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TextBox txtProv;
-        private System.Windows.Forms.Label labelProv;
-        private System.Windows.Forms.PictureBox btnAdd;
-        private System.Windows.Forms.PictureBox btnMinApp;
-        private System.Windows.Forms.PictureBox btnResApp;
-        private System.Windows.Forms.PictureBox btnMaxApp;
-        private System.Windows.Forms.PictureBox btnCloseApp;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.PictureBox btnEditar;
         private System.Windows.Forms.PictureBox btnEliminar;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox btnMinApp;
+        private System.Windows.Forms.PictureBox btnAdd;
+        private System.Windows.Forms.PictureBox btnResApp;
+        private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.PictureBox btnMaxApp;
+        private System.Windows.Forms.PictureBox btnCloseApp;
+        private System.Windows.Forms.Label labelProv;
+        private System.Windows.Forms.TextBox txtProv;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
