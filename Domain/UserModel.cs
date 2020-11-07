@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Common.Cache;
 using DataAccess;
 
 namespace Domain
@@ -15,9 +16,17 @@ namespace Domain
             return userDao.Login(user, pass);
         }
 
+        FunDataStore store = new FunDataStore();
         public bool dataStore()
         {
-            return userDao.dataStore();
+            return store.getDataStore();
         }
+        public int addDataStore(string namestore, string nameowner, string phone, string address)
+        {
+            return store.addDataStore(namestore, nameowner, phone, address);
+        }
+
     }
+
+    
 }

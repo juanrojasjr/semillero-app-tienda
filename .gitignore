@@ -1,2 +1,13 @@
 #Omitir archivo de conexión a base de datos
 DataAccess/ConnectionToSql.cs
+
+#Omitir carpetas Debugs
+Presentation/obj/*
+Presentation/obj/Debug/*
+Domain/obj/Debug/*
+Domain/obj/*
+DataAccess/obj/Debug/*
+DataAccess/obj/*
+Common/obj/Debug/*
+Common/obj/*
+.vs/

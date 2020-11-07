@@ -8,6 +8,9 @@ namespace Common.Cache
 {
     public static class DataStore
     {
-        public static string name { get; set; }
+        public static string namestore { get; set; }
+        public static string nameowner { get; set; }
+        public static string phone { get; set; }
+        public static string address { get; set; }
     }
 }

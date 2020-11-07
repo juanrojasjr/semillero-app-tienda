@@ -33,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.8.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.8\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="InputKey">
+      <HintPath>..\..\..\..\..\..\..\Instaladores\InputKey\InputKey.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +61,12 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarProveedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarProveedor.Designer.cs">
+      <DependentUpon>FormAgregarProveedor.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormAgregarProducto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,11 +79,29 @@
     <Compile Include="FormCajero.Designer.cs">
       <DependentUpon>FormCajero.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormCajeroAveriguar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajeroAveriguar.Designer.cs">
+      <DependentUpon>FormCajeroAveriguar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCajeroPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCajeroPago.Designer.cs">
+      <DependentUpon>FormCajeroPago.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormProveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormProveedores.Designer.cs">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
@@ -87,14 +120,26 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarProveedor.resx">
+      <DependentUpon>FormAgregarProveedor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarProducto.resx">
       <DependentUpon>FormAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCajero.resx">
       <DependentUpon>FormCajero.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormCajeroAveriguar.resx">
+      <DependentUpon>FormCajeroAveriguar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCajeroPago.resx">
+      <DependentUpon>FormCajeroPago.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormProveedores.resx">
+      <DependentUpon>FormProveedores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
@@ -112,6 +157,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -129,6 +175,10 @@
     <ProjectReference Include="..\Common\Common.csproj">
       <Project>{9e8dff0c-5f6b-4826-83a8-d307ef2b7a53}</Project>
       <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <Project>{DF4E6446-191D-4D4A-80B1-B88D4A359589}</Project>
+      <Name>DataAccess</Name>
     </ProjectReference>
     <ProjectReference Include="..\Domain\Domain.csproj">
       <Project>{8cb15191-1175-4899-856f-abcce3900e85}</Project>
@@ -154,6 +204,39 @@
     <None Include="Resources\store.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\previous23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previousb1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximisize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\restaurar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bgLoginForm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rogelio.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\previous.png" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +247,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\loupe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printer.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

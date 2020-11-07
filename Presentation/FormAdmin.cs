@@ -21,7 +21,19 @@ namespace Presentation
         {
             if (MessageBox.Show("¿Seguro que quiere cerrar sesión?", "Warning",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                this.Close();
+            {
+                FormLogin fmLogin = new FormLogin();
+                fmLogin.Show();
+                this.Hide();
+            }
+                
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormProveedores fmprv = new FormProveedores();
+            fmprv.Show();
+            this.Hide();
         }
 
         private void FormAdmin_Load(object sender, EventArgs e)
@@ -35,6 +47,21 @@ namespace Presentation
 
             fmp.Show();
             this.Hide();
+        }
+
+        private void btnCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnMinApp_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
