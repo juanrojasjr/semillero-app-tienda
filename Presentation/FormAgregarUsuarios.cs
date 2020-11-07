@@ -51,16 +51,15 @@ namespace Presentation
         {
             if (value == false)
             {
-                int va = objetuser.insertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
-                if(va == 1)
+               try
                 {
+                    objetuser.InsertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo agregar los datos");
+                    MessageBox.Show("No se pudo agregar los datos por: " + ex);
                 }
-
                 FormUsuarios user = new FormUsuarios();
                 user.Show();
                 this.Hide();

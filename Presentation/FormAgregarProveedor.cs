@@ -15,7 +15,7 @@ namespace Presentation
     {
         Agr_Providers objetopro = new Agr_Providers();
         public string idprov;
-        private bool valor = true;
+        public bool valor = true;
 
         private void FormAgregarProveedor_Load(object sender, EventArgs e)
         {

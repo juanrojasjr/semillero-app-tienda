@@ -63,7 +63,7 @@ namespace DataAccess
             }
         }
 
-        public int insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        public void Insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
         {
             using (var connection = GetConnection())
             {
@@ -79,13 +79,13 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Position", Position);
                     command.Parameters.AddWithValue("@Email", Email);
                     command.CommandType = CommandType.Text;
-                    return command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
                 }
             }
         }
 
 
-        public int Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
+        public void Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
         {
             using (var connection = GetConnection())
             {
@@ -102,12 +102,12 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Email", Email);
                     command.Parameters.AddWithValue("@UserID", UserID);
                     command.CommandType = CommandType.Text;
-                    return command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
                 }
             }
         }
 
-        public int Eliminar(int UserID)
+        public void Eliminar(int UserID)
         {
             using (var connection = GetConnection())
             {
@@ -118,7 +118,7 @@ namespace DataAccess
                     command.CommandText = "DELETE FROM Users WHERE UserID = @UserID";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@UserID", UserID);
-                    return command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();
                 }
             }
         }
