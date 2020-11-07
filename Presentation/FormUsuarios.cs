@@ -55,6 +55,7 @@ namespace Presentation
         {
             FormAgregarUsuarios fmaprv = new FormAgregarUsuarios();
             fmaprv.Show();
+            fmaprv.value = false;
             this.Hide();
         }
 

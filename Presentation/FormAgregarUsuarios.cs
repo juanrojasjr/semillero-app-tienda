@@ -15,7 +15,7 @@ namespace Presentation
     {
         UserModel objetuser = new UserModel();
         public string iduser;
-        private bool value = true;
+        public bool value = true;
 
         private void FormAgregarUsuarios_Load(object sender, EventArgs e)
         {
@@ -47,30 +47,25 @@ namespace Presentation
             Application.Exit();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (value == false)
             {
-                try
+                int va = objetuser.insertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
+                if(va == 1)
                 {
-                    objetuser.InsertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text,txtPosition.Text,txtEmail.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
-                catch (Exception ex)
+                else
                 {
-                    MessageBox.Show("No se pudo agregar los datos por: " + ex);
+                    MessageBox.Show("No se pudo agregar los datos");
                 }
 
                 FormUsuarios user = new FormUsuarios();
                 user.Show();
                 this.Hide();
             }
-            if (value == true)
+            if (value)
             {
                 try
                 {

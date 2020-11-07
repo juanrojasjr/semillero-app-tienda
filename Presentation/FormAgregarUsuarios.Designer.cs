@@ -135,7 +135,6 @@
             this.label2.Size = new System.Drawing.Size(123, 19);
             this.label2.TabIndex = 20;
             this.label2.Text = "Nombre usuario";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtLoginName
             // 

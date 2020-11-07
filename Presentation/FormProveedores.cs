@@ -37,6 +37,7 @@ namespace Presentation
         private void btnAdd_Click(object sender, EventArgs e)
         {
             FormAgregarProveedor fmaprv = new FormAgregarProveedor();
+            fmaprv.valor = false;
             fmaprv.Show();
             this.Hide();
         }

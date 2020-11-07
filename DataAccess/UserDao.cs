@@ -63,7 +63,7 @@ namespace DataAccess
             }
         }
 
-        public void Insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        public int insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
         {
             using (var connection = GetConnection())
             {
@@ -71,7 +71,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO Users(LoginName, UserPass, FirstName, LastName,Position,Email) VALUES (@LoginName, @UserPass, @FirstName, @LastName,@Position,@Email)";
+                    command.CommandText = "INSERT INTO Users VALUES (@LoginName, @UserPass, @FirstName, @LastName, @Position, @Email)";
                     command.Parameters.AddWithValue("@LoginName", LoginName);
                     command.Parameters.AddWithValue("@UserPass", UserPass);
                     command.Parameters.AddWithValue("@FirstName", FirstName);
@@ -79,13 +79,13 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Position", Position);
                     command.Parameters.AddWithValue("@Email", Email);
                     command.CommandType = CommandType.Text;
-                    command.ExecuteNonQuery();
+                    return command.ExecuteNonQuery();
                 }
             }
         }
 
 
-        public void Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
+        public int Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
         {
             using (var connection = GetConnection())
             {
@@ -93,7 +93,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "update Users set LoginName=@LoginName,UserPass=@UserPass,FirstName=@FirstName,LastName=@LastName,Position=@Position,Email=@Email where UserID = @UserID";
+                    command.CommandText = "UPDATE Users SET LoginName=@LoginName,UserPass=@UserPass,FirstName=@FirstName,LastName=@LastName,Position=@Position,Email=@Email WHERE UserID = @UserID";
                     command.Parameters.AddWithValue("@LoginName", LoginName);
                     command.Parameters.AddWithValue("@UserPass", UserPass);
                     command.Parameters.AddWithValue("@FirstName", FirstName);
@@ -102,12 +102,12 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@Email", Email);
                     command.Parameters.AddWithValue("@UserID", UserID);
                     command.CommandType = CommandType.Text;
-                    command.ExecuteNonQuery();
+                    return command.ExecuteNonQuery();
                 }
             }
         }
 
-        public void Eliminar(int UserID)
+        public int Eliminar(int UserID)
         {
             using (var connection = GetConnection())
             {
@@ -115,10 +115,10 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "delete from Users where UserID = @UserID";
+                    command.CommandText = "DELETE FROM Users WHERE UserID = @UserID";
                     command.CommandType = CommandType.Text;
                     command.Parameters.AddWithValue("@UserID", UserID);
-                    command.ExecuteNonQuery();
+                    return command.ExecuteNonQuery();
                 }
             }
         }

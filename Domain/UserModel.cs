@@ -39,19 +39,19 @@ namespace Domain
             return tabla;
         }
 
-        public void InsertarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        public int insertarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
         {
-            users.Insertar(LoginName, UserPass, FirstName, LastName, Position, Email);
+            return users.insertar(LoginName, UserPass, FirstName, LastName, Position, Email);
         }
 
-        public void EditarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
+        public int EditarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
         {
-            users.Editar(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
+            return users.Editar(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
         }
 
-        public void EliminarUser(string UserID)
+        public int EliminarUser(string UserID)
         {
-            users.Eliminar(Convert.ToInt32(UserID));
+            return users.Eliminar(Convert.ToInt32(UserID));
         }
     }
 
