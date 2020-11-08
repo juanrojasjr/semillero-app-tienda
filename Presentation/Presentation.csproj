@@ -267,14 +267,13 @@
     <None Include="Resources\loupe.png" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <None Include="Resources\printer.png" />
-=======
+    </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\delete.png" />
->>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

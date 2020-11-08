@@ -76,7 +76,7 @@
             this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnMinApp.TabIndex = 17;
             this.btnMinApp.TabStop = false;
-            this.btnMinApp.Click += new System.EventHandler(this.btnMinApp_Click);
+            this.btnMinApp.Click += new System.EventHandler(this.BtnMinApp_Click);
             // 
             // btnResApp
             // 
@@ -115,7 +115,7 @@
             this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.btnCloseApp.TabIndex = 15;
             this.btnCloseApp.TabStop = false;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
+            this.btnCloseApp.Click += new System.EventHandler(this.BtnCloseApp_Click);
             // 
             // btnBack
             // 
@@ -126,7 +126,7 @@
             this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnBack.TabIndex = 1;
             this.btnBack.TabStop = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            this.btnBack.Click += new System.EventHandler(this.BtnBack_Click);
             // 
             // txtNameCompany
             // 
@@ -134,7 +134,6 @@
             this.txtNameCompany.Name = "txtNameCompany";
             this.txtNameCompany.Size = new System.Drawing.Size(327, 20);
             this.txtNameCompany.TabIndex = 9;
-            this.txtNameCompany.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -146,7 +145,6 @@
             this.label2.Size = new System.Drawing.Size(70, 19);
             this.label2.TabIndex = 10;
             this.label2.Text = "Empresa";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
@@ -165,7 +163,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(327, 20);
             this.txtName.TabIndex = 11;
-            this.txtName.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -217,7 +214,7 @@
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Guardar";
             this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // FormAgregarProveedor
             // 

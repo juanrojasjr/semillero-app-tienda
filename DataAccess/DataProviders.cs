@@ -14,7 +14,7 @@ namespace DataAccess
         SqlDataReader leer;
         DataTable tabla = new DataTable();
 
-        public DataTable Mostrar()
+        public DataTable GetProvider()
         {
             using (var connection = GetConnection())
             {
@@ -30,7 +30,7 @@ namespace DataAccess
             }
         }
 
-        public void Insertar(string NameCompany,string Name,string Phone,string Email)
+        public void AddProvider(string NameCompany,string Name,string Phone,string Email)
         {
             using (var connection = GetConnection())
             {
@@ -49,8 +49,7 @@ namespace DataAccess
             }
         }
 
-      
-        public void Editar(string NameCompany, string Name, string Phone, string Email,int ProveedoresID)
+        public void EditProvider(string NameCompany, string Name, string Phone, string Email,int ProveedoresID)
         {
             using (var connection = GetConnection())
             {
@@ -70,7 +69,7 @@ namespace DataAccess
             }
         }
 
-        public void Eliminar(int ProveedoresID)
+        public void DeleteProvider(int ProveedoresID)
         {
             using (var connection = GetConnection())
             {

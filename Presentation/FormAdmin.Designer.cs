@@ -29,21 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinApp = new System.Windows.Forms.PictureBox();
             this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-<<<<<<< HEAD
-            this.btnMinApp = new System.Windows.Forms.PictureBox();
-            this.btnCloseApp = new System.Windows.Forms.PictureBox();
-=======
->>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,6 +59,19 @@
             this.panel1.TabIndex = 3;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnMinApp
+            // 
+            this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
+            this.btnMinApp.Location = new System.Drawing.Point(761, 12);
+            this.btnMinApp.Name = "btnMinApp";
+            this.btnMinApp.Size = new System.Drawing.Size(24, 24);
+            this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnMinApp.TabIndex = 11;
+            this.btnMinApp.TabStop = false;
+            this.btnMinApp.Click += new System.EventHandler(this.btnMinApp_Click);
+            // 
             // btnLogout
             // 
             this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
@@ -73,16 +83,18 @@
             this.btnLogout.TabStop = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // btnLogout
+            // btnCloseApp
             // 
-            this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
-            this.btnLogout.Location = new System.Drawing.Point(7, 7);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(32, 32);
-            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnLogout.TabIndex = 0;
-            this.btnLogout.TabStop = false;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
+            this.btnCloseApp.Location = new System.Drawing.Point(791, 12);
+            this.btnCloseApp.Name = "btnCloseApp";
+            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
+            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.btnCloseApp.TabIndex = 10;
+            this.btnCloseApp.TabStop = false;
+            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
             // 
             // button1
             // 
@@ -180,38 +192,8 @@
             this.button6.Size = new System.Drawing.Size(209, 134);
             this.button6.TabIndex = 7;
             this.button6.Text = "Usuarios";
-<<<<<<< HEAD
             this.button6.UseVisualStyleBackColor = false;
-            // 
-            // btnMinApp
-            // 
-            this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
-            this.btnMinApp.Location = new System.Drawing.Point(761, 12);
-            this.btnMinApp.Name = "btnMinApp";
-            this.btnMinApp.Size = new System.Drawing.Size(24, 24);
-            this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnMinApp.TabIndex = 11;
-            this.btnMinApp.TabStop = false;
-            this.btnMinApp.Click += new System.EventHandler(this.btnMinApp_Click);
-            // 
-            // btnCloseApp
-            // 
-            this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
-            this.btnCloseApp.Location = new System.Drawing.Point(791, 12);
-            this.btnCloseApp.Name = "btnCloseApp";
-            this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
-            this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.btnCloseApp.TabIndex = 10;
-            this.btnCloseApp.TabStop = false;
-            this.btnCloseApp.Click += new System.EventHandler(this.btnCloseApp_Click);
-=======
-            this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
->>>>>>> bed5cd63f6fcdf631c6784c4a5a30e6159c3b78b
             // 
             // FormAdmin
             // 
@@ -234,8 +216,8 @@
             this.Load += new System.EventHandler(this.FormAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -31,7 +31,7 @@ namespace Presentation
         private void MostrarProvd()
         {
             Agr_Providers objeto = new Agr_Providers();
-            dataGridView1.DataSource = objeto.MostrarProv();
+            dataGridView1.DataSource = objeto.GetProvider();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -96,7 +96,7 @@ namespace Presentation
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 idProv = dataGridView1.CurrentRow.Cells["ProveedoresID"].Value.ToString();
-                objetoprv.EliminarProv(idProv);
+                objetoprv.DeleteProvider(idProv);
                 MessageBox.Show("Se elimino correctamente");
                 MostrarProvd();
             }

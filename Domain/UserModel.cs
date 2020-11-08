@@ -30,26 +30,26 @@ namespace Domain
 
         private UserDao users = new UserDao();
 
-        public DataTable MostrarUsers()
+        public DataTable GetUser()
         {
             DataTable tabla = new DataTable();
-            tabla = users.Mostrar();
+            tabla = users.GetUser();
             return tabla;
         }
 
-        public int insertarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
         {
-            return users.insertar(LoginName, UserPass, FirstName, LastName, Position, Email);
+            return users.AddUser(LoginName, UserPass, FirstName, LastName, Position, Email);
         }
 
-        public int EditarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
+        public int SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
         {
-            return users.Editar(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
+            return users.SetUser(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
         }
 
-        public int EliminarUser(string UserID)
+        public int DeleteUser(string UserID)
         {
-            return users.Eliminar(Convert.ToInt32(UserID));
+            return users.DeleteUser(Convert.ToInt32(UserID));
         }
     }
 

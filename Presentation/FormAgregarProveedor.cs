@@ -15,7 +15,7 @@ namespace Presentation
     {
         Agr_Providers objetopro = new Agr_Providers();
         public string idprov;
-        private bool valor = true;
+        public bool valor = true;
 
         private void FormAgregarProveedor_Load(object sender, EventArgs e)
         {
@@ -30,45 +30,30 @@ namespace Presentation
             InitializeComponent();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
+        private void BtnBack_Click(object sender, EventArgs e)
         {
             FormProveedores fmprv = new FormProveedores();
             fmprv.Show();
             this.Hide();
         }
 
-        private void btnCloseApp_Click(object sender, EventArgs e)
+        private void BtnCloseApp_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void btnMinApp_Click(object sender, EventArgs e)
+        private void BtnMinApp_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
+        private void BtnSave_Click(object sender, EventArgs e)
         {
            if (valor == false) 
             {
                 try
                 {
-                    objetopro.InsertarProv(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
+                    objetopro.AddProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch (Exception ex)
@@ -84,7 +69,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetopro.EditarPov(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text,idprov);
+                    objetopro.EditProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text,idprov);
                     MessageBox.Show("Se edito correctamente");
                 }
                 catch (Exception ex)

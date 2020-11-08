@@ -51,7 +51,7 @@ namespace Presentation
         {
             if (value == false)
             {
-                int va = objetuser.insertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
+                int va = objetuser.AddUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
                 if(va == 1)
                 {
                     MessageBox.Show("Se agrego correctamente");
@@ -69,7 +69,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetuser.EditarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text, iduser);
+                    objetuser.SetUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text, iduser);
                     MessageBox.Show("Se edito correctamente");
                 }
                 catch (Exception ex)
