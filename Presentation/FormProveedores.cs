@@ -28,10 +28,26 @@ namespace Presentation
              column.Visible = false;
         }
 
+        private void Cargar()
+        {
+            Agr_Providers oDataProveedor = new Agr_Providers();
+            if (!txtEmp.Text.Trim().Equals("") || !txtProv.Text.Trim().Equals(""))
+            {
+                dataGridView1.DataSource = oDataProveedor.funcion(txtEmp.Text);
+                DataGridViewColumn col = dataGridView1.Columns[0];
+                col.Visible = false;
+
+                if (dataGridView1.RowCount > 1)
+                {
+                    dataGridView1.CurrentCell = null;
+                }
+            }
+        }
+
         private void MostrarProvd()
         {
             Agr_Providers objeto = new Agr_Providers();
-            dataGridView1.DataSource = objeto.MostrarProv();
+            dataGridView1.DataSource = objeto.GetProvider();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -96,7 +112,7 @@ namespace Presentation
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 idProv = dataGridView1.CurrentRow.Cells["ProveedoresID"].Value.ToString();
-                objetoprv.EliminarProv(idProv);
+                objetoprv.DeleteProvider(idProv);
                 MessageBox.Show("Se elimino correctamente");
                 MostrarProvd();
             }
@@ -107,6 +123,18 @@ namespace Presentation
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            Cargar();
+            txtEmp.Clear();
+            txtProv.Clear();
         }
     }
 }

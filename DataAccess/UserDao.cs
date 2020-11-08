@@ -28,11 +28,11 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            UserLoginCache.idUser = reader.GetInt32(0);
-                            UserLoginCache.firstName = reader.GetString(3);
-                            UserLoginCache.lastName = reader.GetString(4);
-                            UserLoginCache.position = reader.GetString(5);
-                            UserLoginCache.email = reader.GetString(6);
+                            UserLogin.idUser = reader.GetInt32(0);
+                            UserLogin.firstName = reader.GetString(3);
+                            UserLogin.lastName = reader.GetString(4);
+                            UserLogin.position = reader.GetString(5);
+                            UserLogin.email = reader.GetString(6);
                         }
                         return true;
                     }
@@ -47,7 +47,7 @@ namespace DataAccess
         SqlDataReader view;
         DataTable tabla = new DataTable();
 
-        public DataTable Mostrar()
+        public DataTable GetUser()
         {
             using (var connection = GetConnection())
             {
@@ -63,7 +63,11 @@ namespace DataAccess
             }
         }
 
+<<<<<<< HEAD
         public void Insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+=======
+        public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+>>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
         {
             using (var connection = GetConnection())
             {
@@ -84,8 +88,12 @@ namespace DataAccess
             }
         }
 
+<<<<<<< HEAD
 
         public void Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
+=======
+        public int SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
+>>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
         {
             using (var connection = GetConnection())
             {
@@ -107,7 +115,11 @@ namespace DataAccess
             }
         }
 
+<<<<<<< HEAD
         public void Eliminar(int UserID)
+=======
+        public int DeleteUser(int UserID)
+>>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
         {
             using (var connection = GetConnection())
             {
@@ -122,6 +134,5 @@ namespace DataAccess
                 }
             }
         }
-
     }
 }

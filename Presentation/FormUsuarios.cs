@@ -31,7 +31,7 @@ namespace Presentation
         private void Mostraruser()
         {
             UserModel objeto = new UserModel();
-            dataGridView1.DataSource = objeto.MostrarUsers();
+            dataGridView1.DataSource = objeto.GetUser();
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
@@ -64,7 +64,7 @@ namespace Presentation
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 idUsers = dataGridView1.CurrentRow.Cells["UserID"].Value.ToString();
-                objetoUser.EliminarUser(idUsers);
+                objetoUser.DeleteUser(idUsers);
                 MessageBox.Show("Se elimino correctamente");
                 Mostraruser();
             }

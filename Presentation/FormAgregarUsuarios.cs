@@ -56,7 +56,12 @@ namespace Presentation
         {
             if (value == false)
             {
+<<<<<<< HEAD
                 try
+=======
+                int va = objetuser.AddUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
+                if(va == 1)
+>>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
                 {
                     objetuser.InsertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, cmbCargo.Text, txtEmail.Text);
                     MessageBox.Show("Se agrego correctamente");
@@ -73,7 +78,11 @@ namespace Presentation
             {
                 try
                 {
+<<<<<<< HEAD
                     objetuser.EditarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, cmbCargo.Text, txtEmail.Text, iduser);
+=======
+                    objetuser.SetUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text, iduser);
+>>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
                     MessageBox.Show("Se edito correctamente");
                 }
                 catch (Exception ex)

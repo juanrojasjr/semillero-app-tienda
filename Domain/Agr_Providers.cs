@@ -13,26 +13,33 @@ namespace Domain
     {
         private DataProviders prov = new DataProviders();
 
-        public DataTable MostrarProv()
+        public DataTable GetProvider()
         {
             DataTable tabla = new DataTable();
-            tabla = prov.Mostrar();
+            tabla = prov.GetProvider();
             return tabla;
         }
 
-        public void InsertarProv(string NameCompany, string Name, string Phone, string Email)
+        public void AddProvider(string NameCompany, string Name, string Phone, string Email)
         {
-            prov.Insertar(NameCompany, Name, Phone, Email);
+            prov.AddProvider(NameCompany, Name, Phone, Email);
         }
 
-        public void EditarPov(string NameCompany, string Name, string Phone, string Email,string ProveedoresID)
+        public void EditProvider(string NameCompany, string Name, string Phone, string Email,string ProveedoresID)
         {
-            prov.Editar(NameCompany, Name, Phone, Email, Convert.ToInt32(ProveedoresID));
+            prov.EditProvider(NameCompany, Name, Phone, Email, Convert.ToInt32(ProveedoresID));
         }
 
-        public void EliminarProv(string ProveedoresID)
+        public void DeleteProvider(string ProveedoresID)
         {
-            prov.Eliminar(Convert.ToInt32(ProveedoresID));
+            prov.DeleteProvider(Convert.ToInt32(ProveedoresID));
         }
+
+        DataProviders pv = new DataProviders();
+        public List<datos> Getpr(string value)
+        {
+            return pv.Getpr(value);
+        }
+
     }
 }

@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@
             this.labelProv = new System.Windows.Forms.Label();
             this.txtProv = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnConsult = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEliminar)).BeginInit();
@@ -174,20 +175,21 @@
             // labelProv
             // 
             this.labelProv.AutoSize = true;
-            this.labelProv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProv.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.labelProv.Location = new System.Drawing.Point(22, 62);
             this.labelProv.Name = "labelProv";
-            this.labelProv.Size = new System.Drawing.Size(222, 19);
+            this.labelProv.Size = new System.Drawing.Size(253, 19);
             this.labelProv.TabIndex = 12;
             this.labelProv.Text = "Ingrese el nombre del usuario";
             // 
             // txtProv
             // 
             this.txtProv.BackColor = System.Drawing.Color.White;
+            this.txtProv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProv.Location = new System.Drawing.Point(26, 90);
             this.txtProv.Name = "txtProv";
-            this.txtProv.Size = new System.Drawing.Size(243, 20);
+            this.txtProv.Size = new System.Drawing.Size(243, 27);
             this.txtProv.TabIndex = 11;
             // 
             // dataGridView1
@@ -199,11 +201,26 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
             this.dataGridView1.Location = new System.Drawing.Point(25, 128);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridView1.Size = new System.Drawing.Size(752, 300);
             this.dataGridView1.TabIndex = 10;
+            // 
+            // btnConsult
+            // 
+            this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnConsult.FlatAppearance.BorderSize = 0;
+            this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsult.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnConsult.Location = new System.Drawing.Point(314, 73);
+            this.btnConsult.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsult.Name = "btnConsult";
+            this.btnConsult.Size = new System.Drawing.Size(112, 34);
+            this.btnConsult.TabIndex = 13;
+            this.btnConsult.Text = "Buscar";
+            this.btnConsult.UseVisualStyleBackColor = false;
             // 
             // FormUsuarios
             // 
@@ -211,6 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnConsult);
             this.Controls.Add(this.labelProv);
             this.Controls.Add(this.txtProv);
             this.Controls.Add(this.dataGridView1);
@@ -250,5 +268,6 @@
         private System.Windows.Forms.Label labelProv;
         private System.Windows.Forms.TextBox txtProv;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnConsult;
     }
 }
