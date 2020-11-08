@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormAgregarUsuarios
+    partial class FormAddUser
     {
         /// <summary>
         /// Required designer variable.

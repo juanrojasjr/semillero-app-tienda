@@ -11,18 +11,19 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class FormProveedores : Form
+    public partial class FormProvider : Form
     {
-        Agr_Providers objetoprv = new Agr_Providers();
+        Models oProviders = new Models();
         public string idProv = null;
         
-        public FormProveedores()
+        public FormProvider()
         {
             InitializeComponent();
         }
 
         private void FormProveedores_Load(object sender, EventArgs e)
         {
+            dataGridView1.Columns.Clear();
             MostrarProvd();
             DataGridViewColumn column = dataGridView1.Columns[0];
              column.Visible = false;
@@ -30,13 +31,12 @@ namespace Presentation
 
         private void MostrarProvd()
         {
-            Agr_Providers objeto = new Agr_Providers();
-            dataGridView1.DataSource = objeto.GetProvider();
+            dataGridView1.DataSource = oProviders.GetProvider();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormAgregarProveedor fmaprv = new FormAgregarProveedor();
+            FormAddProvider fmaprv = new FormAddProvider();
             fmaprv.valor = false;
             fmaprv.Show();
             this.Hide();
@@ -59,26 +59,11 @@ namespace Presentation
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                FormAgregarProveedor fmaprv = new FormAgregarProveedor();
+                FormAddProvider fmaprv = new FormAddProvider();
                 fmaprv.Show();
                 fmaprv.txtNameCompany.Text = dataGridView1.CurrentRow.Cells["NameCompany"].Value.ToString();
                 fmaprv.txtName.Text = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
@@ -96,17 +81,12 @@ namespace Presentation
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 idProv = dataGridView1.CurrentRow.Cells["ProveedoresID"].Value.ToString();
-                objetoprv.DeleteProvider(idProv);
+                oProviders.DeleteProvider(idProv);
                 MessageBox.Show("Se elimino correctamente");
                 MostrarProvd();
             }
             else
                 MessageBox.Show("Seleccione una fila para eliminar");
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

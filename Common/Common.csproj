@@ -41,9 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\DataStore.cs" />
+    <Compile Include="Cache\DataProductsATM.cs" />
+    <Compile Include="Cache\DataStoreCache.cs" />
     <Compile Include="Cache\Positions.cs" />
-    <Compile Include="Cache\UserLogin.cs" />
+    <Compile Include="Cache\UserCache.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

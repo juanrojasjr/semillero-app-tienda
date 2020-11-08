@@ -31,11 +31,11 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            UserLogin.idUser = reader.GetInt32(0);
-                            UserLogin.firstName = reader.GetString(3);
-                            UserLogin.lastName = reader.GetString(4);
-                            UserLogin.position = reader.GetString(5);
-                            UserLogin.email = reader.GetString(6);
+                            UserCache.IdUser = reader.GetInt32(0);
+                            UserCache.FirstName = reader.GetString(3);
+                            UserCache.LastName = reader.GetString(4);
+                            UserCache.Position = reader.GetString(5);
+                            UserCache.Email = reader.GetString(6);
                         }
                         return true;
                     }

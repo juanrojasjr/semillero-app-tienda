@@ -20,10 +20,10 @@ namespace Presentation
 
         private void Cargar()
         {
-            DataCajero oDataCajero = new DataCajero();
+            Models oDataCajero = new Models();
             if (!txtSearch.Text.Trim().Equals("") || !txtRef.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataCajero.funcion(txtSearch.Text);
+                dataGridView1.DataSource = oDataCajero.GetProductsATM(txtSearch.Text);
             }
         }
 

@@ -18,8 +18,8 @@ namespace Presentation
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             
-            UserModel store = new UserModel();
-            var valStore = store.dataStore();
+            Models store = new Models();
+            var valStore = store.GetDataStore();
             if (valStore)
             {
                 Application.Run(new FormLogin());
@@ -27,7 +27,7 @@ namespace Presentation
             }
             else
             {
-                Application.Run(new FormRegisterStore());
+                Application.Run(new FormAddStore());
             }
         }
     }

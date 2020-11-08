@@ -31,7 +31,7 @@ namespace Presentation
 
         private void button5_Click(object sender, EventArgs e)
         {
-            FormProveedores fmprv = new FormProveedores();
+            FormProvider fmprv = new FormProvider();
             fmprv.Show();
             this.Hide();
         }
@@ -65,7 +65,7 @@ namespace Presentation
 
         private void button6_Click(object sender, EventArgs e)
         {
-            FormUsuarios users = new FormUsuarios();
+            FormUser users = new FormUser();
             users.Show();
             this.Hide();
         }

@@ -26,14 +26,14 @@ namespace Presentation
             {
                 if (txtPass.Text != "")
                 {
-                    UserModel user = new UserModel();
+                    Models user = new Models();
                     var valLogin = user.LoginUser(txtUser.Text, txtPass.Text);
                     if (valLogin == true)
                     {
                         FormAdmin admin = new FormAdmin();
-                        FormCajero cajero = new FormCajero();
+                        FormATM cajero = new FormATM();
 
-                        if (UserLogin.position == "Administrator")
+                        if (UserCache.Position == "Administrator")
                         {
                             admin.Show();
                             admin.FormClosed += logout;
@@ -79,7 +79,7 @@ namespace Presentation
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            lblNameStore.Text = DataStore.namestore;
+            lblNameStore.Text = DataStoreCache.Namestore;
         }        
 
         private void btnCloseApp_Click(object sender, EventArgs e)

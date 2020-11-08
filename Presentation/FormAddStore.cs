@@ -11,9 +11,9 @@ using Domain;
 
 namespace Presentation
 {
-    public partial class FormRegisterStore : Form
+    public partial class FormAddStore : Form
     {
-        public FormRegisterStore()
+        public FormAddStore()
         {
             InitializeComponent();
         }
@@ -27,8 +27,8 @@ namespace Presentation
             }
             else
             {
-                UserModel dataStore = new UserModel();
-                var val = dataStore.addDataStore(txtNameStore.Text, txtNameOwner.Text, txtPhone.Text, txtAddress.Text);
+                Models dataStore = new Models();
+                var val = dataStore.AddDataStore(txtNameStore.Text, txtNameOwner.Text, txtPhone.Text, txtAddress.Text);
                 if (val == 1)
                 {
                     MessageBox.Show("Tienda registrada.");

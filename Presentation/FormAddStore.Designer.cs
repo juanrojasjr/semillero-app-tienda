@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormRegisterStore
+    partial class FormAddStore
     {
         /// <summary>
         /// Required designer variable.

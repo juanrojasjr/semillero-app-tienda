@@ -61,11 +61,11 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAgregarProveedor.cs">
+    <Compile Include="FormProvider-Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAgregarProveedor.Designer.cs">
-      <DependentUpon>FormAgregarProveedor.cs</DependentUpon>
+    <Compile Include="FormProvider-Add.Designer.cs">
+      <DependentUpon>FormProvider-Add.cs</DependentUpon>
     </Compile>
     <Compile Include="FormAgregarProducto.cs">
       <SubType>Form</SubType>
@@ -73,29 +73,29 @@
     <Compile Include="FormAgregarProducto.Designer.cs">
       <DependentUpon>FormAgregarProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAgregarUsuarios.cs">
+    <Compile Include="FormUser-Add.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAgregarUsuarios.Designer.cs">
-      <DependentUpon>FormAgregarUsuarios.cs</DependentUpon>
+    <Compile Include="FormUser-Add.Designer.cs">
+      <DependentUpon>FormUser-Add.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCajero.cs">
+    <Compile Include="FormATM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCajero.Designer.cs">
-      <DependentUpon>FormCajero.cs</DependentUpon>
+    <Compile Include="FormATM.Designer.cs">
+      <DependentUpon>FormATM.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCajeroAveriguar.cs">
+    <Compile Include="FormATM-Search.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCajeroAveriguar.Designer.cs">
-      <DependentUpon>FormCajeroAveriguar.cs</DependentUpon>
+    <Compile Include="FormATM-Search.Designer.cs">
+      <DependentUpon>FormATM-Search.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormCajeroPago.cs">
+    <Compile Include="FormATM-Payment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormCajeroPago.Designer.cs">
-      <DependentUpon>FormCajeroPago.cs</DependentUpon>
+    <Compile Include="FormATM-Payment.Designer.cs">
+      <DependentUpon>FormATM-Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -103,11 +103,11 @@
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProveedores.cs">
+    <Compile Include="FormProvider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProveedores.Designer.cs">
-      <DependentUpon>FormProveedores.cs</DependentUpon>
+    <Compile Include="FormProvider.Designer.cs">
+      <DependentUpon>FormProvider.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProductos.cs">
       <SubType>Form</SubType>
@@ -115,55 +115,55 @@
     <Compile Include="FormProductos.Designer.cs">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormRegisterStore.cs">
+    <Compile Include="FormAddStore.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormRegisterStore.Designer.cs">
-      <DependentUpon>FormRegisterStore.cs</DependentUpon>
+    <Compile Include="FormAddStore.Designer.cs">
+      <DependentUpon>FormAddStore.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormUsuarios.cs">
+    <Compile Include="FormUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormUsuarios.Designer.cs">
-      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    <Compile Include="FormUser.Designer.cs">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAgregarProveedor.resx">
-      <DependentUpon>FormAgregarProveedor.cs</DependentUpon>
+    <EmbeddedResource Include="FormProvider-Add.resx">
+      <DependentUpon>FormProvider-Add.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarProducto.resx">
       <DependentUpon>FormAgregarProducto.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAgregarUsuarios.resx">
-      <DependentUpon>FormAgregarUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="FormUser-Add.resx">
+      <DependentUpon>FormUser-Add.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCajero.resx">
-      <DependentUpon>FormCajero.cs</DependentUpon>
+    <EmbeddedResource Include="FormATM.resx">
+      <DependentUpon>FormATM.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCajeroAveriguar.resx">
-      <DependentUpon>FormCajeroAveriguar.cs</DependentUpon>
+    <EmbeddedResource Include="FormATM-Search.resx">
+      <DependentUpon>FormATM-Search.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormCajeroPago.resx">
-      <DependentUpon>FormCajeroPago.cs</DependentUpon>
+    <EmbeddedResource Include="FormATM-Payment.resx">
+      <DependentUpon>FormATM-Payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProveedores.resx">
-      <DependentUpon>FormProveedores.cs</DependentUpon>
+    <EmbeddedResource Include="FormProvider.resx">
+      <DependentUpon>FormProvider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductos.resx">
       <DependentUpon>FormProductos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormRegisterStore.resx">
-      <DependentUpon>FormRegisterStore.cs</DependentUpon>
+    <EmbeddedResource Include="FormAddStore.resx">
+      <DependentUpon>FormAddStore.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormUsuarios.resx">
-      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    <EmbeddedResource Include="FormUser.resx">
+      <DependentUpon>FormUser.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -268,7 +268,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printer.png" />
-    </ItemGroup>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit.png" />
   </ItemGroup>

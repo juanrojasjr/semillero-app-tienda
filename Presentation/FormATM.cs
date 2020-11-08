@@ -14,11 +14,11 @@ using InputKey;
 
 namespace Presentation
 {
-    public partial class FormCajero : Form
+    public partial class FormATM : Form
     {
         public int count = 0;
 
-        public FormCajero()
+        public FormATM()
         {
             InitializeComponent();
         }
@@ -46,22 +46,18 @@ namespace Presentation
 
         private void Cargar()
         {
-            DataCajero oDataCajero = new DataCajero();
+            Models oDataATM = new Models();
             if (!txtSearch.Text.Trim().Equals("") || !txtRef.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataCajero.funcion(txtSearch.Text);
+                dataGridView1.DataSource = oDataATM.GetProductsATM(txtSearch.Text);
                 DataGridViewColumn col = dataGridView1.Columns[0];
                 col.Visible = false;
 
                 if (dataGridView1.RowCount > 1)
                 {
                     dataGridView1.CurrentCell = null;
-                    //string sQuatity = popupQuantity();
-                    //actionItem(sQuatity);
                 }
-                //else if (dataGridView1.RowCount > 1)
-                //{
-                //}
+
             }
         }
 
@@ -146,9 +142,8 @@ namespace Presentation
             FormCajeroPago oFormCajeroPago = new FormCajeroPago();
             oFormCajeroPago.lblPriceTotal.Text = lblPriceTotal.Text;
             oFormCajeroPago.list = listView1;
-            //oFormCajeroPago.ShowDialog();
             oFormCajeroPago.Show();
-            //oFormCajeroPago.FormClosed += btnCancel_Click;
+            oFormCajeroPago.FormClosed += btnCancel_Click;
         }
     }
 }

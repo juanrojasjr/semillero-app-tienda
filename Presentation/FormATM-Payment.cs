@@ -85,23 +85,23 @@ namespace Presentation
             iTextSharp.text.Font times = new iTextSharp.text.Font(bf, 8);
 
             // Le colocamos el título y el autor
-            doc.AddTitle("Factura "+ ramNumber+" - "+ DataStore.namestore);
+            doc.AddTitle("Factura "+ ramNumber+" - "+ DataStoreCache.Namestore);
             doc.AddCreator("Ingenieros Uniteistas");
 
             // Abrir documento
             doc.Open();
 
             // Encabezado del documento
-            Paragraph p1 = new Paragraph(DataStore.namestore, times);
+            Paragraph p1 = new Paragraph(DataStoreCache.Namestore, times);
             p1.Alignment = Element.ALIGN_CENTER;
             doc.Add(p1);
             Paragraph p2 = new Paragraph("NIT: " + "901.177.291-5", times);
             p2.Alignment = Element.ALIGN_CENTER;
             doc.Add(p2);
-            Paragraph p3 = new Paragraph(DataStore.address, times);
+            Paragraph p3 = new Paragraph(DataStoreCache.Address, times);
             p3.Alignment = Element.ALIGN_CENTER;
             doc.Add(p3);
-            Paragraph p4 = new Paragraph("Tel. "+DataStore.phone, times);
+            Paragraph p4 = new Paragraph("Tel. "+DataStoreCache.Phone, times);
             p4.Alignment = Element.ALIGN_CENTER;
             doc.Add(p4);
 

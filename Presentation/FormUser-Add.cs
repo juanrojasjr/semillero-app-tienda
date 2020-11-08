@@ -11,9 +11,9 @@ using Domain;
 
 namespace Presentation
 {
-    public partial class FormAgregarUsuarios : Form
+    public partial class FormAddUser : Form
     {
-        UserModel objetuser = new UserModel();
+        Models objetuser = new Models();
         public string iduser;
         public bool value = true;
 
@@ -25,14 +25,14 @@ namespace Presentation
             }
         }
 
-        public FormAgregarUsuarios()
+        public FormAddUser()
         {
             InitializeComponent();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormUsuarios users = new FormUsuarios();
+            FormUser users = new FormUser();
             users.Show();
             this.Hide();
         }
@@ -61,7 +61,7 @@ namespace Presentation
                     MessageBox.Show("No se pudo agregar los datos");
                 }
 
-                FormUsuarios user = new FormUsuarios();
+                FormUser user = new FormUser();
                 user.Show();
                 this.Hide();
             }
@@ -77,7 +77,7 @@ namespace Presentation
                     MessageBox.Show("No se pudo editar los datos por: " + ex);
                 }
 
-                FormUsuarios user = new FormUsuarios();
+                FormUser user = new FormUser();
                 user.Show();
                 this.Hide();
             }

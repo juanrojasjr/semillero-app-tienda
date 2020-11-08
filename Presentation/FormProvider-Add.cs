@@ -11,9 +11,9 @@ using Domain;
 
 namespace Presentation
 {
-    public partial class FormAgregarProveedor : Form
+    public partial class FormAddProvider : Form
     {
-        Agr_Providers objetopro = new Agr_Providers();
+        Models oProviders = new Models();
         public string idprov;
         public bool valor = true;
 
@@ -25,14 +25,14 @@ namespace Presentation
             }
         }
 
-        public FormAgregarProveedor()
+        public FormAddProvider()
         {
             InitializeComponent();
         }
 
         private void BtnBack_Click(object sender, EventArgs e)
         {
-            FormProveedores fmprv = new FormProveedores();
+            FormProvider fmprv = new FormProvider();
             fmprv.Show();
             this.Hide();
         }
@@ -53,7 +53,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetopro.AddProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
+                    oProviders.AddProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch (Exception ex)
@@ -61,7 +61,7 @@ namespace Presentation
                     MessageBox.Show("No se pudo agregar los datos por: " + ex);
                 }
 
-                FormProveedores prov = new FormProveedores();
+                FormProvider prov = new FormProvider();
                 prov.Show();
                 this.Hide();
             }
@@ -69,7 +69,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetopro.EditProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text,idprov);
+                    oProviders.EditProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text,idprov);
                     MessageBox.Show("Se edito correctamente");
                 }
                 catch (Exception ex)
@@ -77,7 +77,7 @@ namespace Presentation
                     MessageBox.Show("No se pudo editar los datos por: " + ex);
                 }
 
-                FormProveedores prov = new FormProveedores();
+                FormProvider prov = new FormProvider();
                 prov.Show();
                 this.Hide();
             }

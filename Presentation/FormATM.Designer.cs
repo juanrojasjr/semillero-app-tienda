@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormCajero
+    partial class FormATM
     {
         /// <summary>
         /// Required designer variable.

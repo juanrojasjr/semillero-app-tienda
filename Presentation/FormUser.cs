@@ -11,12 +11,12 @@ using Domain;
 
 namespace Presentation
 {
-    public partial class FormUsuarios : Form
+    public partial class FormUser : Form
     {
-        UserModel objetoUser = new UserModel();
+        Models objetoUser = new Models();
         public string idUsers = null;
 
-        public FormUsuarios()
+        public FormUser()
         {
             InitializeComponent();
         }
@@ -30,7 +30,7 @@ namespace Presentation
 
         private void Mostraruser()
         {
-            UserModel objeto = new UserModel();
+            Models objeto = new Models();
             dataGridView1.DataSource = objeto.GetUser();
         }
 
@@ -53,7 +53,7 @@ namespace Presentation
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            FormAgregarUsuarios fmaprv = new FormAgregarUsuarios();
+            FormAddUser fmaprv = new FormAddUser();
             fmaprv.Show();
             fmaprv.value = false;
             this.Hide();
@@ -76,7 +76,7 @@ namespace Presentation
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                FormAgregarUsuarios fmauser = new FormAgregarUsuarios();
+                FormAddUser fmauser = new FormAddUser();
                 fmauser.Show();
                 fmauser.txtLoginName.Text = dataGridView1.CurrentRow.Cells["LoginName"].Value.ToString();
                 fmauser.txtUserPass.Text = dataGridView1.CurrentRow.Cells["UserPass"].Value.ToString();
