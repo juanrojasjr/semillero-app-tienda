@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="Cache\DataStore.cs" />
     <Compile Include="Cache\Positions.cs" />
-    <Compile Include="Cache\UserLoginCache.cs" />
+    <Compile Include="Cache\UserLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

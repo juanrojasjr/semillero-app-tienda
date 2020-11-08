@@ -61,7 +61,13 @@ namespace Presentation
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
+        }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormUsuarios users = new FormUsuarios();
+            users.Show();
+            this.Hide();
         }
     }
 }

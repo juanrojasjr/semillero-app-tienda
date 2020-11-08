@@ -73,6 +73,12 @@
     <Compile Include="FormAgregarProducto.Designer.cs">
       <DependentUpon>FormAgregarProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAgregarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgregarUsuarios.Designer.cs">
+      <DependentUpon>FormAgregarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCajero.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,12 @@
     <Compile Include="FormRegisterStore.Designer.cs">
       <DependentUpon>FormRegisterStore.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsuarios.Designer.cs">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormAdmin.resx">
@@ -125,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAgregarProducto.resx">
       <DependentUpon>FormAgregarProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgregarUsuarios.resx">
+      <DependentUpon>FormAgregarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCajero.resx">
       <DependentUpon>FormCajero.cs</DependentUpon>
@@ -146,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormRegisterStore.resx">
       <DependentUpon>FormRegisterStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsuarios.resx">
+      <DependentUpon>FormUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -250,6 +268,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\printer.png" />
+    </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -28,11 +28,11 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            UserLoginCache.idUser = reader.GetInt32(0);
-                            UserLoginCache.firstName = reader.GetString(3);
-                            UserLoginCache.lastName = reader.GetString(4);
-                            UserLoginCache.position = reader.GetString(5);
-                            UserLoginCache.email = reader.GetString(6);
+                            UserLogin.idUser = reader.GetInt32(0);
+                            UserLogin.firstName = reader.GetString(3);
+                            UserLogin.lastName = reader.GetString(4);
+                            UserLogin.position = reader.GetString(5);
+                            UserLogin.email = reader.GetString(6);
                         }
                         return true;
                     }
@@ -40,6 +40,84 @@ namespace DataAccess
                     {
                         return false;
                     }
+                }
+            }
+        }
+
+        SqlDataReader view;
+        DataTable tabla = new DataTable();
+
+        public DataTable GetUser()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Users";
+                    view = command.ExecuteReader();
+                    tabla.Load(view);
+                    return tabla;
+                }
+            }
+        }
+
+        public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Users VALUES (@LoginName, @UserPass, @FirstName, @LastName, @Position, @Email)";
+                    command.Parameters.AddWithValue("@LoginName", LoginName);
+                    command.Parameters.AddWithValue("@UserPass", UserPass);
+                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@LastName", LastName);
+                    command.Parameters.AddWithValue("@Position", Position);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.CommandType = CommandType.Text;
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public int SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Users SET LoginName=@LoginName,UserPass=@UserPass,FirstName=@FirstName,LastName=@LastName,Position=@Position,Email=@Email WHERE UserID = @UserID";
+                    command.Parameters.AddWithValue("@LoginName", LoginName);
+                    command.Parameters.AddWithValue("@UserPass", UserPass);
+                    command.Parameters.AddWithValue("@FirstName", FirstName);
+                    command.Parameters.AddWithValue("@LastName", LastName);
+                    command.Parameters.AddWithValue("@Position", Position);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    command.CommandType = CommandType.Text;
+                    return command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public int DeleteUser(int UserID)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "DELETE FROM Users WHERE UserID = @UserID";
+                    command.CommandType = CommandType.Text;
+                    command.Parameters.AddWithValue("@UserID", UserID);
+                    return command.ExecuteNonQuery();
                 }
             }
         }
