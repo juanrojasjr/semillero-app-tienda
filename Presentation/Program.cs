@@ -22,7 +22,7 @@ namespace Presentation
             var valStore = store.dataStore();
             if (valStore)
             {
-                Application.Run(new FormProveedores());
+                Application.Run(new FormAdmin());
                 //Application.Run(new FormCajero());
             }
             else

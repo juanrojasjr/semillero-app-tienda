@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agr_Products.cs" />
     <Compile Include="DataCajero.cs" />
     <Compile Include="Agr_Providers.cs" />
     <Compile Include="UserModel.cs" />

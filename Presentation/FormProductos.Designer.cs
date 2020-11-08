@@ -37,7 +37,7 @@
             this.btn_agregarprod = new System.Windows.Forms.PictureBox();
             this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataProduct = new System.Windows.Forms.DataGridView();
             this.txtBuscarProd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnBuscarProd = new System.Windows.Forms.Button();
@@ -50,7 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarprod)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +94,7 @@
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEliminar.TabIndex = 20;
             this.btnEliminar.TabStop = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnResApp
             // 
@@ -118,6 +119,7 @@
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnEditar.TabIndex = 19;
             this.btnEditar.TabStop = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnMaxApp
             // 
@@ -142,7 +144,7 @@
             this.btn_agregarprod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btn_agregarprod.TabIndex = 18;
             this.btn_agregarprod.TabStop = false;
-            this.btn_agregarprod.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btn_agregarprod.Click += new System.EventHandler(this.btn_agregarprod_Click);
             // 
             // btnCloseApp
             // 
@@ -169,18 +171,20 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // dataGridView1
+            // dataProduct
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dataProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
-            this.dataGridView1.Location = new System.Drawing.Point(24, 129);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(752, 300);
-            this.dataGridView1.TabIndex = 1;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataProduct.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataProduct.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
+            this.dataProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
+            this.dataProduct.Location = new System.Drawing.Point(24, 129);
+            this.dataProduct.Name = "dataProduct";
+            this.dataProduct.Size = new System.Drawing.Size(752, 300);
+            this.dataProduct.TabIndex = 1;
+            this.dataProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtBuscarProd
             // 
@@ -226,7 +230,7 @@
             this.Controls.Add(this.btnBuscarProd);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBuscarProd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataProduct);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProductos";
@@ -242,7 +246,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btn_agregarprod)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,7 +256,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox btnBack;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataProduct;
         private System.Windows.Forms.PictureBox btn_agregarprod;
         private System.Windows.Forms.TextBox txtBuscarProd;
         private System.Windows.Forms.Label label2;
