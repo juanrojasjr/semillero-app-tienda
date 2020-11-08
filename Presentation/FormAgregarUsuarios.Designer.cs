@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSave = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtLastName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,10 +42,11 @@
             this.btnMaxApp = new System.Windows.Forms.PictureBox();
             this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
+            this.cmbCargo = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPosition = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResApp)).BeginInit();
@@ -55,28 +55,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(119, 594);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 35);
-            this.btnSave.TabIndex = 27;
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(39, 337);
+            this.label5.Location = new System.Drawing.Point(40, 321);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 19);
             this.label5.TabIndex = 26;
@@ -84,7 +68,7 @@
             // 
             // txtLastName
             // 
-            this.txtLastName.Location = new System.Drawing.Point(43, 359);
+            this.txtLastName.Location = new System.Drawing.Point(44, 343);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(326, 20);
             this.txtLastName.TabIndex = 25;
@@ -94,7 +78,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(39, 251);
+            this.label4.Location = new System.Drawing.Point(40, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(66, 19);
             this.label4.TabIndex = 24;
@@ -102,7 +86,7 @@
             // 
             // txtFirstName
             // 
-            this.txtFirstName.Location = new System.Drawing.Point(43, 273);
+            this.txtFirstName.Location = new System.Drawing.Point(44, 257);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(326, 20);
             this.txtFirstName.TabIndex = 23;
@@ -112,7 +96,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(40, 161);
+            this.label3.Location = new System.Drawing.Point(40, 156);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 22;
@@ -120,7 +104,7 @@
             // 
             // txtUserPass
             // 
-            this.txtUserPass.Location = new System.Drawing.Point(43, 183);
+            this.txtUserPass.Location = new System.Drawing.Point(43, 178);
             this.txtUserPass.Name = "txtUserPass";
             this.txtUserPass.Size = new System.Drawing.Size(327, 20);
             this.txtUserPass.TabIndex = 21;
@@ -211,6 +195,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::Presentation.Properties.Resources.previous23;
             this.btnBack.Location = new System.Drawing.Point(12, 7);
             this.btnBack.Name = "btnBack";
@@ -220,41 +205,60 @@
             this.btnBack.TabStop = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // label1
+            // cmbCargo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(42, 506);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 19);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Email";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(46, 528);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(326, 20);
-            this.txtEmail.TabIndex = 30;
+            this.cmbCargo.FormattingEnabled = true;
+            this.cmbCargo.Items.AddRange(new object[] {
+            "Administrator",
+            "User"});
+            this.cmbCargo.Location = new System.Drawing.Point(43, 423);
+            this.cmbCargo.Name = "cmbCargo";
+            this.cmbCargo.Size = new System.Drawing.Size(327, 21);
+            this.cmbCargo.TabIndex = 39;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label6.Location = new System.Drawing.Point(39, 421);
+            this.label6.Location = new System.Drawing.Point(40, 401);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 19);
-            this.label6.TabIndex = 29;
+            this.label6.TabIndex = 36;
             this.label6.Text = "Cargo";
             // 
-            // txtPosition
+            // btnSave
             // 
-            this.txtPosition.Location = new System.Drawing.Point(43, 443);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(326, 20);
-            this.txtPosition.TabIndex = 28;
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSave.FlatAppearance.BorderSize = 0;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.Black;
+            this.btnSave.Location = new System.Drawing.Point(123, 577);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(145, 35);
+            this.btnSave.TabIndex = 43;
+            this.btnSave.Text = "Guardar";
+            this.btnSave.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(42, 488);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 19);
+            this.label1.TabIndex = 42;
+            this.label1.Text = "Email";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Location = new System.Drawing.Point(46, 510);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(323, 20);
+            this.txtEmail.TabIndex = 41;
             // 
             // FormAgregarUsuarios
             // 
@@ -262,11 +266,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(408, 656);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.cmbCargo);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPosition);
-            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtLastName);
             this.Controls.Add(this.label4);
@@ -294,8 +298,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtLastName;
         private System.Windows.Forms.Label label4;
@@ -310,9 +312,10 @@
         private System.Windows.Forms.PictureBox btnMaxApp;
         private System.Windows.Forms.PictureBox btnCloseApp;
         private System.Windows.Forms.PictureBox btnBack;
+        public System.Windows.Forms.ComboBox cmbCargo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox txtPosition;
     }
 }

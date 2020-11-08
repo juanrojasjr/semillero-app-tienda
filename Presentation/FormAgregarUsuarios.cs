@@ -47,13 +47,18 @@ namespace Presentation
             Application.Exit();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSave_Click_2(object sender, EventArgs e)
         {
             if (value == false)
             {
-               try
+                try
                 {
-                    objetuser.InsertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text);
+                    objetuser.InsertarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, cmbCargo.Text, txtEmail.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch (Exception ex)
@@ -68,7 +73,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetuser.EditarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, txtPosition.Text, txtEmail.Text, iduser);
+                    objetuser.EditarUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, cmbCargo.Text, txtEmail.Text, iduser);
                     MessageBox.Show("Se edito correctamente");
                 }
                 catch (Exception ex)
