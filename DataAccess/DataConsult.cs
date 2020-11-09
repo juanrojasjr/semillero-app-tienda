@@ -365,34 +365,47 @@ namespace DataAccess
             }
         }
 
-        public List<DataProvider> GetBill(string value)
+        public List<DataBills> GetBill(string value, string dStar, string dEnd, int proccess)
         {
-            List<DataProvider> datapr = new List<DataProvider>();
+            List<DataBills> dataBills = new List<DataBills>();
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Bills WHERE IdBill LIKE '%" + value + "%'";
+                    if (proccess==1)
+                    {
+                        //Buscar por fecha
+                        command.CommandText = "SELECT * FROM Bills WHERE Date BETWEEN @dStart AND @dEnd";
+                        command.Parameters.AddWithValue("@dStart", dStar);
+                        command.Parameters.AddWithValue("@dEnd", dEnd);
+                    }
+                    else
+                    {
+                        //Buscar por número de factura
+                        command.CommandText = "SELECT * FROM Bills WHERE IdBill LIKE '%" + value + "%'";
+                    }
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
                     while (leer.Read())
                     {
-                        DataProvider oDatospr = new DataProvider();
-                        oDatospr.ProveedoresID = leer.GetInt32(0);
-                        oDatospr.NameCompany = leer.GetString(1);
-                        oDatospr.Nombre = leer.GetString(2);
-                        oDatospr.Phone = leer.GetString(3);
-                        oDatospr.Email = leer.GetString(4);
-                        datapr.Add(oDatospr);
+                        DataBills oDataBills = new DataBills();
+                        oDataBills.IdBill = leer.GetInt32(0);
+                        oDataBills.Date = leer.GetString(1);
+                        oDataBills.Seller = leer.GetString(2);
+                        oDataBills.PriceTotal = leer.GetDouble(3);
+                        oDataBills.Products = leer.GetString(4);
+                        oDataBills.PriceChange = leer.GetDouble(5);
+                        oDataBills.PriceRecep = leer.GetDouble(6);
+                        dataBills.Add(oDataBills);
                     }
                 }
             }
-            return datapr;
+            return dataBills;
         }
 
-        public void AddBill(string Date, string Seller, string PriceTotal, string Products)
+        public void AddBill(string Date, string Seller, string PriceTotal, string Products, string PriceChange, string PriceRecep)
         {
             float fPriceTotal = Convert.ToSingle(PriceTotal);
             using (var connection = GetConnection())
@@ -401,11 +414,13 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO Bills VALUES (@Date, @Seller, @PriceTotal, @Products)";
+                    command.CommandText = "INSERT INTO Bills VALUES (@Date, @Seller, @PriceTotal, @Products, @PriceChange, @PriceRecep)";
                     command.Parameters.AddWithValue("@Date", Date);
                     command.Parameters.AddWithValue("@Seller", Seller);
                     command.Parameters.AddWithValue("@PriceTotal", fPriceTotal);
                     command.Parameters.AddWithValue("@Products", Products);
+                    command.Parameters.AddWithValue("@PriceChange", PriceChange);
+                    command.Parameters.AddWithValue("@PriceRecep", PriceRecep);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
                 }
@@ -454,5 +469,16 @@ namespace DataAccess
         public string Nombre { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
+    }
+
+    public class DataBills
+    {
+        public int IdBill { get; set; }
+        public string Date { get; set; }
+        public string Seller { get; set; }
+        public double PriceTotal { get; set; }
+        public string Products { get; set; }
+        public double PriceChange { get; set; }
+        public double PriceRecep { get; set; }
     }
 }

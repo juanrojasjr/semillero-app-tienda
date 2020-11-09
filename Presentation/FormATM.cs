@@ -40,10 +40,6 @@ namespace Presentation
             Application.Exit();
         }
 
-        private void FormCajero_Load(object sender, EventArgs e)
-        {
-        }
-
         private void Cargar()
         {
             Models oDataATM = new Models();

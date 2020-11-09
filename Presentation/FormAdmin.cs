@@ -69,5 +69,16 @@ namespace Presentation
             users.Show();
             this.Hide();
         }
+
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormBuys fBuys = new FormBuys();
+            fBuys.Show();
+            this.Hide();
+        }
     }
 }

@@ -105,14 +105,14 @@ namespace Domain
             return tblProviders;
         }
 
-        public List<DataProvider> GetBill(string value)
+        public List<DataBills> GetBill(string value, string dStar, string dEnd, int proccess)
         {
-            return oDataConsult.GetBill(value);
+            return oDataConsult.GetBill(value, dStar, dEnd, proccess);
         }
 
-        public void AddBill(string Date, string Seller, string PriceTotal, string Products)
+        public void AddBill(string Date, string Seller, string PriceTotal, string Products, string PriceChange, string PriceRecep)
         {
-            oDataConsult.AddBill(Date, Seller, PriceTotal, Products);
+            oDataConsult.AddBill(Date, Seller, PriceTotal, Products, PriceChange, PriceRecep);
         }
 
         public int NumberBillsInitial()
