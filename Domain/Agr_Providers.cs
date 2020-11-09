@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 using DataAccess;
 using System.Data.SqlClient;
 using System.Data;
+using static DataAccess.DataProviders;
 
 namespace Domain
 {
     public class Agr_Providers
     {
-        private DataProviders prov = new DataProviders();
+        DataProviders prov = new DataProviders();
 
         public DataTable GetProvider()
         {
@@ -35,10 +36,10 @@ namespace Domain
             prov.DeleteProvider(Convert.ToInt32(ProveedoresID));
         }
 
-        DataProviders pv = new DataProviders();
-        public List<datos> Getpr(string value)
+
+        public List<datospr> Getpr(string value)
         {
-            return pv.Getpr(value);
+            return prov.Getpr(value);
         }
 
     }

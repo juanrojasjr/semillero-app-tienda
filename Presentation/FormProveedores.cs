@@ -31,9 +31,9 @@ namespace Presentation
         private void Cargar()
         {
             Agr_Providers oDataProveedor = new Agr_Providers();
-            if (!txtEmp.Text.Trim().Equals("") || !txtProv.Text.Trim().Equals(""))
+            if (!txtEmp.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataProveedor.funcion(txtEmp.Text);
+                dataGridView1.DataSource = oDataProveedor.Getpr(txtEmp.Text);
                 DataGridViewColumn col = dataGridView1.Columns[0];
                 col.Visible = false;
 
@@ -134,7 +134,6 @@ namespace Presentation
         {
             Cargar();
             txtEmp.Clear();
-            txtProv.Clear();
         }
     }
 }

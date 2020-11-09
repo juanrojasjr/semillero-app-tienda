@@ -63,11 +63,7 @@ namespace DataAccess
             }
         }
 
-<<<<<<< HEAD
-        public void Insertar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
-=======
-        public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
->>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
+        public void AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
         {
             using (var connection = GetConnection())
             {
@@ -88,12 +84,7 @@ namespace DataAccess
             }
         }
 
-<<<<<<< HEAD
-
-        public void Editar(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
-=======
-        public int SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
->>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
+        public void SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, int UserID)
         {
             using (var connection = GetConnection())
             {
@@ -115,11 +106,7 @@ namespace DataAccess
             }
         }
 
-<<<<<<< HEAD
-        public void Eliminar(int UserID)
-=======
-        public int DeleteUser(int UserID)
->>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
+        public void DeleteUser(int UserID)
         {
             using (var connection = GetConnection())
             {
@@ -133,6 +120,46 @@ namespace DataAccess
                     command.ExecuteNonQuery();
                 }
             }
+        }
+
+        public List<datosus> Getus(string value)
+        {
+            List<datosus> dataus = new List<datosus>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Users WHERE LoginName LIKE '%" + value + "%'";
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader leer = command.ExecuteReader();
+                    while (leer.Read())
+                    {
+                        datosus oDatosus = new datosus();
+                        oDatosus.UserID = leer.GetInt32(0);
+                        oDatosus.LoginName = leer.GetString(1);
+                        oDatosus.UserPass = leer.GetString(2);
+                        oDatosus.FirstName = leer.GetString(3);
+                        oDatosus.LastName = leer.GetString(4);
+                        oDatosus.Position = leer.GetString(5);
+                        oDatosus.Email = leer.GetString(6);
+                        dataus.Add(oDatosus);
+                    }
+                }
+            }
+            return dataus;
+        }
+
+        public class datosus
+        {
+            public int UserID { get; set; }
+            public string LoginName { get; set; }
+            public string UserPass { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+            public string Position { get; set; }
+            public string Email { get; set; }
         }
     }
 }

@@ -28,6 +28,22 @@ namespace Presentation
             column.Visible = false;
         }
 
+        private void Cargar()
+        {
+            UserModel oDatosus = new UserModel();
+            if (!txtUser.Text.Trim().Equals(""))
+            {
+                dataGridView1.DataSource = oDatosus.Getus(txtUser.Text);
+                DataGridViewColumn col = dataGridView1.Columns[0];
+                col.Visible = false;
+
+                if (dataGridView1.RowCount > 1)
+                {
+                    dataGridView1.CurrentCell = null;
+                }
+            }
+        }
+
         private void Mostraruser()
         {
             UserModel objeto = new UserModel();
@@ -89,6 +105,12 @@ namespace Presentation
             }
             else
                 MessageBox.Show("Seleccione una fila para editar");
+        }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            Cargar();
+            txtUser.Clear();
         }
     }
 }

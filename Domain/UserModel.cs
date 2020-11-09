@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Common.Cache;
 using DataAccess;
 using System.Data;
+using static DataAccess.UserDao;
 
 namespace Domain
 {
@@ -28,7 +29,7 @@ namespace Domain
             return store.addDataStore(namestore, nameowner, phone, address);
         }
 
-        private UserDao users = new UserDao();
+        UserDao users = new UserDao();
 
         public DataTable GetUser()
         {
@@ -37,35 +38,24 @@ namespace Domain
             return tabla;
         }
 
-<<<<<<< HEAD
-        public void InsertarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
+        public void AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
         {
-            users.Insertar(LoginName, UserPass, FirstName, LastName, Position, Email);
+           users.AddUser(LoginName, UserPass, FirstName, LastName, Position, Email);
         }
 
-        public void EditarUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
+        public void SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
         {
-            users.Editar(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
+            users.SetUser(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
         }
 
-        public void EliminarUser(string UserID)
+        public void DeleteUser(string UserID)
         {
-            users.Eliminar(Convert.ToInt32(UserID));
-=======
-        public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
-        {
-            return users.AddUser(LoginName, UserPass, FirstName, LastName, Position, Email);
+            users.DeleteUser(Convert.ToInt32(UserID));
         }
 
-        public int SetUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email, string UserID)
+        public List<datosus> Getus(string value)
         {
-            return users.SetUser(LoginName, UserPass, FirstName, LastName, Position, Email, Convert.ToInt32(UserID));
-        }
-
-        public int DeleteUser(string UserID)
-        {
-            return users.DeleteUser(Convert.ToInt32(UserID));
->>>>>>> 82bd43f01c319fd663f2051e50b260c11b537a62
+            return users.Getus(value);
         }
     }
 
