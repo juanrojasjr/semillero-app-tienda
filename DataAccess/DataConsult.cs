@@ -264,7 +264,7 @@ namespace DataAccess
         #endregion
 
         #region "Functions ATM"
-        public List<DataProductsATM> GetProductsLike(string value)
+        public List<DataProductsATM> GetProductsLike(string value, int process)
         {
             List<DataProductsATM> data = new List<DataProductsATM>();
             using (var connection = GetConnection())
@@ -273,7 +273,14 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%" + value + "%'";
+                    if (process == 1)
+                    {
+                        command.CommandText = "SELECT * FROM Products WHERE Ref LIKE '%" + value + "%'";
+                    }
+                    else
+                    {
+                        command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%" + value + "%'";
+                    }
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
                     while (leer.Read())

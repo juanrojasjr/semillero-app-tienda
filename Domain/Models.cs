@@ -57,9 +57,9 @@ namespace Domain
         #endregion
 
         #region "Functions ATM"
-        public List<DataProductsATM> GetProductsATM(string word)
+        public List<DataProductsATM> GetProductsATM(string word, int process)
         {
-            return oDataConsult.GetProductsLike(word);
+            return oDataConsult.GetProductsLike(word, process);
         }
         #endregion
 

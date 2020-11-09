@@ -21,9 +21,13 @@ namespace Presentation
         private void Cargar()
         {
             Models oDataCajero = new Models();
-            if (!txtSearch.Text.Trim().Equals("") || !txtRef.Text.Trim().Equals(""))
+            if (!txtRef.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataCajero.GetProductsATM(txtSearch.Text);
+                dataGridView1.DataSource = oDataCajero.GetProductsATM(txtRef.Text, 1);
+            }
+            else
+            {
+                dataGridView1.DataSource = oDataCajero.GetProductsATM(txtSearch.Text, 0);
             }
         }
 

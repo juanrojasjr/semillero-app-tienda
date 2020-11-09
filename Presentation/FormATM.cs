@@ -47,17 +47,21 @@ namespace Presentation
         private void Cargar()
         {
             Models oDataATM = new Models();
-            if (!txtSearch.Text.Trim().Equals("") || !txtRef.Text.Trim().Equals(""))
+            if (!txtSearch.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataATM.GetProductsATM(txtSearch.Text);
-                DataGridViewColumn col = dataGridView1.Columns[0];
-                col.Visible = false;
+                dataGridView1.DataSource = oDataATM.GetProductsATM(txtSearch.Text, 0);
+            }
+            else
+            {
+                dataGridView1.DataSource = oDataATM.GetProductsATM(txtRef.Text, 1);
+            }
 
-                if (dataGridView1.RowCount > 1)
-                {
-                    dataGridView1.CurrentCell = null;
-                }
+            DataGridViewColumn col = dataGridView1.Columns[0];
+            col.Visible = false;
 
+            if (dataGridView1.RowCount > 1)
+            {
+                dataGridView1.CurrentCell = null;
             }
         }
 
