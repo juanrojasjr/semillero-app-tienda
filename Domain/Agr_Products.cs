@@ -20,19 +20,19 @@ namespace Domain
             return tabla;
         }
 
-        public void AddProduct(string nombre_producto, string Descripcion, string Marca, string Precio_fabrica, string Precio_venta, string Unidades)
+        public void AddProduct(string Ref, string Nombre, string Categoria, string Stock, string CantMin, string PriceProv, string PriceSale)
         {
-            product.AddProduct(nombre_producto, Descripcion, Marca, Convert.ToSingle(Precio_fabrica), Convert.ToSingle(Precio_venta), Convert.ToInt32(Unidades));
+            product.AddProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale));
         }
 
-        public void EditProduct(string nombre_producto, string Descripcion, string Marca, string Precio_fabrica, string Precio_venta, string Unidades, string id_producto)
+        public void EditProduct(string Ref, string Nombre, string Categoria, string Stock, string CantMin, string PriceProv, string PriceSale, string IdProduct)
         {
-            product.EditProduct(nombre_producto, Descripcion, Marca, Convert.ToSingle(Precio_fabrica), Convert.ToSingle(Precio_venta), Convert.ToInt32(Unidades), Convert.ToInt32(id_producto));
+            product.EditProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale), Convert.ToInt32(IdProduct));
         }
 
-        public void DeleteProduct(string id_producto)
+        public void DeleteProduct(string IdProduct)
         {
-            product.DeleteProduct(Convert.ToInt32(id_producto));
+            product.DeleteProduct(Convert.ToInt32(IdProduct));
         }
     }
 

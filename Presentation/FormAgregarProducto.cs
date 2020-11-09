@@ -15,7 +15,7 @@ namespace Presentation
 
     {
         Agr_Products objetoproduct = new Agr_Products();
-        public string idproduct;
+        public string IdProduct;
         public bool valorprod = true;
 
         private void FormAgregarProducto_Load(object sender, EventArgs e)
@@ -63,7 +63,8 @@ namespace Presentation
             {
                 try
                 {
-                    objetoproduct.AddProduct(txtNombre.Text, txtDescrip.Text, txtMarca.Text, txtPrecioFab.Text, txtPrecioVenta.Text, txtUnidades.Text);
+                   
+                    objetoproduct.AddProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch(Exception ex)
@@ -79,7 +80,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetoproduct.EditProduct(txtNombre.Text, txtDescrip.Text, txtMarca.Text, txtPrecioFab.Text, txtPrecioVenta.Text, txtUnidades.Text, idproduct);
+                    objetoproduct.EditProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, IdProduct);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch (Exception ex)
@@ -91,6 +92,11 @@ namespace Presentation
                 this.Hide();
 
             }
+
+        }
+
+        private void Precio_venta_prod_Click(object sender, EventArgs e)
+        {
 
         }
     }

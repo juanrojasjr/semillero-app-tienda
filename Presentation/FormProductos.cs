@@ -15,7 +15,7 @@ namespace Presentation
     {
         Agr_Products a = new Agr_Products();
 
-        public string id_producto = null;
+        public string IdProduct = null;
 
 
         public FormProductos()
@@ -105,13 +105,14 @@ namespace Presentation
             {
                FormAgregarProducto fmaproduct = new FormAgregarProducto();
                 fmaproduct.Show();
-                fmaproduct.txtNombre.Text = dataProduct.CurrentRow.Cells["nombre_producto"].Value.ToString();
-                fmaproduct.txtDescrip.Text = dataProduct.CurrentRow.Cells["Descripcion"].Value.ToString();
-                fmaproduct.txtMarca.Text = dataProduct.CurrentRow.Cells["Marca"].Value.ToString();
-                fmaproduct.txtPrecioFab.Text = dataProduct.CurrentRow.Cells["Precio_fabrica"].Value.ToString();
-                fmaproduct.txtPrecioVenta.Text = dataProduct.CurrentRow.Cells["Precio_venta"].Value.ToString();
-                fmaproduct.txtUnidades.Text = dataProduct.CurrentRow.Cells["Unidades"].Value.ToString();
-                fmaproduct.idproduct = dataProduct.CurrentRow.Cells["id_producto"].Value.ToString();
+                fmaproduct.txtRef.Text = dataProduct.CurrentRow.Cells["Ref"].Value.ToString();
+                fmaproduct.txtNombre.Text = dataProduct.CurrentRow.Cells["Nombre"].Value.ToString();
+                fmaproduct.txtCategoria.Text = dataProduct.CurrentRow.Cells["Categoria"].Value.ToString();
+                fmaproduct.txtCantStock.Text = dataProduct.CurrentRow.Cells["Stock"].Value.ToString();
+                fmaproduct.txtCantMin.Text = dataProduct.CurrentRow.Cells["CanMin"].Value.ToString();
+                fmaproduct.txtPrecioCompra.Text = dataProduct.CurrentRow.Cells["PriceProv"].Value.ToString();
+                fmaproduct.txtPrecioVenta.Text = dataProduct.CurrentRow.Cells["PriceSale"].Value.ToString();
+                fmaproduct.IdProduct = dataProduct.CurrentRow.Cells["IdProduct"].Value.ToString();
                 this.Hide();
             }
             else
@@ -122,8 +123,8 @@ namespace Presentation
         {
             if (dataProduct.SelectedRows.Count > 0)
             {
-                id_producto = dataProduct.CurrentRow.Cells["id_producto"].Value.ToString();
-                a.DeleteProduct(id_producto);
+                IdProduct = dataProduct.CurrentRow.Cells["IdProduct"].Value.ToString();
+                a.DeleteProduct(IdProduct);
                 MessageBox.Show("Se ha eliminado correctamente");
                 MostrarProduct();
             }
