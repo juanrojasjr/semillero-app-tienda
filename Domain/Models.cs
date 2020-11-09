@@ -16,11 +16,15 @@ namespace Domain
         DataConsult oDataConsult = new DataConsult();
 
         #region "Functions Users"
-        public DataTable GetUser()
+        public DataTable GetUsers()
         {
-            DataTable tabla = new DataTable();
-            tabla = oDataConsult.GetUser();
+            DataTable tabla = oDataConsult.GetUsers();
             return tabla;
+        }
+
+        public List<DataUser> GetUser(string value)
+        {
+            return oDataConsult.GetUser(value);
         }
 
         public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
@@ -42,6 +46,7 @@ namespace Domain
         {
             return oDataConsult.Login(user, pass);
         }
+
         #endregion
 
         #region "Functions DataStore"
@@ -64,11 +69,16 @@ namespace Domain
         #endregion
 
         #region "Functions Providers"
-        public DataTable GetProvider()
+        public DataTable GetProviders()
         {
             DataTable tblProviders = new DataTable();
-            tblProviders = oDataConsult.GetProvider();
+            tblProviders = oDataConsult.GetProviders();
             return tblProviders;
+        }
+
+        public List<DataProvider> GetProvider(string value)
+        {
+            return oDataConsult.GetProvider(value);
         }
 
         public void AddProvider(string NameCompany, string Name, string Phone, string Email)
@@ -86,7 +96,29 @@ namespace Domain
             oDataConsult.DeleteProvider(Convert.ToInt32(ProveedoresID));
         }
         #endregion
+
+        #region "Functions Bills"
+        public DataTable GetBills()
+        {
+            DataTable tblProviders = new DataTable();
+            tblProviders = oDataConsult.GetBills();
+            return tblProviders;
+        }
+
+        public List<DataProvider> GetBill(string value)
+        {
+            return oDataConsult.GetBill(value);
+        }
+
+        public void AddBill(string Date, string Seller, string PriceTotal, string Products)
+        {
+            oDataConsult.AddBill(Date, Seller, PriceTotal, Products);
+        }
+
+        public int NumberBillsInitial()
+        {
+            return oDataConsult.GetNumberBillsInitial();
+        }
+        #endregion
     }
-
-
 }

@@ -11,6 +11,9 @@ using System.IO;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Common.Cache;
+using DataAccess;
+using Domain;
+using System.Diagnostics;
 
 namespace Presentation
 {
@@ -40,6 +43,8 @@ namespace Presentation
 
                 //Deshabilitar
                 btnCloseApp.Visible = false;
+
+                //Crear registro en tabla factura
             }
             else
             {
@@ -63,8 +68,12 @@ namespace Presentation
         public void genFactura(ListView list)
         {
             DateTime dateNow = DateTime.Now;
-            var ramNumber = new Random().Next(0,5000);
-            string nomFactura = "factura-"+ramNumber.ToString()+".pdf";
+            DataConsult oDataConsult = new DataConsult();
+            int numberBillDb = oDataConsult.GetNumberBillsInitial();
+            int numberBill = numberBillDb+1;
+
+
+            string nomFactura = "factura-"+ numberBill + ".pdf";
 
             //Tamaño de documento dinámico
             int tList = list.Items.Count;
@@ -85,7 +94,7 @@ namespace Presentation
             iTextSharp.text.Font times = new iTextSharp.text.Font(bf, 8);
 
             // Le colocamos el título y el autor
-            doc.AddTitle("Factura "+ ramNumber+" - "+ DataStoreCache.Namestore);
+            doc.AddTitle("Factura "+ numberBill + " - "+ DataStoreCache.Namestore);
             doc.AddCreator("Ingenieros Uniteistas");
 
             // Abrir documento
@@ -105,11 +114,13 @@ namespace Presentation
             p4.Alignment = Element.ALIGN_CENTER;
             doc.Add(p4);
 
-            string recibo = "Recibo: "+ramNumber.ToString();
+            string recibo = "Recibo: "+ numberBill;
             Paragraph P5 = new Paragraph(recibo, times);
             doc.Add(P5);
             Paragraph p6 = new Paragraph("Fecha: " + dateNow, times);
             doc.Add(p6);
+            Paragraph seller = new Paragraph("Vendedor: " + UserLoginCache.FirstName, times);
+            doc.Add(seller);
 
             //Salto de línea
             Paragraph sLine = new Paragraph(" ", times);
@@ -139,6 +150,7 @@ namespace Presentation
 
             //Se inicializa variables vacías
             //y se inicializan los objetos para la lista de items
+            string sItems = "";
             string tNombre = "";
             int tCantidad = 0;
             double tPrecio = 0;
@@ -196,6 +208,9 @@ namespace Presentation
                 tbItems.AddCell(iNombre);
                 tbItems.AddCell(iPrecio);
                 tbItems.AddCell(iMul);
+
+                //Añadir a valiable para serealización
+                sItems += tNombre + "," + concat + "," + sMult + ":";
 
                 //Reinicio de valores
                 tNombre = "";
@@ -264,6 +279,15 @@ namespace Presentation
             writer.Close();
 
             MessageBox.Show("¡Factura generada!");
+
+            //Añadir factura a base de datos
+            Models addBill = new Models();
+            addBill.AddBill(dateNow.ToString(), UserLoginCache.FirstName, lblPriceTotal.Text, sItems);
+
+            //Abrir factura
+            Process p = new Process();
+            p.StartInfo.FileName = "D:\\" + nomFactura;
+            p.Start();
         }
     }
 }

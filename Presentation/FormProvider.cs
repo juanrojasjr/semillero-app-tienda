@@ -31,7 +31,7 @@ namespace Presentation
 
         private void MostrarProvd()
         {
-            dataGridView1.DataSource = oProviders.GetProvider();
+            dataGridView1.DataSource = oProviders.GetProviders();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -54,12 +54,12 @@ namespace Presentation
             Application.Exit();
         }
 
-        private void btnMinApp_Click(object sender, EventArgs e)
+        private void BtnMinApp_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private void BtnEditar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -76,7 +76,7 @@ namespace Presentation
                 MessageBox.Show("Seleccione una fila para editar");
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void BtnEliminar_Click(object sender, EventArgs e)
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
@@ -87,6 +87,36 @@ namespace Presentation
             }
             else
                 MessageBox.Show("Seleccione una fila para eliminar");
+        }
+
+        private void BtnConsult_Click(object sender, EventArgs e)
+        {
+            Cargar();
+            txtEmp.Clear();
+            btnViewAll.Visible = true;
+        }
+
+        private void Cargar()
+        {
+            if (!txtEmp.Text.Trim().Equals(""))
+            {
+                dataGridView1.DataSource = oProviders.GetProvider(txtEmp.Text);
+                DataGridViewColumn col = dataGridView1.Columns[0];
+                col.Visible = false;
+
+                if (dataGridView1.RowCount > 1)
+                {
+                    dataGridView1.CurrentCell = null;
+                }
+            }
+        }
+
+        private void BtnViewAll_Click(object sender, EventArgs e)
+        {
+            Models oProviderss = new Models();
+            dataGridView1.DataSource = oProviderss.GetProviders();
+            txtEmp.Text = "";
+            btnViewAll.Visible = false;
         }
     }
 }

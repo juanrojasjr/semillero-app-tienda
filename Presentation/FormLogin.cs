@@ -33,7 +33,7 @@ namespace Presentation
                         FormAdmin admin = new FormAdmin();
                         FormATM cajero = new FormATM();
 
-                        if (UserCache.Position == "Administrator")
+                        if (UserLoginCache.Position == "Administrator")
                         {
                             admin.Show();
                             admin.FormClosed += logout;

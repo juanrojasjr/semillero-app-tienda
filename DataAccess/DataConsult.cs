@@ -29,11 +29,11 @@ namespace DataAccess
                     {
                         while (reader.Read())
                         {
-                            UserCache.IdUser = reader.GetInt32(0);
-                            UserCache.FirstName = reader.GetString(3);
-                            UserCache.LastName = reader.GetString(4);
-                            UserCache.Position = reader.GetString(5);
-                            UserCache.Email = reader.GetString(6);
+                            UserLoginCache.IdUser = reader.GetInt32(0);
+                            UserLoginCache.FirstName = reader.GetString(3);
+                            UserLoginCache.LastName = reader.GetString(4);
+                            UserLoginCache.Position = reader.GetString(5);
+                            UserLoginCache.Email = reader.GetString(6);
                         }
                         return true;
                     }
@@ -47,7 +47,7 @@ namespace DataAccess
 
         SqlDataReader view;
         DataTable tblUsers = new DataTable();
-        public DataTable GetUser()
+        public DataTable GetUsers()
         {
             using (var connection = GetConnection())
             {
@@ -61,6 +61,35 @@ namespace DataAccess
                     return tblUsers;
                 }
             }
+        }
+
+        public List<DataUser> GetUser(string value)
+        {
+            List<DataUser> dataus = new List<DataUser>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Users WHERE LoginName LIKE '%" + value + "%'";
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader leer = command.ExecuteReader();
+                    while (leer.Read())
+                    {
+                        DataUser oDataUser = new DataUser();
+                        oDataUser.UserID = leer.GetInt32(0);
+                        oDataUser.LoginName = leer.GetString(1);
+                        oDataUser.UserPass = leer.GetString(2);
+                        oDataUser.FirstName = leer.GetString(3);
+                        oDataUser.LastName = leer.GetString(4);
+                        oDataUser.Position = leer.GetString(5);
+                        oDataUser.Email = leer.GetString(6);
+                        dataus.Add(oDataUser);
+                    }
+                }
+            }
+            return dataus;
         }
 
         public int AddUser(string LoginName, string UserPass, string FirstName, string LastName, string Position, string Email)
@@ -124,9 +153,6 @@ namespace DataAccess
         #endregion
 
         #region "Functions DataStore"
-        //#####################
-        //FUNCTIONS DATASTORE
-        //#####################
         public int AddDataStore(string namestore, string nameowner, string phone, string address)
         {
             using (var connection = GetConnection())
@@ -185,13 +211,10 @@ namespace DataAccess
         #endregion
 
         #region "Functions Provider"
-        //#####################
-        //FUNCTIONS PROVIDER
-        //#####################
         SqlDataReader leer;
         DataTable tabla = new DataTable();
 
-        public DataTable GetProvider()
+        public DataTable GetProviders()
         {
             using (var connection = GetConnection())
             {
@@ -205,6 +228,33 @@ namespace DataAccess
                     return tabla;
                 }
             }
+        }
+
+        public List<DataProvider> GetProvider(string value)
+        {
+            List<DataProvider> datapr = new List<DataProvider>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM DataProviders WHERE NameCompany LIKE '%" + value + "%'";
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader leer = command.ExecuteReader();
+                    while (leer.Read())
+                    {
+                        DataProvider oDatospr = new DataProvider();
+                        oDatospr.ProveedoresID = leer.GetInt32(0);
+                        oDatospr.NameCompany = leer.GetString(1);
+                        oDatospr.Nombre = leer.GetString(2);
+                        oDatospr.Phone = leer.GetString(3);
+                        oDatospr.Email = leer.GetString(4);
+                        datapr.Add(oDatospr);
+                    }
+                }
+            }
+            return datapr;
         }
 
         public void AddProvider(string NameCompany,string Name,string Phone,string Email)
@@ -297,5 +347,112 @@ namespace DataAccess
             return data;
         }
         #endregion
+
+        #region "Bills"
+        public DataTable GetBills()
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Bills ORDERS BY Date DESC";
+                    leer = command.ExecuteReader();
+                    tabla.Load(leer);
+                    return tabla;
+                }
+            }
+        }
+
+        public List<DataProvider> GetBill(string value)
+        {
+            List<DataProvider> datapr = new List<DataProvider>();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Bills WHERE IdBill LIKE '%" + value + "%'";
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader leer = command.ExecuteReader();
+                    while (leer.Read())
+                    {
+                        DataProvider oDatospr = new DataProvider();
+                        oDatospr.ProveedoresID = leer.GetInt32(0);
+                        oDatospr.NameCompany = leer.GetString(1);
+                        oDatospr.Nombre = leer.GetString(2);
+                        oDatospr.Phone = leer.GetString(3);
+                        oDatospr.Email = leer.GetString(4);
+                        datapr.Add(oDatospr);
+                    }
+                }
+            }
+            return datapr;
+        }
+
+        public void AddBill(string Date, string Seller, string PriceTotal, string Products)
+        {
+            float fPriceTotal = Convert.ToSingle(PriceTotal);
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Bills VALUES (@Date, @Seller, @PriceTotal, @Products)";
+                    command.Parameters.AddWithValue("@Date", Date);
+                    command.Parameters.AddWithValue("@Seller", Seller);
+                    command.Parameters.AddWithValue("@PriceTotal", fPriceTotal);
+                    command.Parameters.AddWithValue("@Products", Products);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public int GetNumberBillsInitial()
+        {
+            int value = 0;
+            //SELECT IdBill FROM Bills
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT IdBill FROM Bills";
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader leer = command.ExecuteReader();
+                    while (leer.Read())
+                    {
+                        value = leer.GetInt32(0);
+                    }
+                }
+            }
+            return value;
+        }
+        #endregion
+    }
+
+    public class DataUser
+    {
+        public int UserID { get; set; }
+        public string LoginName { get; set; }
+        public string UserPass { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Position { get; set; }
+        public string Email { get; set; }
+    }
+
+    public class DataProvider
+    {
+        public int ProveedoresID { get; set; }
+        public string NameCompany { get; set; }
+        public string Nombre { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
     }
 }

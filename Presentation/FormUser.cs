@@ -13,7 +13,7 @@ namespace Presentation
 {
     public partial class FormUser : Form
     {
-        Models objetoUser = new Models();
+        Models oUsers = new Models();
         public string idUsers = null;
 
         public FormUser()
@@ -30,8 +30,7 @@ namespace Presentation
 
         private void Mostraruser()
         {
-            Models objeto = new Models();
-            dataGridView1.DataSource = objeto.GetUser();
+            dataGridView1.DataSource = oUsers.GetUsers();
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
@@ -64,7 +63,7 @@ namespace Presentation
             if (dataGridView1.SelectedRows.Count > 0)
             {
                 idUsers = dataGridView1.CurrentRow.Cells["UserID"].Value.ToString();
-                objetoUser.DeleteUser(idUsers);
+                oUsers.DeleteUser(idUsers);
                 MessageBox.Show("Se elimino correctamente");
                 Mostraruser();
             }
@@ -89,6 +88,30 @@ namespace Presentation
             }
             else
                 MessageBox.Show("Seleccione una fila para editar");
+        }
+
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            if (!txtUser.Text.Trim().Equals(""))
+            {
+                dataGridView1.DataSource = oUsers.GetUser(txtUser.Text);
+                DataGridViewColumn col = dataGridView1.Columns[0];
+                col.Visible = false;
+
+                if (dataGridView1.RowCount > 1)
+                {
+                    dataGridView1.CurrentCell = null;
+                }
+            }
+            btnViewAll.Visible = true;
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            Models oUserss = new Models();
+            dataGridView1.DataSource = oUserss.GetUsers();
+            txtUser.Text = "";
+            btnViewAll.Visible = false;
         }
     }
 }
