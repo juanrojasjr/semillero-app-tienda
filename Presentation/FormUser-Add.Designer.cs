@@ -46,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtPosition = new System.Windows.Forms.TextBox();
+            this.cbCargo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResApp)).BeginInit();
@@ -249,23 +249,27 @@
             this.label6.TabIndex = 29;
             this.label6.Text = "Cargo";
             // 
-            // txtPosition
+            // cbCargo
             // 
-            this.txtPosition.Location = new System.Drawing.Point(43, 443);
-            this.txtPosition.Name = "txtPosition";
-            this.txtPosition.Size = new System.Drawing.Size(326, 20);
-            this.txtPosition.TabIndex = 28;
+            this.cbCargo.FormattingEnabled = true;
+            this.cbCargo.Items.AddRange(new object[] {
+            "Administrator",
+            "Cajero"});
+            this.cbCargo.Location = new System.Drawing.Point(43, 444);
+            this.cbCargo.Name = "cbCargo";
+            this.cbCargo.Size = new System.Drawing.Size(327, 21);
+            this.cbCargo.TabIndex = 32;
             // 
-            // FormAgregarUsuarios
+            // FormAddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(408, 656);
+            this.Controls.Add(this.cbCargo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtPosition);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtLastName);
@@ -277,7 +281,7 @@
             this.Controls.Add(this.txtLoginName);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAgregarUsuarios";
+            this.Name = "FormAddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgregarUsuarios";
             this.Load += new System.EventHandler(this.FormAgregarUsuarios_Load);
@@ -313,6 +317,6 @@
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox txtPosition;
+        private System.Windows.Forms.ComboBox cbCargo;
     }
 }

@@ -22,8 +22,8 @@ namespace Presentation
             var valStore = store.GetDataStore();
             if (valStore)
             {
-                Application.Run(new FormLogin());
-                //Application.Run(new FormBuys());
+                //Application.Run(new FormLogin());
+                Application.Run(new FormAdmin());
             }
             else
             {

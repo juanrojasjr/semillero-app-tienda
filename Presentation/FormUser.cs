@@ -81,7 +81,7 @@ namespace Presentation
                 fmauser.txtUserPass.Text = dataGridView1.CurrentRow.Cells["UserPass"].Value.ToString();
                 fmauser.txtFirstName.Text = dataGridView1.CurrentRow.Cells["FirstName"].Value.ToString();
                 fmauser.txtLastName.Text = dataGridView1.CurrentRow.Cells["LastName"].Value.ToString();
-                fmauser.txtPosition.Text = dataGridView1.CurrentRow.Cells["Position"].Value.ToString();
+                //fmauser.cbCargo. = dataGridView1.CurrentRow.Cells["Position"].Value.ToString();
                 fmauser.txtEmail.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
                 fmauser.iduser = dataGridView1.CurrentRow.Cells["UserID"].Value.ToString();
                 this.Hide();
