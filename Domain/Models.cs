@@ -62,9 +62,9 @@ namespace Domain
         #endregion
 
         #region "Functions Products"
-        public List<DataProducts> GetProductsLike(string word, int process, int typeData)
+        public List<DataProducts> GetProductsLike(string word, int typeSearch, int typeData)
         {
-            return oDataConsult.GetProductsLike(word, process, typeData);
+            return oDataConsult.GetProductsLike(word, typeSearch, typeData);
         }
 
         public DataTable GetProduct()
@@ -121,8 +121,7 @@ namespace Domain
         #region "Functions Bills"
         public DataTable GetBills()
         {
-            DataTable tblProviders = new DataTable();
-            tblProviders = oDataConsult.GetBills();
+            DataTable tblProviders = oDataConsult.GetBills();
             return tblProviders;
         }
 
@@ -139,6 +138,18 @@ namespace Domain
         public int NumberBillsInitial()
         {
             return oDataConsult.GetNumberBillsInitial();
+        }
+        #endregion
+
+        #region "Functions Shopping"
+        public DataTable GetShoppings()
+        {
+            DataTable tblShopping = oDataConsult.GetShoppings();
+            return tblShopping;
+        }
+        public void AddShopping(string IdProduct, string Stock, string PriceBuy, string PriceSale, string PriceTotal, string NumBill, string IdProvider)
+        {
+            oDataConsult.AddShopping(Convert.ToInt32(IdProduct), Convert.ToInt32(Stock), Convert.ToDouble(PriceBuy), Convert.ToDouble(PriceSale), Convert.ToDouble(PriceTotal), Convert.ToInt32(NumBill), Convert.ToInt32(IdProvider));
         }
         #endregion
     }

@@ -61,11 +61,17 @@
     <Compile Include="FormAdmin.Designer.cs">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormBuys.cs">
+    <Compile Include="FormShopping.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBuys.Designer.cs">
-      <DependentUpon>FormBuys.cs</DependentUpon>
+    <Compile Include="FormShopping.Designer.cs">
+      <DependentUpon>FormShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSale.Designer.cs">
+      <DependentUpon>FormSale.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProvider-Add.cs">
       <SubType>Form</SubType>
@@ -138,8 +144,11 @@
     <EmbeddedResource Include="FormAdmin.resx">
       <DependentUpon>FormAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBuys.resx">
-      <DependentUpon>FormBuys.cs</DependentUpon>
+    <EmbeddedResource Include="FormShopping.resx">
+      <DependentUpon>FormShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSale.resx">
+      <DependentUpon>FormSale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProvider-Add.resx">
       <DependentUpon>FormProvider-Add.cs</DependentUpon>

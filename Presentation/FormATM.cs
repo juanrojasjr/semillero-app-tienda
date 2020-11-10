@@ -54,6 +54,10 @@ namespace Presentation
 
             DataGridViewColumn col = dataGridView1.Columns[0];
             col.Visible = false;
+            DataGridViewColumn col2 = dataGridView1.Columns[4];
+            col2.Visible = false;
+            DataGridViewColumn col3 = dataGridView1.Columns[5];
+            col3.Visible = false;
 
             if (dataGridView1.RowCount > 1)
             {
@@ -144,6 +148,11 @@ namespace Presentation
             oFormCajeroPago.list = listView1;
             oFormCajeroPago.Show();
             oFormCajeroPago.FormClosed += btnCancel_Click;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

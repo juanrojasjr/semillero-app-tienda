@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cache\DataProductsATM.cs" />
     <Compile Include="Cache\DataStoreCache.cs" />
     <Compile Include="Cache\Positions.cs" />
     <Compile Include="Cache\UserLoginCache.cs" />

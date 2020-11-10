@@ -23,7 +23,7 @@ namespace Presentation
             if (valStore)
             {
                 //Application.Run(new FormLogin());
-                Application.Run(new FormAdmin());
+                Application.Run(new FormShopping());
             }
             else
             {

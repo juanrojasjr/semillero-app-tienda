@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormBuys
+    partial class FormSale
     {
         /// <summary>
         /// Required designer variable.

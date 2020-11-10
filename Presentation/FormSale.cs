@@ -16,10 +16,10 @@ using System.Diagnostics;
 
 namespace Presentation
 {
-    public partial class FormBuys : Form
+    public partial class FormSale : Form
     {
         Models oBillsF = new Models();
-        public FormBuys()
+        public FormSale()
         {
             InitializeComponent();
         }
