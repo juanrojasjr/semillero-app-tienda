@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormProductos
+    partial class FormProducts
     {
         /// <summary>
         /// Required designer variable.
@@ -218,7 +218,7 @@
             this.btnBuscarProd.Text = "Buscar";
             this.btnBuscarProd.UseVisualStyleBackColor = false;
             // 
-            // FormProductos
+            // FormProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,7 +230,8 @@
             this.Controls.Add(this.dataProduct);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormProductos";
+            this.Name = "FormProducts";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PanelProductos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.panel1.ResumeLayout(false);

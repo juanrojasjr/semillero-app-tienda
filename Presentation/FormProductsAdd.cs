@@ -11,7 +11,7 @@ using Domain;
 
 namespace Presentation
 {
-    public partial class FormAgregarProducto : Form
+    public partial class FormProductsAdd : Form
 
     {
         Models oModels = new Models();
@@ -27,14 +27,14 @@ namespace Presentation
             }
 
         }
-        public FormAgregarProducto()
+        public FormProductsAdd()
         {
             InitializeComponent();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            FormProductos fmp = new FormProductos();
+            FormProducts fmp = new FormProducts();
 
             fmp.Show();
             this.Hide();
@@ -42,7 +42,7 @@ namespace Presentation
 
         private void btn_addproduct_Click(object sender, EventArgs e)
         {
-            FormProductos fmp = new FormProductos();
+            FormProducts fmp = new FormProducts();
            
             fmp.Show();
             this.Hide();
@@ -71,7 +71,7 @@ namespace Presentation
                 {
                     MessageBox.Show("No se pudo agregar los datos"+ ex);
                 }
-                FormProductos fmp = new FormProductos();
+                FormProducts fmp = new FormProducts();
                 fmp.Show();
                 this.Hide();
 
@@ -87,7 +87,7 @@ namespace Presentation
                 {
                     MessageBox.Show("No se pudo agregar los datos" + ex);
                 }
-                FormProductos fmp = new FormProductos();
+                FormProducts fmp = new FormProducts();
                 fmp.Show();
                 this.Hide();
 

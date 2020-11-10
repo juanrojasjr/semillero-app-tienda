@@ -45,11 +45,11 @@ namespace Presentation
             Models oDataATM = new Models();
             if (!txtSearch.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataATM.GetProductsATM(txtSearch.Text, 0);
+                dataGridView1.DataSource = oDataATM.GetProductsLike(txtSearch.Text, 0, 0);
             }
             else
             {
-                dataGridView1.DataSource = oDataATM.GetProductsATM(txtRef.Text, 1);
+                dataGridView1.DataSource = oDataATM.GetProductsLike(txtRef.Text, 1, 0);
             }
 
             DataGridViewColumn col = dataGridView1.Columns[0];

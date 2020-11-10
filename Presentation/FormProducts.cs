@@ -11,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    public partial class FormProductos : Form
+    public partial class FormProducts : Form
     {
         Models oModel = new Models();
 
         public string IdProduct = null;
 
-        public FormProductos()
+        public FormProducts()
         {
             InitializeComponent();
         }
@@ -57,7 +57,7 @@ namespace Presentation
         {
             if (dataProduct.SelectedRows.Count > 0)
             {
-               FormAgregarProducto fmaproduct = new FormAgregarProducto();
+               FormProductsAdd fmaproduct = new FormProductsAdd();
                 fmaproduct.Show();
                 fmaproduct.txtRef.Text = dataProduct.CurrentRow.Cells["Ref"].Value.ToString();
                 fmaproduct.txtNombre.Text = dataProduct.CurrentRow.Cells["Nombre"].Value.ToString();
@@ -88,7 +88,7 @@ namespace Presentation
 
         private void btn_agregarprod_Click(object sender, EventArgs e)
         {
-            FormAgregarProducto fmp = new FormAgregarProducto();
+            FormProductsAdd fmp = new FormProductsAdd();
             fmp.valorprod = false;
             fmp.Show();
             this.Hide();

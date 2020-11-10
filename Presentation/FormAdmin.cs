@@ -43,7 +43,7 @@ namespace Presentation
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormProductos fmp = new FormProductos();
+            FormProducts fmp = new FormProducts();
 
             fmp.Show();
             this.Hide();

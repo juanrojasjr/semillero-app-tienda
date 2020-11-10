@@ -1,6 +1,6 @@
 ﻿namespace Presentation
 {
-    partial class FormAgregarProducto
+    partial class FormProductsAdd
     {
         /// <summary>
         /// Required designer variable.
@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnMinApp = new System.Windows.Forms.PictureBox();
             this.btnResApp = new System.Windows.Forms.PictureBox();
             this.btnMaxApp = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@
             this.btnSaveProd = new System.Windows.Forms.Button();
             this.txtCantMin = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnResApp)).BeginInit();
@@ -72,6 +72,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 47);
             this.panel1.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label2.Location = new System.Drawing.Point(316, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(157, 19);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Agregar un Producto";
             // 
             // btnMinApp
             // 
@@ -279,18 +290,7 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Cantidad Minima";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(316, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 19);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Agregar un Producto";
-            // 
-            // FormAgregarProducto
+            // FormProductsAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -313,7 +313,8 @@
             this.Controls.Add(this.Marca_prod);
             this.Controls.Add(this.txtCategoria);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAgregarProducto";
+            this.Name = "FormProductsAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgregarProducto";
             this.Load += new System.EventHandler(this.FormAgregarProducto_Load);
             this.panel1.ResumeLayout(false);

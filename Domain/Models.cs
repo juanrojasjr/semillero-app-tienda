@@ -62,15 +62,14 @@ namespace Domain
         #endregion
 
         #region "Functions Products"
-        public List<DataProductsATM> GetProductsATM(string word, int process)
+        public List<DataProducts> GetProductsLike(string word, int process, int typeData)
         {
-            return oDataConsult.GetProductsLike(word, process);
+            return oDataConsult.GetProductsLike(word, process, typeData);
         }
 
         public DataTable GetProduct()
         {
-            DataTable tabla = new DataTable();
-            tabla = oDataConsult.GetProduct();
+            DataTable tabla = oDataConsult.GetProduct();
             return tabla;
         }
 
