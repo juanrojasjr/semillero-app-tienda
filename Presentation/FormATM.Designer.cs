@@ -271,6 +271,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(840, 166);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel4
             // 

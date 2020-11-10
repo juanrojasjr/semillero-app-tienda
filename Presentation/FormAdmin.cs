@@ -76,7 +76,7 @@ namespace Presentation
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormBuys fBuys = new FormBuys();
+            FormSale fBuys = new FormSale();
             fBuys.Show();
             this.Hide();
         }

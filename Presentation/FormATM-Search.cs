@@ -23,11 +23,11 @@ namespace Presentation
             Models oDataCajero = new Models();
             if (!txtRef.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataCajero.GetProductsATM(txtRef.Text, 1);
+                dataGridView1.DataSource = oDataCajero.GetProducts(txtRef.Text, 1, 0);
             }
             else
             {
-                dataGridView1.DataSource = oDataCajero.GetProductsATM(txtSearch.Text, 0);
+                dataGridView1.DataSource = oDataCajero.GetProducts(txtSearch.Text, 0, 0);
             }
         }
 

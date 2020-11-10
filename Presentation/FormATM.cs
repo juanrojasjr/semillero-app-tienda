@@ -45,15 +45,19 @@ namespace Presentation
             Models oDataATM = new Models();
             if (!txtSearch.Text.Trim().Equals(""))
             {
-                dataGridView1.DataSource = oDataATM.GetProductsATM(txtSearch.Text, 0);
+                dataGridView1.DataSource = oDataATM.GetProducts(txtSearch.Text, 0, 0);
             }
             else
             {
-                dataGridView1.DataSource = oDataATM.GetProductsATM(txtRef.Text, 1);
+                dataGridView1.DataSource = oDataATM.GetProducts(txtRef.Text, 1, 0);
             }
 
             DataGridViewColumn col = dataGridView1.Columns[0];
             col.Visible = false;
+            DataGridViewColumn col2 = dataGridView1.Columns[4];
+            col2.Visible = false;
+            DataGridViewColumn col3 = dataGridView1.Columns[5];
+            col3.Visible = false;
 
             if (dataGridView1.RowCount > 1)
             {
@@ -144,6 +148,11 @@ namespace Presentation
             oFormCajeroPago.list = listView1;
             oFormCajeroPago.Show();
             oFormCajeroPago.FormClosed += btnCancel_Click;
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
