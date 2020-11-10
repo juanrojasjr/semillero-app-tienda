@@ -72,12 +72,15 @@ namespace Presentation
 
         private void btnBuy_Click(object sender, EventArgs e)
         {
+            FormShopping fshop = new FormShopping();
+            fshop.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            FormSale fBuys = new FormSale();
-            fBuys.Show();
+            FormSale fSale = new FormSale();
+            fSale.Show();
             this.Hide();
         }
     }
