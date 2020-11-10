@@ -82,5 +82,10 @@ namespace Presentation
                 this.Hide();
             }
         }
+
+        private void txtNameCompany_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

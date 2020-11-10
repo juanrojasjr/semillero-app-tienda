@@ -43,7 +43,7 @@
   <ItemGroup>
     <Compile Include="ConnectionToSql.cs" />
     <Compile Include="DataConsult.cs" />
-    <Compile Include="Productos.cs" />
+    <Compile Include="DataProduct.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

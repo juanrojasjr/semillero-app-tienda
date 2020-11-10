@@ -211,11 +211,10 @@ namespace DataAccess
         #endregion
 
         #region "Functions Provider"
-        SqlDataReader leer;
-        DataTable tabla = new DataTable();
-
         public DataTable GetProviders()
         {
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -313,44 +312,71 @@ namespace DataAccess
         }
         #endregion
 
-        #region "Functions ATM"
-        public List<DataProductsATM> GetProductsLike(string value, int process)
+        #region "Functions Products"
+        public List<DataProducts> GetProductsLike(string word, int typeSearch, int typeData)
         {
-            List<DataProductsATM> data = new List<DataProductsATM>();
+            List<DataProducts> data = new List<DataProducts>();
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    if (process == 1)
+                    if (typeSearch == 1)
                     {
-                        command.CommandText = "SELECT * FROM Products WHERE Ref LIKE '%" + value + "%'";
+                        command.CommandText = "SELECT * FROM Products WHERE Ref LIKE '%" + word + "%'";
                     }
                     else
                     {
-                        command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%" + value + "%'";
+                        command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%" + word + "%'";
                     }
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
                     while (leer.Read())
                     {
-                        DataProductsATM oDatos = new DataProductsATM();
+                        DataProducts oDatos = new DataProducts();
                         oDatos.IdProduct = leer.GetInt32(0);
-                        oDatos.Ref = leer.GetString(1);
+                        oDatos.Ref = leer.GetInt32(1);
                         oDatos.Nombre = leer.GetString(2);
-                        oDatos.PriceSale = leer.GetInt32(7);
+                        if (typeData == 1)
+                        {
+                            oDatos.Stock = leer.GetInt32(4);
+                            oDatos.PriceProv = leer.GetDouble(6);
+                        }
+                        oDatos.PriceSale = leer.GetDouble(7);
                         data.Add(oDatos);
                     }
                 }
             }
             return data;
         }
+
+        public void SetProducts(string NameCompany, string Name, string Phone, string Email, int ProveedoresID)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "update DataProviders set NameCompany=@NameCompany,Name=@Name,Phone=@Phone,Email=@Email where ProveedoresID = @ProveedoresID";
+                    command.Parameters.AddWithValue("@NameCompany", NameCompany);
+                    command.Parameters.AddWithValue("@Name", Name);
+                    command.Parameters.AddWithValue("@Phone", Phone);
+                    command.Parameters.AddWithValue("@Email", Email);
+                    command.Parameters.AddWithValue("@ProveedoresID", ProveedoresID);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
         #endregion
 
-        #region "Bills"
+        #region "Functions Bills"
         public DataTable GetBills()
         {
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -449,6 +475,47 @@ namespace DataAccess
             return value;
         }
         #endregion
+
+        #region "Functions Shopping"
+        public DataTable GetShoppings()
+        {
+            DataTable tabla = new DataTable();
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "SELECT * FROM Shopping";
+                    SqlDataReader leer = command.ExecuteReader();
+                    tabla.Load(leer);
+                    return tabla;
+                }
+            }
+        }
+
+        public void AddShopping(int IdProduct, int Stock, double PriceBuy, double PriceSale, double PriceTotal, int NumBill, int IdProvider)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "INSERT INTO Shopping VALUES (@IdProduct, @Stock, @PriceBuy, @PriceSale, @PriceTotal, @NumBill, @IdProvider)";
+                    command.Parameters.AddWithValue("@IdProduct", IdProduct);
+                    command.Parameters.AddWithValue("@Stock", Stock);
+                    command.Parameters.AddWithValue("@PriceBuy", PriceBuy);
+                    command.Parameters.AddWithValue("@PriceSale", PriceSale);
+                    command.Parameters.AddWithValue("@PriceTotal", PriceTotal);
+                    command.Parameters.AddWithValue("@NumBill", NumBill);
+                    command.Parameters.AddWithValue("@IdProvider", IdProvider);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+        #endregion
     }
 
     public class DataUser
@@ -480,5 +547,15 @@ namespace DataAccess
         public string Products { get; set; }
         public double PriceChange { get; set; }
         public double PriceRecep { get; set; }
+    }
+
+    public class DataProducts
+    {
+        public int IdProduct { get; set; }
+        public int Ref { get; set; }
+        public string Nombre { get; set; }
+        public int Stock { get; set; }
+        public double PriceSale { get; set; }
+        public double PriceProv { get; set; }
     }
 }
