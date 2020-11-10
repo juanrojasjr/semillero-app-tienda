@@ -14,7 +14,7 @@ namespace Presentation
     public partial class FormAgregarProducto : Form
 
     {
-        Agr_Products objetoproduct = new Agr_Products();
+        Models oModels = new Models();
         public string IdProduct;
         public bool valorprod = true;
 
@@ -63,8 +63,8 @@ namespace Presentation
             {
                 try
                 {
-                   
-                    objetoproduct.AddProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text);
+
+                    oModels.AddProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch(Exception ex)
@@ -80,7 +80,7 @@ namespace Presentation
             {
                 try
                 {
-                    objetoproduct.EditProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, IdProduct);
+                    oModels.EditProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, IdProduct);
                     MessageBox.Show("Se agrego correctamente");
                 }
                 catch (Exception ex)

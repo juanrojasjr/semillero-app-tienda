@@ -69,7 +69,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 47);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // btnMinApp
             // 
@@ -184,7 +183,6 @@
             this.dataProduct.Name = "dataProduct";
             this.dataProduct.Size = new System.Drawing.Size(752, 300);
             this.dataProduct.TabIndex = 1;
-            this.dataProduct.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // txtBuscarProd
             // 
@@ -205,7 +203,6 @@
             this.label2.TabIndex = 20;
             this.label2.Text = "Buscar Producto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btnBuscarProd
             // 

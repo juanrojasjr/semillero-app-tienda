@@ -13,10 +13,9 @@ namespace Presentation
 {
     public partial class FormProductos : Form
     {
-        Agr_Products a = new Agr_Products();
+        Models oModel = new Models();
 
         public string IdProduct = null;
-
 
         public FormProductos()
         {
@@ -32,18 +31,8 @@ namespace Presentation
 
         private void MostrarProduct()
         {
-            Agr_Products objeto = new Agr_Products();
-            dataProduct.DataSource = objeto.GetProduct();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnLogout_Click(object sender, EventArgs e)
-        {
-
+            Models oModel = new Models();
+            dataProduct.DataSource = oModel.GetProduct();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -52,41 +41,6 @@ namespace Presentation
 
             fmp.Show();
             this.Hide();
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Marca_prod_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-       
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnBuscarprod_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnMinApp_Click(object sender, EventArgs e)
@@ -124,7 +78,7 @@ namespace Presentation
             if (dataProduct.SelectedRows.Count > 0)
             {
                 IdProduct = dataProduct.CurrentRow.Cells["IdProduct"].Value.ToString();
-                a.DeleteProduct(IdProduct);
+                oModel.DeleteProduct(IdProduct);
                 MessageBox.Show("Se ha eliminado correctamente");
                 MostrarProduct();
             }

@@ -61,10 +61,32 @@ namespace Domain
         }
         #endregion
 
-        #region "Functions ATM"
+        #region "Functions Products"
         public List<DataProductsATM> GetProductsATM(string word, int process)
         {
             return oDataConsult.GetProductsLike(word, process);
+        }
+
+        public DataTable GetProduct()
+        {
+            DataTable tabla = new DataTable();
+            tabla = oDataConsult.GetProduct();
+            return tabla;
+        }
+
+        public void AddProduct(string Ref, string Nombre, string Categoria, string Stock, string CantMin, string PriceProv, string PriceSale)
+        {
+            oDataConsult.AddProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale));
+        }
+
+        public void EditProduct(string Ref, string Nombre, string Categoria, string Stock, string CantMin, string PriceProv, string PriceSale, string IdProduct)
+        {
+            oDataConsult.EditProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale), Convert.ToInt32(IdProduct));
+        }
+
+        public void DeleteProduct(string IdProduct)
+        {
+            oDataConsult.DeleteProduct(Convert.ToInt32(IdProduct));
         }
         #endregion
 
