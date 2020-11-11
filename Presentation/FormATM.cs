@@ -52,12 +52,14 @@ namespace Presentation
                 dataGridView1.DataSource = oDataATM.GetProductsLike(txtRef.Text, 1, 0);
             }
 
-            DataGridViewColumn col = dataGridView1.Columns[0];
-            col.Visible = false;
-            DataGridViewColumn col2 = dataGridView1.Columns[4];
-            col2.Visible = false;
-            DataGridViewColumn col3 = dataGridView1.Columns[5];
+            DataGridViewColumn col0 = dataGridView1.Columns[0]; //Oculta columna IdProduct
+            col0.Visible = false;
+            DataGridViewColumn col3 = dataGridView1.Columns[3]; //Oculta columna Categoria
             col3.Visible = false;
+            DataGridViewColumn col5 = dataGridView1.Columns[5]; //Oculta columna Cantidad Minima
+            col5.Visible = false;
+            DataGridViewColumn col6 = dataGridView1.Columns[6]; //Oculta columna Precio Proveedor
+            col6.Visible = false;
 
             if (dataGridView1.RowCount > 1)
             {
