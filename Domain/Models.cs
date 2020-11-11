@@ -62,9 +62,9 @@ namespace Domain
         #endregion
 
         #region "Functions Products"
-        public DataTable GetProductsLike(string word, int typeSearch, int typeData)
+        public DataTable GetProductsLike(string word, int typeSearch)
         {
-            return oDataConsult.GetProductsLike(word, typeSearch, typeData);
+            return oDataConsult.GetProductsLike(word, typeSearch);
         }
 
         public DataTable GetProduct()

@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtRef = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.btnConsult = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -46,9 +43,6 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.txtRef);
-            this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.btnConsult);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.txtSearch);
@@ -59,39 +53,6 @@
             this.panel4.Size = new System.Drawing.Size(800, 94);
             this.panel4.TabIndex = 12;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(261, 16);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(186, 19);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Número de referencia";
-            // 
-            // txtRef
-            // 
-            this.txtRef.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRef.Location = new System.Drawing.Point(265, 39);
-            this.txtRef.Margin = new System.Windows.Forms.Padding(4);
-            this.txtRef.Name = "txtRef";
-            this.txtRef.Size = new System.Drawing.Size(200, 33);
-            this.txtRef.TabIndex = 11;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(238, 47);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(19, 19);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "o";
-            // 
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
@@ -99,7 +60,7 @@
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnConsult.Location = new System.Drawing.Point(478, 39);
+            this.btnConsult.Location = new System.Drawing.Point(337, 39);
             this.btnConsult.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsult.Name = "btnConsult";
             this.btnConsult.Size = new System.Drawing.Size(112, 34);
@@ -116,9 +77,9 @@
             this.label2.Location = new System.Drawing.Point(15, 16);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 19);
+            this.label2.Size = new System.Drawing.Size(283, 19);
             this.label2.TabIndex = 8;
-            this.label2.Text = "Nombre del producto";
+            this.label2.Text = "Nombre o referencia del producto";
             // 
             // txtSearch
             // 
@@ -126,7 +87,7 @@
             this.txtSearch.Location = new System.Drawing.Point(19, 39);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(211, 33);
+            this.txtSearch.Size = new System.Drawing.Size(310, 33);
             this.txtSearch.TabIndex = 7;
             // 
             // panel1
@@ -158,6 +119,8 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -165,6 +128,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(19, 155);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(768, 258);
@@ -197,9 +161,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtRef;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSearch;

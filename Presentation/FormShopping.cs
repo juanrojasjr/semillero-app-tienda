@@ -36,10 +36,12 @@ namespace Presentation
             bool va = Int32.TryParse(txtProduct.Text, out nu);
             if (va)
             {
-                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 1, 1);
+                // Busca por referencia de producto
+                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 1);
             }else
             {
-                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 0, 1);
+                //Busca por nombre de producto
+                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 0);
             }
             if (dataGridView1.RowCount < 1)
             {

@@ -21,20 +21,32 @@ namespace Presentation
         private void Cargar()
         {
             Models oDataCajero = new Models();
-            if (!txtRef.Text.Trim().Equals(""))
+            //Función para validar si es INT o STRING
+            int nu;
+            bool va = Int32.TryParse(txtSearch.Text, out nu);
+            if (va)
             {
-                dataGridView1.DataSource = oDataCajero.GetProductsLike(txtRef.Text, 1, 0);
+                //Busca por nombre de producto
+                dataGridView1.DataSource = oDataCajero.GetProductsLike(txtSearch.Text, 1);
             }
             else
             {
-                dataGridView1.DataSource = oDataCajero.GetProductsLike(txtSearch.Text, 0, 0);
+                //Busca por referencia de producto
+                dataGridView1.DataSource = oDataCajero.GetProductsLike(txtSearch.Text, 0);
             }
+            DataGridViewColumn col0 = dataGridView1.Columns[0]; //Oculta columna IdProduct
+            col0.Visible = false;
+            DataGridViewColumn col3 = dataGridView1.Columns[3]; //Oculta columna Categoria
+            col3.Visible = false;
+            DataGridViewColumn col5 = dataGridView1.Columns[5]; //Oculta columna Cantidad Minima
+            col5.Visible = false;
+            DataGridViewColumn col6 = dataGridView1.Columns[6]; //Oculta columna Precio Proveedor
+            col6.Visible = false;
         }
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
             Cargar();
-            txtRef.Clear();
             txtSearch.Clear();
         }
 

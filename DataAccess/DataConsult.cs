@@ -314,8 +314,7 @@ namespace DataAccess
         #endregion
 
         #region "Functions Products"
-        public DataTable GetProductsLike(string word, int typeSearch, int typeData)
-        //public List<DataProducts> GetProductsLike(string word, int typeSearch, int typeData)
+        public DataTable GetProductsLike(string word, int typeSearch)
         {
             DataTable data = new DataTable();
             using (var connection = GetConnection())
@@ -335,19 +334,6 @@ namespace DataAccess
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
                     data.Load(leer);
-                    //while (leer.Read())
-                    //{
-                    //    DataProducts oDatos = new DataProducts();
-                    //    oDatos.IdProduct = leer.GetInt32(0);
-                    //    oDatos.Ref = leer.GetInt32(1);
-                    //    oDatos.Nombre = leer.GetString(2);
-                    //    oDatos.Stock = leer.GetInt32(4);
-                    //    if (typeData == 1)
-                    //    {
-                    //        oDatos.PriceProv = leer.GetDouble(6);
-                    //    }
-                    //    oDatos.PriceSale = leer.GetDouble(7);
-                    //}
                 }
             }
             return data;
