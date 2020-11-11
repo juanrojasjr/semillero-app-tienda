@@ -181,7 +181,6 @@
             this.Precio_venta_prod.Size = new System.Drawing.Size(119, 19);
             this.Precio_venta_prod.TabIndex = 25;
             this.Precio_venta_prod.Text = "Precio de Venta";
-            this.Precio_venta_prod.Click += new System.EventHandler(this.Precio_venta_prod_Click);
             // 
             // txtPrecioCompra
             // 
@@ -189,7 +188,6 @@
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(313, 20);
             this.txtPrecioCompra.TabIndex = 24;
-            this.txtPrecioCompra.TextChanged += new System.EventHandler(this.txtPrecioFab_TextChanged);
             // 
             // Precio_compra_prod
             // 

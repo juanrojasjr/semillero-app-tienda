@@ -45,8 +45,7 @@ namespace DataAccess
             }
         }
 
-        SqlDataReader view;
-        DataTable tblUsers = new DataTable();
+        
         public DataTable GetUsers()
         {
             using (var connection = GetConnection())
@@ -54,6 +53,8 @@ namespace DataAccess
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
+                    SqlDataReader view;
+                    DataTable tblUsers = new DataTable();
                     command.Connection = connection;
                     command.CommandText = "SELECT * FROM Users";
                     view = command.ExecuteReader();
@@ -313,9 +314,10 @@ namespace DataAccess
         #endregion
 
         #region "Functions Products"
-        public List<DataProducts> GetProductsLike(string word, int typeSearch, int typeData)
+        public DataTable GetProductsLike(string word, int typeSearch, int typeData)
+        //public List<DataProducts> GetProductsLike(string word, int typeSearch, int typeData)
         {
-            List<DataProducts> data = new List<DataProducts>();
+            DataTable data = new DataTable();
             using (var connection = GetConnection())
             {
                 connection.Open();
@@ -332,20 +334,20 @@ namespace DataAccess
                     }
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
-                    while (leer.Read())
-                    {
-                        DataProducts oDatos = new DataProducts();
-                        oDatos.IdProduct = leer.GetInt32(0);
-                        oDatos.Ref = leer.GetInt32(1);
-                        oDatos.Nombre = leer.GetString(2);
-                        if (typeData == 1)
-                        {
-                            oDatos.Stock = leer.GetInt32(4);
-                            oDatos.PriceProv = leer.GetDouble(6);
-                        }
-                        oDatos.PriceSale = leer.GetDouble(7);
-                        data.Add(oDatos);
-                    }
+                    data.Load(leer);
+                    //while (leer.Read())
+                    //{
+                    //    DataProducts oDatos = new DataProducts();
+                    //    oDatos.IdProduct = leer.GetInt32(0);
+                    //    oDatos.Ref = leer.GetInt32(1);
+                    //    oDatos.Nombre = leer.GetString(2);
+                    //    oDatos.Stock = leer.GetInt32(4);
+                    //    if (typeData == 1)
+                    //    {
+                    //        oDatos.PriceProv = leer.GetDouble(6);
+                    //    }
+                    //    oDatos.PriceSale = leer.GetDouble(7);
+                    //}
                 }
             }
             return data;
@@ -462,7 +464,7 @@ namespace DataAccess
                     if (proccess==1)
                     {
                         //Buscar por fecha
-                        command.CommandText = "SELECT * FROM Bills WHERE Date BETWEEN @dStart AND @dEnd";
+                        command.CommandText = "SELECT IdBill AS #_Factura, Date AS Fecha, Seller AS Vendedor, PriceTotal AS Total, Products AS Productos, PriceChange AS Cambio, PriceRecep AS Recibido FROM Bills WHERE Date BETWEEN @dStart AND @dEnd";
                         command.Parameters.AddWithValue("@dStart", dStar);
                         command.Parameters.AddWithValue("@dEnd", dEnd);
                     }
@@ -476,13 +478,13 @@ namespace DataAccess
                     while (leer.Read())
                     {
                         DataBills oDataBills = new DataBills();
-                        oDataBills.IdBill = leer.GetInt32(0);
-                        oDataBills.Date = leer.GetString(1);
-                        oDataBills.Seller = leer.GetString(2);
-                        oDataBills.PriceTotal = leer.GetDouble(3);
-                        oDataBills.Products = leer.GetString(4);
-                        oDataBills.PriceChange = leer.GetDouble(5);
-                        oDataBills.PriceRecep = leer.GetDouble(6);
+                        oDataBills.Factura = leer.GetInt32(0);
+                        oDataBills.Fecha = leer.GetDateTime(1);
+                        oDataBills.Vendedor = leer.GetString(2);
+                        oDataBills.Total = leer.GetDouble(3);
+                        oDataBills.Productos = leer.GetString(4);
+                        oDataBills.Revuelto = leer.GetDouble(5);
+                        oDataBills.Recibido = leer.GetDouble(6);
                         dataBills.Add(oDataBills);
                     }
                 }
@@ -599,13 +601,13 @@ namespace DataAccess
 
     public class DataBills
     {
-        public int IdBill { get; set; }
-        public string Date { get; set; }
-        public string Seller { get; set; }
-        public double PriceTotal { get; set; }
-        public string Products { get; set; }
-        public double PriceChange { get; set; }
-        public double PriceRecep { get; set; }
+        public int Factura { get; set; }
+        public DateTime Fecha { get; set; }
+        public string Vendedor { get; set; }
+        public double Total { get; set; }
+        public string Productos { get; set; }
+        public double Revuelto { get; set; }
+        public double Recibido { get; set; }
     }
 
     public class DataProducts

@@ -45,16 +45,7 @@ namespace Presentation
             FormProducts fmp = new FormProducts();
            
             fmp.Show();
-            this.Hide();
-
-            
-        }
-
-       
-
-        private void txtPrecioFab_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Hide();            
         }
 
         private void btnSaveProd_Click(object sender, EventArgs e)
@@ -65,11 +56,11 @@ namespace Presentation
                 {
 
                     oModels.AddProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text);
-                    MessageBox.Show("Se agrego correctamente");
+                    MessageBox.Show("Se agregó correctamente.");
                 }
                 catch(Exception ex)
                 {
-                    MessageBox.Show("No se pudo agregar los datos"+ ex);
+                    MessageBox.Show("No se pudo agregar los datos."+ ex);
                 }
                 FormProducts fmp = new FormProducts();
                 fmp.Show();
@@ -81,22 +72,16 @@ namespace Presentation
                 try
                 {
                     oModels.EditProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, IdProduct);
-                    MessageBox.Show("Se agrego correctamente");
+                    MessageBox.Show("Se editó correctamente");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo agregar los datos" + ex);
+                    MessageBox.Show("No se pudo editar los datos" + ex);
                 }
                 FormProducts fmp = new FormProducts();
                 fmp.Show();
                 this.Hide();
-
             }
-
-        }
-
-        private void Precio_venta_prod_Click(object sender, EventArgs e)
-        {
 
         }
     }
