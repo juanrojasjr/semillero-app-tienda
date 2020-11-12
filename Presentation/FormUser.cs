@@ -26,6 +26,8 @@ namespace Presentation
             Mostraruser();
             DataGridViewColumn column = dataGridView1.Columns[0];
             column.Visible = false;
+            DataGridViewColumn colPass = dataGridView1.Columns[2];
+            colPass.Visible = false;
         }
 
         private void Mostraruser()
@@ -65,7 +67,8 @@ namespace Presentation
                 idUsers = dataGridView1.CurrentRow.Cells["UserID"].Value.ToString();
                 oUsers.DeleteUser(idUsers);
                 MessageBox.Show("Se elimino correctamente");
-                Mostraruser();
+                Models oUserss = new Models();
+                dataGridView1.DataSource = oUserss.GetUsers();
             }
             else
                 MessageBox.Show("Seleccione una fila para eliminar");

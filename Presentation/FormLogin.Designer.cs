@@ -97,7 +97,7 @@
             // 
             this.txtPass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.txtPass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPass.Location = new System.Drawing.Point(132, 157);
+            this.txtPass.Location = new System.Drawing.Point(132, 152);
             this.txtPass.Margin = new System.Windows.Forms.Padding(5);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '*';
@@ -167,7 +167,7 @@
             this.lblError.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.lblError.Image = global::Presentation.Properties.Resources.error;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(129, 197);
+            this.lblError.Location = new System.Drawing.Point(132, 250);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(124, 16);
             this.lblError.TabIndex = 6;
@@ -181,7 +181,7 @@
             this.btnLogin.FlatAppearance.BorderSize = 0;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(132, 228);
+            this.btnLogin.Location = new System.Drawing.Point(132, 202);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(260, 35);
             this.btnLogin.TabIndex = 5;
@@ -193,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label2.Location = new System.Drawing.Point(128, 133);
+            this.label2.Location = new System.Drawing.Point(128, 128);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(88, 19);
             this.label2.TabIndex = 3;
@@ -203,7 +203,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(128, 65);
+            this.label1.Location = new System.Drawing.Point(128, 60);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(145, 19);
             this.label1.TabIndex = 2;
@@ -214,7 +214,7 @@
             // 
             this.txtUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.txtUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtUser.Location = new System.Drawing.Point(132, 89);
+            this.txtUser.Location = new System.Drawing.Point(132, 84);
             this.txtUser.Margin = new System.Windows.Forms.Padding(5);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(260, 27);
