@@ -568,7 +568,8 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Shopping";
+                    command.CommandText = "SELECT DISTINCT C.Nombre Producto, A.Stock U_Compradas, A.PriceBuy Compra, A.PriceSale Venta, A.PriceTotal C_Total, A.NumBill Factura, B.NameCompany Proveedor " +
+                        "FROM Shopping A INNER JOIN DataProviders B ON A.IdProvider = B.ProveedoresID INNER JOIN Products C ON A.IdProducts = C.IdProducT";
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
                     return tabla;

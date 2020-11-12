@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picHistory = new System.Windows.Forms.PictureBox();
             this.btnBuyAdd = new System.Windows.Forms.PictureBox();
             this.btnMinApp = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
@@ -58,7 +59,10 @@
             this.txtBill = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnContinue = new System.Windows.Forms.Button();
+            this.dgvAllShopping = new System.Windows.Forms.DataGridView();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHistory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuyAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -66,12 +70,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.pnlFields.SuspendLayout();
             this.pnlProvider.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllShopping)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.panel1.Controls.Add(this.picHistory);
             this.panel1.Controls.Add(this.btnBuyAdd);
             this.panel1.Controls.Add(this.btnMinApp);
             this.panel1.Controls.Add(this.btnBack);
@@ -83,6 +89,18 @@
             this.panel1.Padding = new System.Windows.Forms.Padding(9, 9, 9, 10);
             this.panel1.Size = new System.Drawing.Size(692, 59);
             this.panel1.TabIndex = 5;
+            // 
+            // picHistory
+            // 
+            this.picHistory.Image = global::Presentation.Properties.Resources.history;
+            this.picHistory.Location = new System.Drawing.Point(97, 11);
+            this.picHistory.Margin = new System.Windows.Forms.Padding(4);
+            this.picHistory.Name = "picHistory";
+            this.picHistory.Size = new System.Drawing.Size(32, 32);
+            this.picHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picHistory.TabIndex = 12;
+            this.picHistory.TabStop = false;
+            this.picHistory.Click += new System.EventHandler(this.picHistory_Click);
             // 
             // btnBuyAdd
             // 
@@ -189,7 +207,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(15, 141);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(663, 108);
+            this.dataGridView1.Size = new System.Drawing.Size(663, 123);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
@@ -208,7 +226,7 @@
             this.pnlFields.Controls.Add(this.txtAddQuantity);
             this.pnlFields.Controls.Add(this.label3);
             this.pnlFields.Controls.Add(this.label2);
-            this.pnlFields.Location = new System.Drawing.Point(17, 270);
+            this.pnlFields.Location = new System.Drawing.Point(17, 274);
             this.pnlFields.Name = "pnlFields";
             this.pnlFields.Size = new System.Drawing.Size(415, 152);
             this.pnlFields.TabIndex = 20;
@@ -357,7 +375,7 @@
             this.pnlProvider.Controls.Add(this.label9);
             this.pnlProvider.Controls.Add(this.txtBill);
             this.pnlProvider.Controls.Add(this.label7);
-            this.pnlProvider.Location = new System.Drawing.Point(457, 270);
+            this.pnlProvider.Location = new System.Drawing.Point(457, 274);
             this.pnlProvider.Name = "pnlProvider";
             this.pnlProvider.Size = new System.Drawing.Size(218, 152);
             this.pnlProvider.TabIndex = 21;
@@ -420,13 +438,42 @@
             this.btnContinue.UseVisualStyleBackColor = false;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
+            // dgvAllShopping
+            // 
+            this.dgvAllShopping.AllowUserToAddRows = false;
+            this.dgvAllShopping.AllowUserToDeleteRows = false;
+            this.dgvAllShopping.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAllShopping.Location = new System.Drawing.Point(15, 74);
+            this.dgvAllShopping.Name = "dgvAllShopping";
+            this.dgvAllShopping.ReadOnly = true;
+            this.dgvAllShopping.Size = new System.Drawing.Size(663, 352);
+            this.dgvAllShopping.TabIndex = 23;
+            this.dgvAllShopping.Visible = false;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnCancel.FlatAppearance.BorderSize = 0;
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnCancel.Location = new System.Drawing.Point(18, 440);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(661, 34);
+            this.btnCancel.TabIndex = 24;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Visible = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // FormShopping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(692, 487);
-            this.Controls.Add(this.btnContinue);
+            this.Controls.Add(this.dgvAllShopping);
             this.Controls.Add(this.pnlProvider);
             this.Controls.Add(this.pnlFields);
             this.Controls.Add(this.dataGridView1);
@@ -435,6 +482,8 @@
             this.Controls.Add(this.txtProduct);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnContinue);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -443,6 +492,7 @@
             this.Text = "FormBuy";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picHistory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBuyAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
@@ -452,6 +502,7 @@
             this.pnlFields.PerformLayout();
             this.pnlProvider.ResumeLayout(false);
             this.pnlProvider.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAllShopping)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -489,5 +540,8 @@
         private System.Windows.Forms.TextBox txtBill;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btnContinue;
+        private System.Windows.Forms.PictureBox picHistory;
+        private System.Windows.Forms.DataGridView dgvAllShopping;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

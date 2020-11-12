@@ -158,5 +158,21 @@ namespace Presentation
             btnContinue.Enabled = false;
             dataGridView1.DataSource = null;
         }
+
+        private void picHistory_Click(object sender, EventArgs e)
+        {
+            Models oModels = new Models();
+            dgvAllShopping.DataSource = oModels.GetShoppings();
+            dataGridView1.Visible = false;
+            dgvAllShopping.Visible = true;
+            btnCancel.Visible = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Visible = true;
+            dgvAllShopping.Visible = false;
+            btnCancel.Visible = false;
+        }
     }
 }
