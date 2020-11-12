@@ -44,7 +44,6 @@ namespace DataAccess
                 }
             }
         }
-
         
         public DataTable GetUsers()
         {
@@ -379,7 +378,7 @@ namespace DataAccess
             }
         }
 
-        public void EditProduct(int Ref, string Nombre, string Categoria, int Stock, int CantMin, float PriceProv, float PriceSale, int IdProduct)
+        public void SetProduct(int Ref, string Nombre, string Categoria, int Stock, int CantMin, float PriceProv, float PriceSale, int IdProduct)
         {
             using (var connection = GetConnection())
             {
@@ -387,7 +386,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "update Products set Ref=@ref, Nombre=@nombre, Categoria=@categoria, Stock=@stock, CanMin=@canmin, PriceProv=@priceprov, PriceSale=@pricesale where IdProduct = @idproduct";
+                    command.CommandText = "UPDATE Products SET Ref=@ref, Nombre=@nombre, Categoria=@categoria, Stock=@stock, CanMin=@canmin, PriceProv=@priceprov, PriceSale=@pricesale WHERE IdProduct = @idproduct";
                     command.Parameters.AddWithValue("@ref", Ref);
                     command.Parameters.AddWithValue("@nombre", Nombre);
                     command.Parameters.AddWithValue("@categoria", Categoria);
@@ -395,6 +394,42 @@ namespace DataAccess
                     command.Parameters.AddWithValue("@canmin", CantMin);
                     command.Parameters.AddWithValue("@priceprov", PriceProv);
                     command.Parameters.AddWithValue("@pricesale", PriceSale);
+                    command.Parameters.AddWithValue("@idproduct", IdProduct);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void SetProduct(int Stock, float PriceProv, float PriceSale, int IdProduct)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Products SET Stock=@stock, PriceProv=@priceprov, PriceSale=@pricesale WHERE IdProduct = @idproduct";
+                    command.Parameters.AddWithValue("@stock", Stock);
+                    command.Parameters.AddWithValue("@priceprov", PriceProv);
+                    command.Parameters.AddWithValue("@pricesale", PriceSale);
+                    command.Parameters.AddWithValue("@idproduct", IdProduct);
+                    command.CommandType = CommandType.Text;
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public void SetProduct(int Stock, int IdProduct)
+        {
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "UPDATE Products SET Stock=@stock WHERE IdProduct = @idproduct";
+                    command.Parameters.AddWithValue("@stock", Stock);
                     command.Parameters.AddWithValue("@idproduct", IdProduct);
                     command.CommandType = CommandType.Text;
                     command.ExecuteNonQuery();
@@ -549,7 +584,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO Shopping VALUES (@IdProduct, @Stock, @PriceBuy, @PriceSale, @PriceTotal, @NumBill, @IdProvider)";
+                    command.CommandText = "INSERT INTO Shopping VALUES(@IdProduct, @Stock, @PriceBuy, @PriceSale, @PriceTotal, @NumBill, @IdProvider)";
                     command.Parameters.AddWithValue("@IdProduct", IdProduct);
                     command.Parameters.AddWithValue("@Stock", Stock);
                     command.Parameters.AddWithValue("@PriceBuy", PriceBuy);

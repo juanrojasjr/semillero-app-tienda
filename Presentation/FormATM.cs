@@ -40,6 +40,12 @@ namespace Presentation
             Application.Exit();
         }
 
+        private void btnConsult_Click(object sender, EventArgs e)
+        {
+            Cargar();
+            txtSearch.Clear();
+        }
+
         private void Cargar()
         {
             Models oDataATM = new Models();
@@ -73,17 +79,6 @@ namespace Presentation
             }
         }
 
-        private void actionItem(string sQuatity)
-        {
-            addListViewItems(sQuatity, dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString(),
-                dataGridView1.CurrentRow.Cells["Ref"].Value.ToString(),
-                dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
-            int price = Int32.Parse(dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString());
-            int iQuantity = Int32.Parse(sQuatity);
-            int op = price * iQuantity;
-            sumTotal(op);
-        }
-
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string sQuatity = popupQuantity();
@@ -98,12 +93,28 @@ namespace Presentation
             return sQuatity;
         }
 
-        private void addListViewItems(string cant, string Nombre, string refe, string price)
+        private void actionItem(string sQuatity)
+        {
+            //Agrega producto seleccionado al ListView
+            addListViewItems(sQuatity, dataGridView1.CurrentRow.Cells[2].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[1].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[7].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[0].Value.ToString(),
+                dataGridView1.CurrentRow.Cells[4].Value.ToString());
+            int price = Int32.Parse(dataGridView1.CurrentRow.Cells[7].Value.ToString());
+            int iQuantity = Int32.Parse(sQuatity);
+            int op = price * iQuantity;
+            sumTotal(op); //Realiza multiplicación de cantidad por precio
+        }
+
+        private void addListViewItems(string cant, string Nombre, string refe, string price, string id, string stock)
         {
             ListViewItem lista = new ListViewItem(cant);
             lista.SubItems.Add(Nombre);
             lista.SubItems.Add(refe);
             lista.SubItems.Add(price);
+            lista.SubItems.Add(id);
+            lista.SubItems.Add(stock);
             listView1.Items.Add(lista);
         }
 
@@ -112,13 +123,7 @@ namespace Presentation
             count += price;
             lblPriceTotal.Text = count.ToString();
             lblPriceTotal.Visible = true;
-        }
-
-        private void btnConsult_Click(object sender, EventArgs e)
-        {
-            Cargar();
-            txtSearch.Clear();
-        }
+        }        
 
         public void btnCancel_Click(object sender, EventArgs e)
         {
@@ -155,11 +160,6 @@ namespace Presentation
             oFormCajeroPago.list = listView1;
             oFormCajeroPago.Show();
             oFormCajeroPago.FormClosed += btnCancel_Click;
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Presentation
     public partial class FormCajeroPago : Form
     {
         public ListView list = new ListView();
+
         public FormCajeroPago()
         {
             InitializeComponent();
@@ -44,7 +45,8 @@ namespace Presentation
                 //Deshabilitar
                 btnCloseApp.Visible = false;
 
-                //Crear registro en tabla factura
+                //Actualizar Stock en base de datos
+                setStockItems();
             }
             else
             {
@@ -63,6 +65,38 @@ namespace Presentation
         {
             genFactura(list);
             this.Close();
+        }
+
+        public void setStockItems()
+        {
+            int sId = 0;
+            int sQuantity = 0;
+            int sStock = 0;
+            for (int i = 0; i < list.Items.Count; i++)
+            {
+                Models oModels = new Models();
+                for (int j = 0; j < list.Columns.Count; j++)
+                {
+                    if (j == 0)
+                    {
+                        sQuantity = Convert.ToInt32(list.Items[i].SubItems[j].Text);
+                    }
+                    else if (j == 4)
+                    {
+                        sId = Convert.ToInt32(list.Items[i].SubItems[j].Text);
+                    }
+                    else if(j == 5)
+                    {
+                        sStock = Convert.ToInt32(list.Items[i].SubItems[j].Text);
+                    }
+                }
+                int ope = sStock - sQuantity;
+                //Reinicio de valores
+                oModels.SetProduct(ope.ToString(), sId.ToString());
+                sId = 0;
+                sQuantity = 0;
+                sStock = 0;
+            }
         }
 
         public void genFactura(ListView list)
@@ -168,13 +202,13 @@ namespace Presentation
                         {
                             tCantidad = Convert.ToInt32(list.Items[i].SubItems[j].Text);
                         }
-                        else if(j == 3)
-                        {
-                            tPrecio = Convert.ToDouble(list.Items[i].SubItems[j].Text);
-                        }
-                        else
+                        else if(j == 1)
                         {
                             tNombre = list.Items[i].SubItems[j].Text;
+                        }
+                        else if (j == 3)
+                        {
+                            tPrecio = Convert.ToDouble(list.Items[i].SubItems[j].Text);
                         }
                     }
                 }

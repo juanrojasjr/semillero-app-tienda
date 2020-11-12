@@ -78,9 +78,19 @@ namespace Domain
             oDataConsult.AddProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale));
         }
 
-        public void EditProduct(string Ref, string Nombre, string Categoria, string Stock, string CantMin, string PriceProv, string PriceSale, string IdProduct)
+        public void SetProduct(string Ref, string Nombre, string Categoria, string Stock, string CantMin, string PriceProv, string PriceSale, string IdProduct)
         {
-            oDataConsult.EditProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale), Convert.ToInt32(IdProduct));
+            oDataConsult.SetProduct(Convert.ToInt32(Ref), Nombre, Categoria, Convert.ToInt32(Stock), Convert.ToInt32(CantMin), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale), Convert.ToInt32(IdProduct));
+        }
+
+        public void SetProduct(string Stock, string PriceProv, string PriceSale, string IdProduct)
+        {
+            oDataConsult.SetProduct(Convert.ToInt32(Stock), Convert.ToSingle(PriceProv), Convert.ToSingle(PriceSale), Convert.ToInt32(IdProduct));
+        }
+
+        public void SetProduct(string Stock, string IdProduct)
+        {
+            oDataConsult.SetProduct(Convert.ToInt32(Stock), Convert.ToInt32(IdProduct));
         }
 
         public void DeleteProduct(string IdProduct)

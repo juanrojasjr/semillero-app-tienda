@@ -71,7 +71,7 @@ namespace Presentation
             {
                 try
                 {
-                    oModels.EditProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, IdProduct);
+                    oModels.SetProduct(txtRef.Text, txtNombre.Text, txtCategoria.Text, txtCantStock.Text, txtCantMin.Text, txtPrecioCompra.Text, txtPrecioVenta.Text, IdProduct);
                     MessageBox.Show("Se editó correctamente");
                 }
                 catch (Exception ex)

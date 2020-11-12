@@ -152,7 +152,7 @@ namespace Presentation
         {
             Models oShopping = new Models();
             oShopping.AddShopping(lblId.Text, txtAddQuantity.Text, txtPriceBuy.Text, txtPriceSale.Text, lblTotalPrice.Text, txtBill.Text, idProvider[cbProvider.SelectedIndex].ToString());
-            MessageBox.Show("Compra registrada.");
+            oShopping.SetProduct(lblQuantityTotal.Text, txtPriceBuy.Text, txtPriceSale.Text, lblId.Text);
             pnlFields.Visible = false;
             pnlProvider.Visible = false;
             btnContinue.Enabled = false;

@@ -50,6 +50,8 @@
             this.colName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colRef = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colStock = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
@@ -268,7 +270,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(840, 166);
             this.dataGridView1.TabIndex = 9;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel4
             // 
@@ -305,7 +306,9 @@
             this.colQuantity,
             this.colName,
             this.colRef,
-            this.colPrice});
+            this.colPrice,
+            this.colId,
+            this.colStock});
             this.listView1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(19, 339);
@@ -335,6 +338,16 @@
             // 
             this.colPrice.Text = "Precio";
             this.colPrice.Width = 58;
+            // 
+            // colId
+            // 
+            this.colId.Text = "Id";
+            this.colId.Width = 0;
+            // 
+            // colStock
+            // 
+            this.colStock.Text = "Stock";
+            this.colStock.Width = 0;
             // 
             // FormATM
             // 
@@ -386,7 +399,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader colQuantity;
         private System.Windows.Forms.ColumnHeader colName;
         private System.Windows.Forms.ColumnHeader colRef;
         private System.Windows.Forms.ColumnHeader colPrice;
@@ -394,5 +406,8 @@
         private System.Windows.Forms.Button btnConsultItem;
         private System.Windows.Forms.Button btnDeleteItem;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ColumnHeader colQuantity;
+        private System.Windows.Forms.ColumnHeader colId;
+        private System.Windows.Forms.ColumnHeader colStock;
     }
 }
