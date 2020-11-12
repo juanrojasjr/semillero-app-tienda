@@ -56,7 +56,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 7);
-            this.panel1.Size = new System.Drawing.Size(383, 51);
+            this.panel1.Size = new System.Drawing.Size(329, 51);
             this.panel1.TabIndex = 5;
             // 
             // ImgPrint
@@ -76,7 +76,7 @@
             this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
-            this.btnCloseApp.Location = new System.Drawing.Point(349, 13);
+            this.btnCloseApp.Location = new System.Drawing.Point(295, 13);
             this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
@@ -88,7 +88,7 @@
             // txtRecep
             // 
             this.txtRecep.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRecep.Location = new System.Drawing.Point(123, 109);
+            this.txtRecep.Location = new System.Drawing.Point(91, 107);
             this.txtRecep.Name = "txtRecep";
             this.txtRecep.Size = new System.Drawing.Size(143, 27);
             this.txtRecep.TabIndex = 6;
@@ -98,7 +98,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(166, 87);
+            this.label1.Location = new System.Drawing.Point(134, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 19);
             this.label1.TabIndex = 7;
@@ -109,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(100, 112);
+            this.label2.Location = new System.Drawing.Point(71, 110);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(18, 19);
             this.label2.TabIndex = 8;
@@ -120,7 +120,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(143, 216);
+            this.label3.Location = new System.Drawing.Point(111, 214);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 19);
             this.label3.TabIndex = 9;
@@ -131,7 +131,7 @@
             this.lblPriceTotal.BackColor = System.Drawing.Color.Transparent;
             this.lblPriceTotal.Font = new System.Drawing.Font("Tahoma", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPriceTotal.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.lblPriceTotal.Location = new System.Drawing.Point(68, 235);
+            this.lblPriceTotal.Location = new System.Drawing.Point(36, 233);
             this.lblPriceTotal.Name = "lblPriceTotal";
             this.lblPriceTotal.Size = new System.Drawing.Size(253, 33);
             this.lblPriceTotal.TabIndex = 10;
@@ -143,7 +143,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(163, 299);
+            this.label4.Location = new System.Drawing.Point(131, 297);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 19);
             this.label4.TabIndex = 11;
@@ -154,7 +154,7 @@
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChange.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.lblChange.Location = new System.Drawing.Point(79, 318);
+            this.lblChange.Location = new System.Drawing.Point(47, 316);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(231, 23);
             this.lblChange.TabIndex = 12;
@@ -167,8 +167,9 @@
             this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnPayment.Location = new System.Drawing.Point(138, 143);
+            this.btnPayment.Location = new System.Drawing.Point(106, 141);
             this.btnPayment.Margin = new System.Windows.Forms.Padding(4);
             this.btnPayment.Name = "btnPayment";
             this.btnPayment.Size = new System.Drawing.Size(112, 34);
@@ -183,7 +184,7 @@
             this.lblError.ForeColor = System.Drawing.Color.White;
             this.lblError.Image = global::Presentation.Properties.Resources.error;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(84, 181);
+            this.lblError.Location = new System.Drawing.Point(52, 179);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(220, 16);
             this.lblError.TabIndex = 14;
@@ -195,7 +196,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(383, 384);
+            this.ClientSize = new System.Drawing.Size(329, 384);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.lblChange);

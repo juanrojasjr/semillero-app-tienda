@@ -61,7 +61,7 @@
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(6, 6, 6, 7);
-            this.panel1.Size = new System.Drawing.Size(927, 53);
+            this.panel1.Size = new System.Drawing.Size(932, 53);
             this.panel1.TabIndex = 4;
             // 
             // btnMinApp
@@ -69,7 +69,7 @@
             this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
-            this.btnMinApp.Location = new System.Drawing.Point(858, 13);
+            this.btnMinApp.Location = new System.Drawing.Point(863, 13);
             this.btnMinApp.Margin = new System.Windows.Forms.Padding(4);
             this.btnMinApp.Name = "btnMinApp";
             this.btnMinApp.Size = new System.Drawing.Size(24, 24);
@@ -95,7 +95,7 @@
             this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
-            this.btnCloseApp.Location = new System.Drawing.Point(890, 13);
+            this.btnCloseApp.Location = new System.Drawing.Point(895, 13);
             this.btnCloseApp.Margin = new System.Windows.Forms.Padding(4);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
@@ -208,12 +208,12 @@
             this.btnPrint.UseVisualStyleBackColor = false;
             this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
             // 
-            // FormBuys
+            // FormSale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(927, 527);
+            this.ClientSize = new System.Drawing.Size(932, 513);
             this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateEnd);
@@ -228,7 +228,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "FormBuys";
+            this.Name = "FormSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormBuys";
             this.panel1.ResumeLayout(false);

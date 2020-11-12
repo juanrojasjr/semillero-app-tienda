@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.PictureBox();
             this.btnEliminar = new System.Windows.Forms.PictureBox();
@@ -75,7 +75,7 @@
             // btnEditar
             // 
             this.btnEditar.Image = global::Presentation.Properties.Resources.edit;
-            this.btnEditar.Location = new System.Drawing.Point(118, 8);
+            this.btnEditar.Location = new System.Drawing.Point(88, 8);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(32, 32);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -86,7 +86,7 @@
             // btnEliminar
             // 
             this.btnEliminar.Image = global::Presentation.Properties.Resources.delete;
-            this.btnEliminar.Location = new System.Drawing.Point(169, 8);
+            this.btnEliminar.Location = new System.Drawing.Point(126, 8);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(32, 32);
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -110,7 +110,7 @@
             // btnAdd
             // 
             this.btnAdd.Image = global::Presentation.Properties.Resources.add1;
-            this.btnAdd.Location = new System.Drawing.Point(65, 8);
+            this.btnAdd.Location = new System.Drawing.Point(50, 8);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(32, 32);
             this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -173,7 +173,7 @@
             this.labelProv.AutoSize = true;
             this.labelProv.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProv.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labelProv.Location = new System.Drawing.Point(22, 62);
+            this.labelProv.Location = new System.Drawing.Point(22, 59);
             this.labelProv.Name = "labelProv";
             this.labelProv.Size = new System.Drawing.Size(222, 19);
             this.labelProv.TabIndex = 12;
@@ -182,9 +182,10 @@
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.Color.White;
-            this.txtUser.Location = new System.Drawing.Point(26, 90);
+            this.txtUser.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUser.Location = new System.Drawing.Point(26, 81);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(243, 20);
+            this.txtUser.Size = new System.Drawing.Size(243, 27);
             this.txtUser.TabIndex = 11;
             // 
             // dataGridView1
@@ -196,9 +197,9 @@
             this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(168)))), ((int)(((byte)(178)))));
             this.dataGridView1.Location = new System.Drawing.Point(26, 128);
             this.dataGridView1.Name = "dataGridView1";
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
-            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Size = new System.Drawing.Size(752, 300);
             this.dataGridView1.TabIndex = 10;
             // 

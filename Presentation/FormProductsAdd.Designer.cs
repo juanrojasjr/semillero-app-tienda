@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnMinApp = new System.Windows.Forms.PictureBox();
             this.btnResApp = new System.Windows.Forms.PictureBox();
             this.btnMaxApp = new System.Windows.Forms.PictureBox();
@@ -61,7 +60,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.btnMinApp);
             this.panel1.Controls.Add(this.btnResApp);
             this.panel1.Controls.Add(this.btnMaxApp);
@@ -72,17 +70,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(816, 47);
             this.panel1.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(316, 17);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 19);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "Agregar un Producto";
             // 
             // btnMinApp
             // 
@@ -148,9 +135,10 @@
             // 
             // txtCantStock
             // 
-            this.txtCantStock.Location = new System.Drawing.Point(442, 187);
+            this.txtCantStock.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantStock.Location = new System.Drawing.Point(442, 174);
             this.txtCantStock.Name = "txtCantStock";
-            this.txtCantStock.Size = new System.Drawing.Size(313, 20);
+            this.txtCantStock.Size = new System.Drawing.Size(313, 27);
             this.txtCantStock.TabIndex = 28;
             // 
             // Cantidad
@@ -158,7 +146,7 @@
             this.Cantidad.AutoSize = true;
             this.Cantidad.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cantidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Cantidad.Location = new System.Drawing.Point(438, 165);
+            this.Cantidad.Location = new System.Drawing.Point(438, 152);
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.Size = new System.Drawing.Size(136, 19);
             this.Cantidad.TabIndex = 27;
@@ -166,9 +154,10 @@
             // 
             // txtPrecioVenta
             // 
-            this.txtPrecioVenta.Location = new System.Drawing.Point(69, 380);
+            this.txtPrecioVenta.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioVenta.Location = new System.Drawing.Point(69, 332);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
-            this.txtPrecioVenta.Size = new System.Drawing.Size(313, 20);
+            this.txtPrecioVenta.Size = new System.Drawing.Size(313, 27);
             this.txtPrecioVenta.TabIndex = 26;
             // 
             // Precio_venta_prod
@@ -176,7 +165,7 @@
             this.Precio_venta_prod.AutoSize = true;
             this.Precio_venta_prod.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Precio_venta_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Precio_venta_prod.Location = new System.Drawing.Point(65, 358);
+            this.Precio_venta_prod.Location = new System.Drawing.Point(65, 310);
             this.Precio_venta_prod.Name = "Precio_venta_prod";
             this.Precio_venta_prod.Size = new System.Drawing.Size(119, 19);
             this.Precio_venta_prod.TabIndex = 25;
@@ -184,9 +173,10 @@
             // 
             // txtPrecioCompra
             // 
-            this.txtPrecioCompra.Location = new System.Drawing.Point(442, 280);
+            this.txtPrecioCompra.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecioCompra.Location = new System.Drawing.Point(442, 254);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
-            this.txtPrecioCompra.Size = new System.Drawing.Size(313, 20);
+            this.txtPrecioCompra.Size = new System.Drawing.Size(313, 27);
             this.txtPrecioCompra.TabIndex = 24;
             // 
             // Precio_compra_prod
@@ -194,7 +184,7 @@
             this.Precio_compra_prod.AutoSize = true;
             this.Precio_compra_prod.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Precio_compra_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Precio_compra_prod.Location = new System.Drawing.Point(438, 258);
+            this.Precio_compra_prod.Location = new System.Drawing.Point(438, 232);
             this.Precio_compra_prod.Name = "Precio_compra_prod";
             this.Precio_compra_prod.Size = new System.Drawing.Size(135, 19);
             this.Precio_compra_prod.TabIndex = 23;
@@ -202,9 +192,10 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(69, 187);
+            this.txtCategoria.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCategoria.Location = new System.Drawing.Point(69, 174);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(313, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(313, 27);
             this.txtCategoria.TabIndex = 22;
             // 
             // Marca_prod
@@ -212,7 +203,7 @@
             this.Marca_prod.AutoSize = true;
             this.Marca_prod.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Marca_prod.Location = new System.Drawing.Point(65, 165);
+            this.Marca_prod.Location = new System.Drawing.Point(65, 152);
             this.Marca_prod.Name = "Marca_prod";
             this.Marca_prod.Size = new System.Drawing.Size(76, 19);
             this.Marca_prod.TabIndex = 21;
@@ -220,9 +211,10 @@
             // 
             // txtRef
             // 
-            this.txtRef.Location = new System.Drawing.Point(69, 90);
+            this.txtRef.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRef.Location = new System.Drawing.Point(69, 96);
             this.txtRef.Name = "txtRef";
-            this.txtRef.Size = new System.Drawing.Size(313, 20);
+            this.txtRef.Size = new System.Drawing.Size(313, 27);
             this.txtRef.TabIndex = 20;
             // 
             // Descripcion_prod
@@ -230,7 +222,7 @@
             this.Descripcion_prod.AutoSize = true;
             this.Descripcion_prod.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Descripcion_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Descripcion_prod.Location = new System.Drawing.Point(65, 68);
+            this.Descripcion_prod.Location = new System.Drawing.Point(65, 74);
             this.Descripcion_prod.Name = "Descripcion_prod";
             this.Descripcion_prod.Size = new System.Drawing.Size(82, 19);
             this.Descripcion_prod.TabIndex = 19;
@@ -238,9 +230,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(442, 90);
+            this.txtNombre.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(442, 96);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(313, 20);
+            this.txtNombre.Size = new System.Drawing.Size(313, 27);
             this.txtNombre.TabIndex = 18;
             // 
             // Nombre_prod
@@ -248,7 +241,7 @@
             this.Nombre_prod.AutoSize = true;
             this.Nombre_prod.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nombre_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.Nombre_prod.Location = new System.Drawing.Point(438, 68);
+            this.Nombre_prod.Location = new System.Drawing.Point(438, 74);
             this.Nombre_prod.Name = "Nombre_prod";
             this.Nombre_prod.Size = new System.Drawing.Size(66, 19);
             this.Nombre_prod.TabIndex = 17;
@@ -256,13 +249,13 @@
             // 
             // btnSaveProd
             // 
-            this.btnSaveProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnSaveProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.btnSaveProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveProd.FlatAppearance.BorderSize = 0;
             this.btnSaveProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSaveProd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSaveProd.ForeColor = System.Drawing.Color.Black;
-            this.btnSaveProd.Location = new System.Drawing.Point(517, 380);
+            this.btnSaveProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnSaveProd.Location = new System.Drawing.Point(519, 324);
             this.btnSaveProd.Name = "btnSaveProd";
             this.btnSaveProd.Size = new System.Drawing.Size(159, 35);
             this.btnSaveProd.TabIndex = 29;
@@ -272,9 +265,10 @@
             // 
             // txtCantMin
             // 
-            this.txtCantMin.Location = new System.Drawing.Point(69, 280);
+            this.txtCantMin.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCantMin.Location = new System.Drawing.Point(69, 254);
             this.txtCantMin.Name = "txtCantMin";
-            this.txtCantMin.Size = new System.Drawing.Size(313, 20);
+            this.txtCantMin.Size = new System.Drawing.Size(313, 27);
             this.txtCantMin.TabIndex = 31;
             // 
             // label1
@@ -282,7 +276,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(65, 258);
+            this.label1.Location = new System.Drawing.Point(65, 232);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(127, 19);
             this.label1.TabIndex = 30;
@@ -293,7 +287,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(816, 480);
+            this.ClientSize = new System.Drawing.Size(816, 408);
             this.Controls.Add(this.txtCantMin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSaveProd);
@@ -348,7 +342,6 @@
         public System.Windows.Forms.TextBox txtCategoria;
         public System.Windows.Forms.TextBox txtRef;
         public System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtCantMin;
         private System.Windows.Forms.Label label1;
     }

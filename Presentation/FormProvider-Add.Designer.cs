@@ -62,7 +62,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(412, 48);
+            this.panel1.Size = new System.Drawing.Size(379, 48);
             this.panel1.TabIndex = 8;
             // 
             // btnMinApp
@@ -70,7 +70,7 @@
             this.btnMinApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinApp.Image = global::Presentation.Properties.Resources.minimize_icon;
-            this.btnMinApp.Location = new System.Drawing.Point(350, 11);
+            this.btnMinApp.Location = new System.Drawing.Point(317, 11);
             this.btnMinApp.Name = "btnMinApp";
             this.btnMinApp.Size = new System.Drawing.Size(24, 24);
             this.btnMinApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -83,7 +83,7 @@
             this.btnResApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnResApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnResApp.Image = global::Presentation.Properties.Resources.restaurar_icon;
-            this.btnResApp.Location = new System.Drawing.Point(350, 11);
+            this.btnResApp.Location = new System.Drawing.Point(317, 11);
             this.btnResApp.Name = "btnResApp";
             this.btnResApp.Size = new System.Drawing.Size(24, 24);
             this.btnResApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -96,7 +96,7 @@
             this.btnMaxApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaxApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaxApp.Image = global::Presentation.Properties.Resources.maximisize_icon;
-            this.btnMaxApp.Location = new System.Drawing.Point(350, 11);
+            this.btnMaxApp.Location = new System.Drawing.Point(317, 11);
             this.btnMaxApp.Name = "btnMaxApp";
             this.btnMaxApp.Size = new System.Drawing.Size(24, 24);
             this.btnMaxApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -109,7 +109,7 @@
             this.btnCloseApp.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCloseApp.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCloseApp.Image = global::Presentation.Properties.Resources.close_icon;
-            this.btnCloseApp.Location = new System.Drawing.Point(380, 11);
+            this.btnCloseApp.Location = new System.Drawing.Point(347, 11);
             this.btnCloseApp.Name = "btnCloseApp";
             this.btnCloseApp.Size = new System.Drawing.Size(24, 24);
             this.btnCloseApp.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -130,7 +130,7 @@
             // 
             // txtNameCompany
             // 
-            this.txtNameCompany.Location = new System.Drawing.Point(47, 117);
+            this.txtNameCompany.Location = new System.Drawing.Point(27, 99);
             this.txtNameCompany.Name = "txtNameCompany";
             this.txtNameCompany.Size = new System.Drawing.Size(327, 20);
             this.txtNameCompany.TabIndex = 9;
@@ -141,7 +141,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(44, 95);
+            this.label2.Location = new System.Drawing.Point(24, 77);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 19);
             this.label2.TabIndex = 10;
@@ -152,7 +152,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(44, 180);
+            this.label3.Location = new System.Drawing.Point(24, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 19);
             this.label3.TabIndex = 12;
@@ -160,7 +160,7 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(47, 202);
+            this.txtName.Location = new System.Drawing.Point(27, 170);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(327, 20);
             this.txtName.TabIndex = 11;
@@ -170,7 +170,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(43, 270);
+            this.label4.Location = new System.Drawing.Point(23, 215);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 14;
@@ -178,7 +178,7 @@
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(47, 292);
+            this.txtPhone.Location = new System.Drawing.Point(27, 237);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(326, 20);
             this.txtPhone.TabIndex = 13;
@@ -188,7 +188,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(43, 363);
+            this.label5.Location = new System.Drawing.Point(22, 287);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(139, 19);
             this.label5.TabIndex = 16;
@@ -196,20 +196,20 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(47, 385);
+            this.txtEmail.Location = new System.Drawing.Point(26, 309);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(326, 20);
             this.txtEmail.TabIndex = 15;
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.Black;
-            this.btnSave.Location = new System.Drawing.Point(119, 478);
+            this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
+            this.btnSave.Location = new System.Drawing.Point(117, 368);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(145, 35);
             this.btnSave.TabIndex = 17;
@@ -217,12 +217,12 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
-            // FormAgregarProveedor
+            // FormAddProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(412, 554);
+            this.ClientSize = new System.Drawing.Size(379, 440);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEmail);
@@ -234,7 +234,7 @@
             this.Controls.Add(this.txtNameCompany);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FormAgregarProveedor";
+            this.Name = "FormAddProvider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormAgregarProveedor";
             this.Load += new System.EventHandler(this.FormAgregarProveedor_Load);

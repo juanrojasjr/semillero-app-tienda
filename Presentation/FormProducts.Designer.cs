@@ -87,7 +87,7 @@
             // 
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Image = global::Presentation.Properties.Resources.delete;
-            this.btnEliminar.Location = new System.Drawing.Point(169, 8);
+            this.btnEliminar.Location = new System.Drawing.Point(126, 8);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(32, 32);
             this.btnEliminar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             // 
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Image = global::Presentation.Properties.Resources.edit;
-            this.btnEditar.Location = new System.Drawing.Point(118, 8);
+            this.btnEditar.Location = new System.Drawing.Point(88, 8);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(32, 32);
             this.btnEditar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -137,7 +137,7 @@
             // 
             this.btn_agregarprod.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_agregarprod.Image = global::Presentation.Properties.Resources.add;
-            this.btn_agregarprod.Location = new System.Drawing.Point(65, 8);
+            this.btn_agregarprod.Location = new System.Drawing.Point(50, 8);
             this.btn_agregarprod.Name = "btn_agregarprod";
             this.btn_agregarprod.Size = new System.Drawing.Size(32, 32);
             this.btn_agregarprod.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -186,9 +186,10 @@
             // 
             // txtBuscarProd
             // 
-            this.txtBuscarProd.Location = new System.Drawing.Point(24, 91);
+            this.txtBuscarProd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarProd.Location = new System.Drawing.Point(24, 83);
             this.txtBuscarProd.Name = "txtBuscarProd";
-            this.txtBuscarProd.Size = new System.Drawing.Size(278, 20);
+            this.txtBuscarProd.Size = new System.Drawing.Size(278, 27);
             this.txtBuscarProd.TabIndex = 2;
             // 
             // label2
@@ -197,7 +198,7 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(20, 69);
+            this.label2.Location = new System.Drawing.Point(20, 61);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 19);
             this.label2.TabIndex = 20;
@@ -209,8 +210,9 @@
             this.btnBuscarProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
             this.btnBuscarProd.FlatAppearance.BorderSize = 0;
             this.btnBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarProd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarProd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnBuscarProd.Location = new System.Drawing.Point(324, 77);
+            this.btnBuscarProd.Location = new System.Drawing.Point(324, 76);
             this.btnBuscarProd.Margin = new System.Windows.Forms.Padding(4);
             this.btnBuscarProd.Name = "btnBuscarProd";
             this.btnBuscarProd.Size = new System.Drawing.Size(112, 34);
