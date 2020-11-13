@@ -202,6 +202,7 @@
             this.txtEmp.Name = "txtEmp";
             this.txtEmp.Size = new System.Drawing.Size(239, 27);
             this.txtEmp.TabIndex = 7;
+            this.txtEmp.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmp_KeyPress);
             // 
             // btnConsult
             // 

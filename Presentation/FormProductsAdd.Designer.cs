@@ -259,7 +259,7 @@
             this.btnSaveProd.Name = "btnSaveProd";
             this.btnSaveProd.Size = new System.Drawing.Size(159, 35);
             this.btnSaveProd.TabIndex = 29;
-            this.btnSaveProd.Text = "Guardar Producto";
+            this.btnSaveProd.Text = "Guardar";
             this.btnSaveProd.UseVisualStyleBackColor = false;
             this.btnSaveProd.Click += new System.EventHandler(this.btnSaveProd_Click);
             // 

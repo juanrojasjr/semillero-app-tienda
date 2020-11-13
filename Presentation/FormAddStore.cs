@@ -20,15 +20,25 @@ namespace Presentation
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            enterFunction();
+        }
+
+        private void btnCloseApp_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void enterFunction()
+        {
             if (txtNameStore.Text == "" || txtNameOwner.Text == "" ||
-                txtAddress.Text == "" || txtPhone.Text == "")
+                txtAddress.Text == "" || txtPhone.Text == "" || txtNit.Text == "")
             {
                 lblError.Visible = true;
             }
             else
             {
                 Models dataStore = new Models();
-                var val = dataStore.AddDataStore(txtNameStore.Text, txtNameOwner.Text, txtPhone.Text, txtAddress.Text);
+                var val = dataStore.AddDataStore(txtNameStore.Text, txtNameOwner.Text, txtPhone.Text, txtAddress.Text, txtNit.Text);
                 if (val == 1)
                 {
                     MessageBox.Show("Tienda registrada.");
@@ -39,19 +49,14 @@ namespace Presentation
                     login.Show();
                 }
             }
-
-
-            
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        private void txtNit_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-        }
-
-        private void btnCloseApp_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
         }
     }
 }

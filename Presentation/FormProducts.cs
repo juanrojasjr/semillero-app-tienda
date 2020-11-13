@@ -93,5 +93,57 @@ namespace Presentation
             fmp.Show();
             this.Hide();
         }
+
+        private void btnBuscarProd_Click(object sender, EventArgs e)
+        {
+            enterFunction();
+        }
+
+        private void enterFunction()
+        {
+            Cargar();
+            txtBuscarProd.Clear();
+        }
+
+        private void txtBuscarProd_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
+        }
+
+        private void Cargar()
+        {
+            Models oDataATM = new Models();
+
+            //Función para validar si es INT o STRING
+            int nu;
+            bool va = Int32.TryParse(txtBuscarProd.Text, out nu);
+            if (va)
+            {
+                //Busca por referencia de producto
+                dataProduct.DataSource = oDataATM.GetProductsLike(txtBuscarProd.Text, 1);
+            }
+            else
+            {
+                //Busca por nombre de producto
+                dataProduct.DataSource = oDataATM.GetProductsLike(txtBuscarProd.Text, 0);
+            }
+
+            DataGridViewColumn col0 = dataProduct.Columns[0]; //Oculta columna IdProduct
+            col0.Visible = false;
+            DataGridViewColumn col3 = dataProduct.Columns[3]; //Oculta columna Categoria
+            col3.Visible = false;
+            DataGridViewColumn col5 = dataProduct.Columns[5]; //Oculta columna Cantidad Minima
+            col5.Visible = false;
+            DataGridViewColumn col6 = dataProduct.Columns[6]; //Oculta columna Precio Proveedor
+            col6.Visible = false;
+
+            if (dataProduct.RowCount > 1)
+            {
+                dataProduct.CurrentCell = null;
+            }
+        }
     }
 }

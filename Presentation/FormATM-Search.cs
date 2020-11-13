@@ -46,13 +46,26 @@ namespace Presentation
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
-            Cargar();
-            txtSearch.Clear();
+            enterFunction();
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void enterFunction()
+        {
+            Cargar();
+            txtSearch.Clear();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
         }
     }
 }

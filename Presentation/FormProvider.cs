@@ -91,9 +91,7 @@ namespace Presentation
 
         private void BtnConsult_Click(object sender, EventArgs e)
         {
-            Cargar();
-            txtEmp.Clear();
-            btnViewAll.Visible = true;
+            enterFunction();
         }
 
         private void Cargar()
@@ -117,6 +115,21 @@ namespace Presentation
             dataGridView1.DataSource = oProviderss.GetProviders();
             txtEmp.Text = "";
             btnViewAll.Visible = false;
+        }
+
+        private void txtEmp_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
+        }
+
+        private void enterFunction()
+        {
+            Cargar();
+            txtEmp.Clear();
+            btnViewAll.Visible = true;
         }
     }
 }

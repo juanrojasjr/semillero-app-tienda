@@ -28,30 +28,7 @@ namespace Presentation
 
         private void btnPayment_Click(object sender, EventArgs e)
         {
-            int change = Int32.Parse(txtRecep.Text);
-            int priceTotal = Int32.Parse(lblPriceTotal.Text);
-            lblError.Visible = false;
-
-            if (change >= priceTotal)
-            {
-                int op = change - priceTotal;
-                string sOp = op.ToString();
-                lblChange.Text = sOp;
-
-                //Habilitar
-                lblChange.Visible = true;
-                ImgPrint.Visible = true;
-
-                //Deshabilitar
-                btnCloseApp.Visible = false;
-
-                //Actualizar Stock en base de datos
-                setStockItems();
-            }
-            else
-            {
-                lblError.Visible = true;
-            }
+            enterFunction();
         }
 
         private void btnCloseApp_Click(object sender, EventArgs e)
@@ -138,7 +115,7 @@ namespace Presentation
             Paragraph p1 = new Paragraph(DataStoreCache.Namestore, times);
             p1.Alignment = Element.ALIGN_CENTER;
             doc.Add(p1);
-            Paragraph p2 = new Paragraph("NIT: " + "901.177.291-5", times);
+            Paragraph p2 = new Paragraph("NIT: " + DataStoreCache.Nit, times);
             p2.Alignment = Element.ALIGN_CENTER;
             doc.Add(p2);
             Paragraph p3 = new Paragraph(DataStoreCache.Address, times);
@@ -325,6 +302,42 @@ namespace Presentation
             Process p = new Process();
             p.StartInfo.FileName = "D:\\facturas\\" + nomFactura;
             p.Start();
+        }
+
+        private void enterFunction()
+        {
+            int change = Int32.Parse(txtRecep.Text);
+            int priceTotal = Int32.Parse(lblPriceTotal.Text);
+            lblError.Visible = false;
+
+            if (change >= priceTotal)
+            {
+                int op = change - priceTotal;
+                string sOp = op.ToString();
+                lblChange.Text = sOp;
+
+                //Habilitar
+                lblChange.Visible = true;
+                ImgPrint.Visible = true;
+
+                //Deshabilitar
+                btnCloseApp.Visible = false;
+
+                //Actualizar Stock en base de datos
+                setStockItems();
+            }
+            else
+            {
+                lblError.Visible = true;
+            }
+        }
+
+        private void txtRecep_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
         }
     }
 }

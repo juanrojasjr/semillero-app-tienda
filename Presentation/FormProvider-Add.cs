@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
@@ -49,12 +50,45 @@ namespace Presentation
 
         private void BtnSave_Click(object sender, EventArgs e)
         {
-           if (valor == false) 
+            enterFunction();
+        }
+
+        private Boolean validMail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void enterFunction()
+        {
+            if (valor == false)
             {
                 try
                 {
-                    oProviders.AddProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
-                    MessageBox.Show("Se agrego correctamente");
+                    if (validMail(txtEmail.Text))
+                    {
+                        oProviders.AddProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
+                        MessageBox.Show("Se agrego correctamente");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ingresa un correo electrónico válido.");
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -69,7 +103,7 @@ namespace Presentation
             {
                 try
                 {
-                    oProviders.EditProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text,idprov);
+                    oProviders.EditProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text, idprov);
                     MessageBox.Show("Se edito correctamente");
                 }
                 catch (Exception ex)
@@ -83,9 +117,24 @@ namespace Presentation
             }
         }
 
-        private void txtNameCompany_TextChanged(object sender, EventArgs e)
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
+        }
 
+        private void txtPhone_TextChanged(object sender, EventArgs e)
+        {
+            //Función para validar si es INT o STRING
+            int nu;
+            bool va = Int32.TryParse(txtPhone.Text, out nu);
+            if (va == false)
+            {
+                MessageBox.Show("Este campo solo recibe números.");
+                txtPhone.Text = "";
+            }
         }
     }
 }

@@ -95,6 +95,27 @@ namespace Presentation
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
+            consult();
+        }
+
+        private void btnViewAll_Click(object sender, EventArgs e)
+        {
+            Models oUserss = new Models();
+            dataGridView1.DataSource = oUserss.GetUsers();
+            txtUser.Text = "";
+            btnViewAll.Visible = false;
+        }
+
+        private void txtUser_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                consult();
+            }
+        }
+
+        private void consult()
+        {
             if (!txtUser.Text.Trim().Equals(""))
             {
                 dataGridView1.DataSource = oUsers.GetUser(txtUser.Text);
@@ -107,14 +128,6 @@ namespace Presentation
                 }
             }
             btnViewAll.Visible = true;
-        }
-
-        private void btnViewAll_Click(object sender, EventArgs e)
-        {
-            Models oUserss = new Models();
-            dataGridView1.DataSource = oUserss.GetUsers();
-            txtUser.Text = "";
-            btnViewAll.Visible = false;
         }
     }
 }

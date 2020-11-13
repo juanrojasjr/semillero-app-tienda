@@ -191,6 +191,7 @@
             this.txtBuscarProd.Name = "txtBuscarProd";
             this.txtBuscarProd.Size = new System.Drawing.Size(278, 27);
             this.txtBuscarProd.TabIndex = 2;
+            this.txtBuscarProd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBuscarProd_KeyPress);
             // 
             // label2
             // 
@@ -219,6 +220,7 @@
             this.btnBuscarProd.TabIndex = 21;
             this.btnBuscarProd.Text = "Buscar";
             this.btnBuscarProd.UseVisualStyleBackColor = false;
+            this.btnBuscarProd.Click += new System.EventHandler(this.btnBuscarProd_Click);
             // 
             // FormProducts
             // 

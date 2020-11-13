@@ -36,6 +36,11 @@ namespace Presentation
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
+            enterFunction();
+        }
+
+        private void enterFunction()
+        {
             if (!txtNumberBill.Text.Trim().Equals(""))
             {
                 dataGridView1.DataSource = oBillsF.GetBill(txtNumberBill.Text, dateStart.Value.ToShortDateString(), dateEnd.Value.ToShortDateString(), 0);
@@ -281,6 +286,14 @@ namespace Presentation
             FormAdmin fAdmin = new FormAdmin();
             fAdmin.Show();
             this.Hide();
+        }
+
+        private void txtNumberBill_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
         }
     }
 }

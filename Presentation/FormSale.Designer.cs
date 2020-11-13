@@ -131,6 +131,7 @@
             this.txtNumberBill.Name = "txtNumberBill";
             this.txtNumberBill.Size = new System.Drawing.Size(189, 27);
             this.txtNumberBill.TabIndex = 7;
+            this.txtNumberBill.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumberBill_KeyPress);
             // 
             // btnConsult
             // 

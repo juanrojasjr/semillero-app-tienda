@@ -92,6 +92,7 @@
             this.txtRecep.Name = "txtRecep";
             this.txtRecep.Size = new System.Drawing.Size(143, 27);
             this.txtRecep.TabIndex = 6;
+            this.txtRecep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRecep_KeyPress);
             // 
             // label1
             // 

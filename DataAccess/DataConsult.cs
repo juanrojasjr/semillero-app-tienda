@@ -153,7 +153,7 @@ namespace DataAccess
         #endregion
 
         #region "Functions DataStore"
-        public int AddDataStore(string namestore, string nameowner, string phone, string address)
+        public int AddDataStore(string namestore, string nameowner, string phone, string address, string nit)
         {
             using (var connection = GetConnection())
             {
@@ -161,11 +161,12 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "INSERT INTO DataStore(NameStore, NameOwner, Phone, Address) VALUES (@namestore, @nameowner, @phone, @address)";
+                    command.CommandText = "INSERT INTO DataStore VALUES (@namestore, @nameowner, @phone, @address, @nit)";
                     command.Parameters.AddWithValue("@namestore", namestore);
                     command.Parameters.AddWithValue("@nameowner", nameowner);
                     command.Parameters.AddWithValue("@phone", phone);
                     command.Parameters.AddWithValue("@address", address);
+                    command.Parameters.AddWithValue("@nit", nit);
                     command.CommandType = CommandType.Text;
 
                     //Cargar datos obtenidos en la clase/caché
@@ -173,6 +174,7 @@ namespace DataAccess
                     DataStoreCache.Nameowner = nameowner;
                     DataStoreCache.Phone = phone;
                     DataStoreCache.Address = address;
+                    DataStoreCache.Nit = nit;
 
                     return command.ExecuteNonQuery();
                 }

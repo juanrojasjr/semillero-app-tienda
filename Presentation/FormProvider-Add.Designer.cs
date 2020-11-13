@@ -130,11 +130,11 @@
             // 
             // txtNameCompany
             // 
+            this.txtNameCompany.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNameCompany.Location = new System.Drawing.Point(27, 99);
             this.txtNameCompany.Name = "txtNameCompany";
-            this.txtNameCompany.Size = new System.Drawing.Size(327, 20);
+            this.txtNameCompany.Size = new System.Drawing.Size(327, 27);
             this.txtNameCompany.TabIndex = 9;
-            this.txtNameCompany.TextChanged += new System.EventHandler(this.txtNameCompany_TextChanged);
             // 
             // label2
             // 
@@ -160,9 +160,10 @@
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(27, 170);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(327, 20);
+            this.txtName.Size = new System.Drawing.Size(327, 27);
             this.txtName.TabIndex = 11;
             // 
             // label4
@@ -178,10 +179,12 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(27, 237);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(326, 20);
+            this.txtPhone.Size = new System.Drawing.Size(326, 27);
             this.txtPhone.TabIndex = 13;
+            this.txtPhone.TextChanged += new System.EventHandler(this.txtPhone_TextChanged);
             // 
             // label5
             // 
@@ -196,10 +199,12 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(26, 309);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(326, 20);
+            this.txtEmail.Size = new System.Drawing.Size(326, 27);
             this.txtEmail.TabIndex = 15;
+            this.txtEmail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEmail_KeyPress);
             // 
             // btnSave
             // 

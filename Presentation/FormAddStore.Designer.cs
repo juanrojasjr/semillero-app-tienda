@@ -41,6 +41,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCloseApp = new System.Windows.Forms.PictureBox();
             this.lblError = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNit = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCloseApp)).BeginInit();
             this.SuspendLayout();
@@ -48,7 +50,7 @@
             // txtNameStore
             // 
             this.txtNameStore.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNameStore.Location = new System.Drawing.Point(57, 363);
+            this.txtNameStore.Location = new System.Drawing.Point(57, 352);
             this.txtNameStore.Name = "txtNameStore";
             this.txtNameStore.Size = new System.Drawing.Size(328, 20);
             this.txtNameStore.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label2.Location = new System.Drawing.Point(57, 341);
+            this.label2.Location = new System.Drawing.Point(57, 330);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 19);
             this.label2.TabIndex = 2;
@@ -67,7 +69,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label3.Location = new System.Drawing.Point(57, 406);
+            this.label3.Location = new System.Drawing.Point(57, 395);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(174, 19);
             this.label3.TabIndex = 4;
@@ -76,7 +78,7 @@
             // txtNameOwner
             // 
             this.txtNameOwner.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNameOwner.Location = new System.Drawing.Point(57, 428);
+            this.txtNameOwner.Location = new System.Drawing.Point(57, 417);
             this.txtNameOwner.Name = "txtNameOwner";
             this.txtNameOwner.Size = new System.Drawing.Size(328, 20);
             this.txtNameOwner.TabIndex = 3;
@@ -85,7 +87,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label4.Location = new System.Drawing.Point(57, 471);
+            this.label4.Location = new System.Drawing.Point(57, 460);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 6;
@@ -94,7 +96,7 @@
             // txtPhone
             // 
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Location = new System.Drawing.Point(57, 493);
+            this.txtPhone.Location = new System.Drawing.Point(57, 482);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(328, 20);
             this.txtPhone.TabIndex = 5;
@@ -103,7 +105,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label5.Location = new System.Drawing.Point(57, 535);
+            this.label5.Location = new System.Drawing.Point(57, 524);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 19);
             this.label5.TabIndex = 8;
@@ -112,7 +114,7 @@
             // txtAddress
             // 
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Location = new System.Drawing.Point(57, 557);
+            this.txtAddress.Location = new System.Drawing.Point(57, 546);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(328, 20);
             this.txtAddress.TabIndex = 7;
@@ -128,7 +130,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(359, 44);
             this.richTextBox1.TabIndex = 10;
             this.richTextBox1.Text = "Completa el siguiente formulario para registrar tu tienda en el sistema.";
-            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // btnSave
             // 
@@ -137,7 +138,7 @@
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
-            this.btnSave.Location = new System.Drawing.Point(85, 634);
+            this.btnSave.Location = new System.Drawing.Point(82, 683);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(279, 35);
             this.btnSave.TabIndex = 11;
@@ -175,19 +176,40 @@
             this.lblError.ForeColor = System.Drawing.Color.White;
             this.lblError.Image = global::Presentation.Properties.Resources.error;
             this.lblError.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lblError.Location = new System.Drawing.Point(94, 595);
+            this.lblError.Location = new System.Drawing.Point(100, 644);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(242, 16);
             this.lblError.TabIndex = 14;
             this.lblError.Text = "        Debes completar todo el formulario";
             this.lblError.Visible = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(57, 589);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(36, 19);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "NIT";
+            // 
+            // txtNit
+            // 
+            this.txtNit.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNit.Location = new System.Drawing.Point(57, 611);
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(328, 20);
+            this.txtNit.TabIndex = 15;
+            this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
+            // 
             // FormAddStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
-            this.ClientSize = new System.Drawing.Size(446, 710);
+            this.ClientSize = new System.Drawing.Size(446, 757);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtNit);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnCloseApp);
             this.Controls.Add(this.pictureBox1);
@@ -228,5 +250,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox btnCloseApp;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNit;
     }
 }

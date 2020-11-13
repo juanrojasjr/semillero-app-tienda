@@ -55,9 +55,9 @@ namespace Domain
             return oDataConsult.GetDataStore();
         }
 
-        public int AddDataStore(string namestore, string nameowner, string phone, string address)
+        public int AddDataStore(string namestore, string nameowner, string phone, string address, string nit)
         {
-            return oDataConsult.AddDataStore(namestore, nameowner, phone, address);
+            return oDataConsult.AddDataStore(namestore, nameowner, phone, address, nit);
         }
         #endregion
 

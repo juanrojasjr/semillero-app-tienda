@@ -12,5 +12,6 @@ namespace Common.Cache
         public static string Nameowner { get; set; }
         public static string Phone { get; set; }
         public static string Address { get; set; }
+        public static string Nit { get; set; }
     }
 }

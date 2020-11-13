@@ -170,6 +170,7 @@
             this.txtProduct.Name = "txtProduct";
             this.txtProduct.Size = new System.Drawing.Size(257, 27);
             this.txtProduct.TabIndex = 7;
+            this.txtProduct.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtProduct_KeyPress);
             // 
             // btnConsult
             // 
@@ -473,7 +474,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(692, 487);
-            this.Controls.Add(this.dgvAllShopping);
             this.Controls.Add(this.pnlProvider);
             this.Controls.Add(this.pnlFields);
             this.Controls.Add(this.dataGridView1);
@@ -484,6 +484,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnContinue);
+            this.Controls.Add(this.dgvAllShopping);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

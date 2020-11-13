@@ -22,41 +22,7 @@ namespace Presentation
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUser.Text != "")
-            {
-                if (txtPass.Text != "")
-                {
-                    Models user = new Models();
-                    var valLogin = user.LoginUser(txtUser.Text, txtPass.Text);
-                    if (valLogin == true)
-                    {
-                        FormAdmin admin = new FormAdmin();
-                        FormATM cajero = new FormATM();
-
-                        if (UserLoginCache.Position == "Administrator")
-                        {
-                            admin.Show();
-                            admin.FormClosed += logout;
-                            this.Hide();
-                        }
-                        else
-                        {
-                            cajero.Show();
-                            cajero.FormClosed += logout;
-                            this.Hide();
-                        }
-                    }
-                    else {
-                        msgError("Usuario o contraseña incorrectos.");
-                        txtPass.Clear();
-                        txtUser.Focus();
-                    }
-                }
-                else { 
-                    msgError("Por favor ingrese su contraseña."); 
-                }
-            }
-            else { msgError("Por favor ingrese su usuario."); }
+            login();
         }
         private void msgError(string msg)
         {
@@ -121,5 +87,54 @@ namespace Presentation
 
         private void lblNameStore_Click(object sender, EventArgs e){}
         private void label1_Click(object sender, EventArgs e){}
+
+        public void login()
+        {
+            if (txtUser.Text != "")
+            {
+                if (txtPass.Text != "")
+                {
+                    Models user = new Models();
+                    var valLogin = user.LoginUser(txtUser.Text, txtPass.Text);
+                    if (valLogin == true)
+                    {
+                        FormAdmin admin = new FormAdmin();
+                        FormATM cajero = new FormATM();
+
+                        if (UserLoginCache.Position == "Administrator")
+                        {
+                            admin.Show();
+                            admin.FormClosed += logout;
+                            this.Hide();
+                        }
+                        else
+                        {
+                            cajero.Show();
+                            cajero.FormClosed += logout;
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        msgError("Usuario o contraseña incorrectos.");
+                        txtPass.Clear();
+                        txtUser.Focus();
+                    }
+                }
+                else
+                {
+                    msgError("Por favor ingrese su contraseña.");
+                }
+            }
+            else { msgError("Por favor ingrese su usuario."); }
+        }
+
+        private void txtPass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                login();
+            }
+        }
     }
 }

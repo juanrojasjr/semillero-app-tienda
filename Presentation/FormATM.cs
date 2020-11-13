@@ -42,8 +42,7 @@ namespace Presentation
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
-            Cargar();
-            txtSearch.Clear();
+            enterFunction();
         }
 
         private void Cargar()
@@ -160,6 +159,20 @@ namespace Presentation
             oFormCajeroPago.list = listView1;
             oFormCajeroPago.Show();
             oFormCajeroPago.FormClosed += btnCancel_Click;
+        }
+
+        private void enterFunction()
+        {
+            Cargar();
+            txtSearch.Clear();
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
         }
     }
 }

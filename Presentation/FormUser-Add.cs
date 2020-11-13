@@ -50,12 +50,46 @@ namespace Presentation
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            functEnter();
+        }
+
+        private Boolean validMail(String email)
+        {
+            String expresion;
+            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            if (Regex.IsMatch(email, expresion))
+            {
+                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        private void txtEmail_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                functEnter();
+            }
+        }
+
+        private void functEnter()
+        {
             if (value == false)
             {
                 if (validMail(txtEmail.Text))
                 {
                     int va = objetuser.AddUser(txtLoginName.Text, txtUserPass.Text, txtFirstName.Text, txtLastName.Text, cbCargo.Text, txtEmail.Text);
-                    if(va == 1)
+                    if (va == 1)
                     {
                         MessageBox.Show("Se agrego correctamente");
                         FormUser user = new FormUser();
@@ -87,27 +121,6 @@ namespace Presentation
                 FormUser user = new FormUser();
                 user.Show();
                 this.Hide();
-            }
-        }
-
-        private Boolean validMail(String email)
-        {
-            String expresion;
-            expresion = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
-            if (Regex.IsMatch(email, expresion))
-            {
-                if (Regex.Replace(email, expresion, String.Empty).Length == 0)
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            else
-            {
-                return false;
             }
         }
     }

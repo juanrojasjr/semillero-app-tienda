@@ -30,25 +30,7 @@ namespace Presentation
 
         private void btnConsult_Click(object sender, EventArgs e)
         {
-            txtProduct.Text = "";
-            Models oGetProducts = new Models();
-            int nu;
-            bool va = Int32.TryParse(txtProduct.Text, out nu);
-            if (va)
-            {
-                // Busca por referencia de producto
-                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 1);
-            }else
-            {
-                //Busca por nombre de producto
-                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 0);
-            }
-            if (dataGridView1.RowCount < 1)
-            {
-                lblSelected.Text = "Ningún resultado. Si no existe el producto, puede crear uno en el +.";
-                lblSelected.Visible = true;
-            }
-            else lblSelected.Visible = false;
+            enterFunction();
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -173,6 +155,38 @@ namespace Presentation
             dataGridView1.Visible = true;
             dgvAllShopping.Visible = false;
             btnCancel.Visible = false;
+        }
+
+        private void txtProduct_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                enterFunction();
+            }
+        }
+
+        private void enterFunction()
+        {
+            txtProduct.Text = "";
+            Models oGetProducts = new Models();
+            int nu;
+            bool va = Int32.TryParse(txtProduct.Text, out nu);
+            if (va)
+            {
+                // Busca por referencia de producto
+                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 1);
+            }
+            else
+            {
+                //Busca por nombre de producto
+                dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 0);
+            }
+            if (dataGridView1.RowCount < 1)
+            {
+                lblSelected.Text = "Ningún resultado. Si no existe el producto, puede crear uno en el +.";
+                lblSelected.Visible = true;
+            }
+            else lblSelected.Visible = false;
         }
     }
 }
