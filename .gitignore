@@ -8,6 +8,6 @@ Domain/obj/Debug/*
 Domain/obj/*
 DataAccess/obj/Debug/*
 DataAccess/obj/*
-Common/obj/Debug/*
+Common/obj/Debug/
 Common/obj/*
 .vs/
