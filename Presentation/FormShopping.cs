@@ -40,9 +40,9 @@ namespace Presentation
                 pnlFields.Visible = true;
                 pnlProvider.Visible = true;
                 lblId.Text = dataGridView1.CurrentRow.Cells["IdProduct"].Value.ToString();
-                lblQuantity.Text = dataGridView1.CurrentRow.Cells["Stock"].Value.ToString();
-                txtPriceBuy.Text = dataGridView1.CurrentRow.Cells["PriceProv"].Value.ToString();
-                txtPriceSale.Text = dataGridView1.CurrentRow.Cells["PriceSale"].Value.ToString();
+                lblQuantity.Text = dataGridView1.CurrentRow.Cells["Inventario"].Value.ToString();
+                txtPriceBuy.Text = dataGridView1.CurrentRow.Cells["P. Proveedor"].Value.ToString();
+                txtPriceSale.Text = dataGridView1.CurrentRow.Cells["P. Venta"].Value.ToString();
                 lblQuantityTotal.Text = lblQuantity.Text;
                 getProviders();
             }
@@ -126,7 +126,7 @@ namespace Presentation
             for (int i = 0; i < oDataTable.Rows.Count; i++)
             {
                 idProvider.Add(oDataTable.Rows[i]["ProveedoresID"].ToString());
-                cbProvider.Items.Add(oDataTable.Rows[i]["NameCompany"].ToString());
+                cbProvider.Items.Add(oDataTable.Rows[i]["Compañía"].ToString());
             }
         }
 
@@ -139,6 +139,7 @@ namespace Presentation
             pnlProvider.Visible = false;
             btnContinue.Enabled = false;
             dataGridView1.DataSource = null;
+            MessageBox.Show("Compra agregada e inventario editado.");
         }
 
         private void picHistory_Click(object sender, EventArgs e)
@@ -146,6 +147,7 @@ namespace Presentation
             Models oModels = new Models();
             if (oModels.GetShoppings().Rows.Count != 0) {
                 dgvAllShopping.DataSource = oModels.GetShoppings();
+                dgvAllShopping.Columns[2].Width = 110;
                 dataGridView1.Visible = false;
                 dgvAllShopping.Visible = true;
                 btnCancel.Visible = true;
@@ -188,6 +190,8 @@ namespace Presentation
                 //Busca por nombre de producto
                 dataGridView1.DataSource = oGetProducts.GetProductsLike(txtProduct.Text, 0);
             }
+            dataGridView1.Columns[2].Width = 140;
+            dataGridView1.Columns[6].Width = 125;
             if (dataGridView1.RowCount < 1)
             {
                 lblSelected.Text = "Ningún resultado. Si no existe el producto, puede crear uno en el +.";

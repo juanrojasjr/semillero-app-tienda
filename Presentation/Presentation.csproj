@@ -73,11 +73,11 @@
     <Compile Include="FormSale.Designer.cs">
       <DependentUpon>FormSale.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormProvider-Add.cs">
+    <Compile Include="FormProviderAdd.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormProvider-Add.Designer.cs">
-      <DependentUpon>FormProvider-Add.cs</DependentUpon>
+    <Compile Include="FormProviderAdd.Designer.cs">
+      <DependentUpon>FormProviderAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="FormProductsAdd.cs">
       <SubType>Form</SubType>
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="FormSale.resx">
       <DependentUpon>FormSale.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormProvider-Add.resx">
-      <DependentUpon>FormProvider-Add.cs</DependentUpon>
+    <EmbeddedResource Include="FormProviderAdd.resx">
+      <DependentUpon>FormProviderAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductsAdd.resx">
       <DependentUpon>FormProductsAdd.cs</DependentUpon>

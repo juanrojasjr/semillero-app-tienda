@@ -164,6 +164,7 @@ namespace Presentation
             string sItems = "";
             string tNombre = "";
             int tCantidad = 0;
+            int cantidadDeItems = 0;
             double tPrecio = 0;
             PdfPCell iNombre;
             PdfPCell iPrecio;
@@ -224,7 +225,10 @@ namespace Presentation
 
                 tbItems.AddCell(iNombre);
                 tbItems.AddCell(iPrecio);
-                tbItems.AddCell(iMul);                
+                tbItems.AddCell(iMul);
+
+                //Va sumando la cantidad de items
+                cantidadDeItems += tCantidad;
 
                 //Reinicio de valores
                 tNombre = "";
@@ -239,7 +243,7 @@ namespace Presentation
             doc.Add(sLine1);
 
             //Cantidad de productos
-            Paragraph p7 = new Paragraph("# Productos: "+ list.Items.Count.ToString(), times);
+            Paragraph p7 = new Paragraph("# Items: "+ cantidadDeItems.ToString(), times);
             doc.Add(p7);
 
             //Salto de línea

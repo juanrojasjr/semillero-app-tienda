@@ -80,24 +80,39 @@ namespace Presentation
             {
                 try
                 {
-                    if (validMail(txtEmail.Text))
+                    //Valida que el campo contenga 10 dígitos exactos
+                    int cantDigitos = txtPhone.Text.Length;
+                    bool cdBool = true, validMailBool = true;
+                    if (cantDigitos < 10 || cantDigitos >= 11)
+                    {
+                        cdBool = false;
+                        MessageBox.Show("El téfono debe ser de 10 dígitos.");
+                    }
+                    //Valida que el email corresponda a la estructura mail
+                    if (!validMail(txtEmail.Text))
+                    {
+                        validMailBool = false;
+                        MessageBox.Show("Ingresa un correo electrónico válido.");
+                    }
+
+                    //Si todas las validaciones son verdaderas guarda
+                    if (validMailBool && cdBool && txtNameCompany.Text.Length != 0 && txtName.Text.Length != 0)
                     {
                         oProviders.AddProvider(txtNameCompany.Text, txtName.Text, txtPhone.Text, txtEmail.Text);
                         MessageBox.Show("Se agrego correctamente");
+                        FormProvider prov = new FormProvider();
+                        prov.Show();
+                        this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Ingresa un correo electrónico válido.");
+                        MessageBox.Show("Ningún campo puede estar vacío.");
                     }
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("No se pudo agregar los datos por: " + ex);
                 }
-
-                FormProvider prov = new FormProvider();
-                prov.Show();
-                this.Hide();
             }
             if (valor == true)
             {
@@ -128,9 +143,9 @@ namespace Presentation
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
             //Función para validar si es INT o STRING
-            int nu;
-            bool va = Int32.TryParse(txtPhone.Text, out nu);
-            if (va == false)
+            long nu;
+            bool va = Int64.TryParse(txtPhone.Text, out nu);
+            if (!va)
             {
                 MessageBox.Show("Este campo solo recibe números.");
                 txtPhone.Text = "";

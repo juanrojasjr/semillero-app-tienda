@@ -99,6 +99,7 @@ namespace Presentation
             if (!txtEmp.Text.Trim().Equals(""))
             {
                 dataGridView1.DataSource = oProviders.GetProvider(txtEmp.Text);
+                dataGridView1.Columns[6].Width = 120;
                 DataGridViewColumn col = dataGridView1.Columns[0];
                 col.Visible = false;
 

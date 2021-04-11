@@ -224,7 +224,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM DataProviders";
+                    command.CommandText = "SELECT ProveedoresID, NameCompany 'Compañía', Name 'Nombre', Phone 'Teléfono', Email 'Correo electrónico' FROM DataProviders";
                     leer = command.ExecuteReader();
                     tabla.Load(leer);
                     return tabla;
@@ -241,7 +241,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM DataProviders WHERE NameCompany LIKE '%" + value + "%'";
+                    command.CommandText = "SELECT ProveedoresID, NameCompany 'Compañía', Name 'Nombre', Phone 'Teléfono', Email 'Correo electrónico' FROM DataProviders WHERE NameCompany LIKE '%" + value + "%'";
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
                     while (leer.Read())
@@ -327,11 +327,11 @@ namespace DataAccess
                     command.Connection = connection;
                     if (typeSearch == 1)
                     {
-                        command.CommandText = "SELECT * FROM Products WHERE Ref LIKE '%" + word + "%'";
+                        command.CommandText = "SELECT IdProduct, Ref 'Ref.', Nombre, Categoria, Stock Inventario, CanMin 'Inv. Min', PriceProv 'P. Proveedor', PriceSale 'P. Venta' FROM Products WHERE Ref LIKE '%" + word + "%'";
                     }
                     else
                     {
-                        command.CommandText = "SELECT * FROM Products WHERE Nombre LIKE '%" + word + "%'";
+                        command.CommandText = "SELECT IdProduct, Ref 'Ref.', Nombre, Categoria, Stock Inventario, CanMin 'Inv. Min', PriceProv 'P. Proveedor', PriceSale 'P. Venta' FROM Products WHERE Nombre LIKE '%" + word + "%'";
                     }
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
@@ -351,7 +351,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Products";
+                    command.CommandText = "SELECT IdProduct, Ref 'Ref.', Nombre, Categoria, Stock Inventario, CanMin 'Inv. Min', PriceProv 'P. Proveedor', PriceSale 'P. Venta' FROM Products";
                     leer = command.ExecuteReader();
                     tabla.Load(leer);
                     return tabla;
@@ -468,7 +468,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT * FROM Bills ORDERS BY Date DESC";
+                    command.CommandText = "SELECT IdBill, Date 'Fecha', Seller 'Vendedor', PriceTotal 'P. Total', Products 'Productos', PriceChange 'Cambio', PriceRecep 'Pago' FROM Bills ORDER BY Date DESC";
                     leer = command.ExecuteReader();
                     tabla.Load(leer);
                     return tabla;
@@ -488,14 +488,14 @@ namespace DataAccess
                     if (proccess==1)
                     {
                         //Buscar por fecha
-                        command.CommandText = "SELECT IdBill AS #_Factura, Date AS Fecha, Seller AS Vendedor, PriceTotal AS Total, Products AS Productos, PriceChange AS Cambio, PriceRecep AS Recibido FROM Bills WHERE Date BETWEEN @dStart AND @dEnd";
+                        command.CommandText = "SELECT IdBill '# Factura', Date 'Fecha', Seller 'Vendedor', PriceTotal 'P. Total', Products 'Productos', PriceChange 'Cambio', PriceRecep 'Pago' FROM Bills WHERE Date BETWEEN @dStart AND @dEnd";
                         command.Parameters.AddWithValue("@dStart", dStar);
                         command.Parameters.AddWithValue("@dEnd", dEnd);
                     }
                     else
                     {
                         //Buscar por número de factura
-                        command.CommandText = "SELECT * FROM Bills WHERE IdBill LIKE '%" + value + "%'";
+                        command.CommandText = "SELECT IdBill '# Factura', Date 'Fecha', Seller 'Vendedor', PriceTotal 'P. Total', Products 'Productos', PriceChange 'Cambio', PriceRecep 'Pago' FROM Bills WHERE IdBill LIKE '%" + value + "%'";
                     }
                     command.CommandType = CommandType.Text;
                     SqlDataReader leer = command.ExecuteReader();
@@ -571,7 +571,7 @@ namespace DataAccess
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "SELECT DISTINCT C.Nombre Producto, A.Stock U_Compradas, A.PriceBuy Compra, A.PriceSale Venta, A.PriceTotal C_Total, A.NumBill Factura, B.NameCompany Proveedor " +
+                    command.CommandText = "SELECT DISTINCT C.Nombre 'Producto', A.Stock 'U_Compradas', A.PriceBuy 'Compra', A.PriceSale 'Venta', A.PriceTotal C_Total, A.NumBill Factura, B.NameCompany Proveedor " +
                         "FROM Shopping A INNER JOIN DataProviders B ON A.IdProvider = B.ProveedoresID INNER JOIN Products C ON A.IdProducts = C.IdProducT";
                     SqlDataReader leer = command.ExecuteReader();
                     tabla.Load(leer);
