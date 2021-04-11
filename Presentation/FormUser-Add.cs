@@ -123,5 +123,20 @@ namespace Presentation
                 this.Hide();
             }
         }
+
+        private void cbCargo_KeyDown(object sender, KeyEventArgs e)
+        {
+            cbCargo.Text = "";
+        }
+
+        private void cbCargo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            cbCargo.Text = "";
+        }
+
+        private void cbCargo_KeyUp(object sender, KeyEventArgs e)
+        {
+            cbCargo.Text = "";
+        }
     }
 }

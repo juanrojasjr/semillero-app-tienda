@@ -139,7 +139,7 @@
             this.txtCantStock.Location = new System.Drawing.Point(442, 174);
             this.txtCantStock.Name = "txtCantStock";
             this.txtCantStock.Size = new System.Drawing.Size(313, 27);
-            this.txtCantStock.TabIndex = 28;
+            this.txtCantStock.TabIndex = 4;
             // 
             // Cantidad
             // 
@@ -148,9 +148,9 @@
             this.Cantidad.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Cantidad.Location = new System.Drawing.Point(438, 152);
             this.Cantidad.Name = "Cantidad";
-            this.Cantidad.Size = new System.Drawing.Size(136, 19);
+            this.Cantidad.Size = new System.Drawing.Size(134, 19);
             this.Cantidad.TabIndex = 27;
-            this.Cantidad.Text = "Cantidad en Stock";
+            this.Cantidad.Text = "Cantidad en stock";
             // 
             // txtPrecioVenta
             // 
@@ -158,7 +158,7 @@
             this.txtPrecioVenta.Location = new System.Drawing.Point(69, 332);
             this.txtPrecioVenta.Name = "txtPrecioVenta";
             this.txtPrecioVenta.Size = new System.Drawing.Size(313, 27);
-            this.txtPrecioVenta.TabIndex = 26;
+            this.txtPrecioVenta.TabIndex = 7;
             // 
             // Precio_venta_prod
             // 
@@ -167,9 +167,9 @@
             this.Precio_venta_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Precio_venta_prod.Location = new System.Drawing.Point(65, 310);
             this.Precio_venta_prod.Name = "Precio_venta_prod";
-            this.Precio_venta_prod.Size = new System.Drawing.Size(119, 19);
+            this.Precio_venta_prod.Size = new System.Drawing.Size(117, 19);
             this.Precio_venta_prod.TabIndex = 25;
-            this.Precio_venta_prod.Text = "Precio de Venta";
+            this.Precio_venta_prod.Text = "Precio de venta";
             // 
             // txtPrecioCompra
             // 
@@ -177,7 +177,7 @@
             this.txtPrecioCompra.Location = new System.Drawing.Point(442, 254);
             this.txtPrecioCompra.Name = "txtPrecioCompra";
             this.txtPrecioCompra.Size = new System.Drawing.Size(313, 27);
-            this.txtPrecioCompra.TabIndex = 24;
+            this.txtPrecioCompra.TabIndex = 6;
             // 
             // Precio_compra_prod
             // 
@@ -186,9 +186,9 @@
             this.Precio_compra_prod.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.Precio_compra_prod.Location = new System.Drawing.Point(438, 232);
             this.Precio_compra_prod.Name = "Precio_compra_prod";
-            this.Precio_compra_prod.Size = new System.Drawing.Size(135, 19);
+            this.Precio_compra_prod.Size = new System.Drawing.Size(132, 19);
             this.Precio_compra_prod.TabIndex = 23;
-            this.Precio_compra_prod.Text = "Precio de Compra";
+            this.Precio_compra_prod.Text = "Precio de compra";
             // 
             // txtCategoria
             // 
@@ -196,7 +196,7 @@
             this.txtCategoria.Location = new System.Drawing.Point(69, 174);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(313, 27);
-            this.txtCategoria.TabIndex = 22;
+            this.txtCategoria.TabIndex = 3;
             // 
             // Marca_prod
             // 
@@ -215,7 +215,7 @@
             this.txtRef.Location = new System.Drawing.Point(69, 96);
             this.txtRef.Name = "txtRef";
             this.txtRef.Size = new System.Drawing.Size(313, 27);
-            this.txtRef.TabIndex = 20;
+            this.txtRef.TabIndex = 1;
             // 
             // Descripcion_prod
             // 
@@ -234,7 +234,7 @@
             this.txtNombre.Location = new System.Drawing.Point(442, 96);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(313, 27);
-            this.txtNombre.TabIndex = 18;
+            this.txtNombre.TabIndex = 2;
             // 
             // Nombre_prod
             // 
@@ -258,7 +258,7 @@
             this.btnSaveProd.Location = new System.Drawing.Point(519, 324);
             this.btnSaveProd.Name = "btnSaveProd";
             this.btnSaveProd.Size = new System.Drawing.Size(159, 35);
-            this.btnSaveProd.TabIndex = 29;
+            this.btnSaveProd.TabIndex = 8;
             this.btnSaveProd.Text = "Guardar";
             this.btnSaveProd.UseVisualStyleBackColor = false;
             this.btnSaveProd.Click += new System.EventHandler(this.btnSaveProd_Click);
@@ -269,7 +269,7 @@
             this.txtCantMin.Location = new System.Drawing.Point(69, 254);
             this.txtCantMin.Name = "txtCantMin";
             this.txtCantMin.Size = new System.Drawing.Size(313, 27);
-            this.txtCantMin.TabIndex = 31;
+            this.txtCantMin.TabIndex = 5;
             // 
             // label1
             // 
@@ -278,9 +278,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(65, 232);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 19);
+            this.label1.Size = new System.Drawing.Size(129, 19);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Cantidad Minima";
+            this.label1.Text = "Cantidad mínima";
             // 
             // FormProductsAdd
             // 

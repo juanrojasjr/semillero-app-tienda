@@ -56,6 +56,7 @@
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnConsult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsult.FlatAppearance.BorderSize = 0;
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

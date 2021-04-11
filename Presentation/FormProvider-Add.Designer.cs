@@ -119,6 +119,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::Presentation.Properties.Resources.previous23;
             this.btnBack.Location = new System.Drawing.Point(12, 7);
             this.btnBack.Name = "btnBack";
@@ -156,7 +157,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(143, 19);
             this.label3.TabIndex = 12;
-            this.label3.Text = "Nombre Proveedor";
+            this.label3.Text = "Nombre proveedor";
             // 
             // txtName
             // 
@@ -175,7 +176,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 19);
             this.label4.TabIndex = 14;
-            this.label4.Text = "Telefono";
+            this.label4.Text = "Teléfono";
             // 
             // txtPhone
             // 
@@ -193,9 +194,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label5.Location = new System.Drawing.Point(22, 287);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 19);
+            this.label5.Size = new System.Drawing.Size(138, 19);
             this.label5.TabIndex = 16;
-            this.label5.Text = "Correo Electronico";
+            this.label5.Text = "Correo electrónico";
             // 
             // txtEmail
             // 

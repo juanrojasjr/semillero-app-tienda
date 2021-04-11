@@ -74,6 +74,7 @@
             // 
             // btnEditar
             // 
+            this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Image = global::Presentation.Properties.Resources.edit;
             this.btnEditar.Location = new System.Drawing.Point(88, 8);
             this.btnEditar.Name = "btnEditar";
@@ -85,6 +86,7 @@
             // 
             // btnEliminar
             // 
+            this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Image = global::Presentation.Properties.Resources.delete;
             this.btnEliminar.Location = new System.Drawing.Point(126, 8);
             this.btnEliminar.Name = "btnEliminar";
@@ -109,6 +111,7 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAdd.Image = global::Presentation.Properties.Resources.add1;
             this.btnAdd.Location = new System.Drawing.Point(50, 8);
             this.btnAdd.Name = "btnAdd";
@@ -133,6 +136,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::Presentation.Properties.Resources.previous23;
             this.btnBack.Location = new System.Drawing.Point(12, 8);
             this.btnBack.Name = "btnBack";
@@ -207,6 +211,7 @@
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnConsult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsult.FlatAppearance.BorderSize = 0;
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -223,6 +228,7 @@
             // btnViewAll
             // 
             this.btnViewAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnViewAll.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewAll.FlatAppearance.BorderSize = 0;
             this.btnViewAll.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnViewAll.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

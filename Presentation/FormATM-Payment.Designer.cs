@@ -61,6 +61,7 @@
             // 
             // ImgPrint
             // 
+            this.ImgPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ImgPrint.Image = global::Presentation.Properties.Resources.printer;
             this.ImgPrint.Location = new System.Drawing.Point(9, 9);
             this.ImgPrint.Name = "ImgPrint";
@@ -166,6 +167,7 @@
             // btnPayment
             // 
             this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPayment.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

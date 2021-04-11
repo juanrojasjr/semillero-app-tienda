@@ -93,6 +93,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.Image = global::Presentation.Properties.Resources.exit;
             this.btnLogout.Location = new System.Drawing.Point(10, 10);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
@@ -134,6 +135,7 @@
             // btnPayment
             // 
             this.btnPayment.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnPayment.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -150,6 +152,7 @@
             // btnConsultItem
             // 
             this.btnConsultItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnConsultItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsultItem.FlatAppearance.BorderSize = 0;
             this.btnConsultItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
             this.btnConsultItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,6 +169,7 @@
             // btnDeleteItem
             // 
             this.btnDeleteItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnDeleteItem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteItem.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnDeleteItem.FlatAppearance.BorderSize = 0;
             this.btnDeleteItem.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
@@ -183,6 +187,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));
@@ -287,6 +292,7 @@
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnConsult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsult.FlatAppearance.BorderSize = 0;
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(213)))), ((int)(((byte)(184)))));

@@ -203,12 +203,13 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 19);
             this.label2.TabIndex = 20;
-            this.label2.Text = "Buscar Producto";
+            this.label2.Text = "Buscar producto";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnBuscarProd
             // 
             this.btnBuscarProd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnBuscarProd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarProd.FlatAppearance.BorderSize = 0;
             this.btnBuscarProd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarProd.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

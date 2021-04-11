@@ -144,10 +144,17 @@ namespace Presentation
         private void picHistory_Click(object sender, EventArgs e)
         {
             Models oModels = new Models();
-            dgvAllShopping.DataSource = oModels.GetShoppings();
-            dataGridView1.Visible = false;
-            dgvAllShopping.Visible = true;
-            btnCancel.Visible = true;
+            if (oModels.GetShoppings().Rows.Count != 0) {
+                dgvAllShopping.DataSource = oModels.GetShoppings();
+                dataGridView1.Visible = false;
+                dgvAllShopping.Visible = true;
+                btnCancel.Visible = true;
+            }
+            else
+            {
+                MessageBox.Show("No hay historial para mostrar.");
+            }
+
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

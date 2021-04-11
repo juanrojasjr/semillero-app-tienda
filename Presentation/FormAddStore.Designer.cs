@@ -199,7 +199,7 @@
             this.txtNit.Location = new System.Drawing.Point(57, 611);
             this.txtNit.Name = "txtNit";
             this.txtNit.Size = new System.Drawing.Size(328, 20);
-            this.txtNit.TabIndex = 15;
+            this.txtNit.TabIndex = 9;
             this.txtNit.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNit_KeyPress);
             // 
             // FormAddStore

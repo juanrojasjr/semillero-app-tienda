@@ -92,6 +92,7 @@
             // 
             // picHistory
             // 
+            this.picHistory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picHistory.Image = global::Presentation.Properties.Resources.history;
             this.picHistory.Location = new System.Drawing.Point(97, 11);
             this.picHistory.Margin = new System.Windows.Forms.Padding(4);
@@ -104,6 +105,7 @@
             // 
             // btnBuyAdd
             // 
+            this.btnBuyAdd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuyAdd.Image = global::Presentation.Properties.Resources.add1;
             this.btnBuyAdd.Location = new System.Drawing.Point(57, 11);
             this.btnBuyAdd.Margin = new System.Windows.Forms.Padding(4);
@@ -129,6 +131,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::Presentation.Properties.Resources.previous2;
             this.btnBack.Location = new System.Drawing.Point(15, 11);
             this.btnBack.Margin = new System.Windows.Forms.Padding(6);
@@ -175,6 +178,7 @@
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnConsult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsult.FlatAppearance.BorderSize = 0;
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,7 +257,7 @@
             this.lblTotalPrice.Name = "lblTotalPrice";
             this.lblTotalPrice.Size = new System.Drawing.Size(117, 19);
             this.lblTotalPrice.TabIndex = 24;
-            this.lblTotalPrice.Text = "Cantidad Total";
+            this.lblTotalPrice.Text = "Cantidad total";
             this.lblTotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label8
@@ -265,7 +269,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(85, 16);
             this.label8.TabIndex = 23;
-            this.label8.Text = "Total a Pagar";
+            this.label8.Text = "Total a pagar";
             // 
             // txtPriceSale
             // 
@@ -283,9 +287,9 @@
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(154, 81);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 16);
+            this.label6.Size = new System.Drawing.Size(96, 16);
             this.label6.TabIndex = 21;
-            this.label6.Text = "Precio de Venta";
+            this.label6.Text = "Precio de venta";
             // 
             // txtPriceBuy
             // 
@@ -304,9 +308,9 @@
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(29, 81);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(110, 16);
+            this.label5.Size = new System.Drawing.Size(108, 16);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Precio de Compra";
+            this.label5.Text = "Precio de compra";
             // 
             // lblQuantityTotal
             // 
@@ -315,7 +319,7 @@
             this.lblQuantityTotal.Name = "lblQuantityTotal";
             this.lblQuantityTotal.Size = new System.Drawing.Size(117, 19);
             this.lblQuantityTotal.TabIndex = 6;
-            this.lblQuantityTotal.Text = "Cantidad Total";
+            this.lblQuantityTotal.Text = "Cantidad total";
             this.lblQuantityTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
@@ -325,9 +329,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(289, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 16);
+            this.label4.Size = new System.Drawing.Size(87, 16);
             this.label4.TabIndex = 5;
-            this.label4.Text = "Cantidad Total";
+            this.label4.Text = "Cantidad total";
             // 
             // lblQuantity
             // 
@@ -366,9 +370,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(36, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(97, 16);
+            this.label2.Size = new System.Drawing.Size(96, 16);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Cantidad Actual";
+            this.label2.Text = "Cantidad actual";
             // 
             // pnlProvider
             // 
@@ -385,6 +389,7 @@
             // 
             // cbProvider
             // 
+            this.cbProvider.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbProvider.FormattingEnabled = true;
             this.cbProvider.Location = new System.Drawing.Point(49, 108);
             this.cbProvider.Name = "cbProvider";
@@ -420,11 +425,12 @@
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(126, 16);
             this.label7.TabIndex = 4;
-            this.label7.Text = "# Factura Proveedor";
+            this.label7.Text = "# Factura proveedor";
             // 
             // btnContinue
             // 
             this.btnContinue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnContinue.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinue.Enabled = false;
             this.btnContinue.FlatAppearance.BorderSize = 0;
             this.btnContinue.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -454,6 +460,7 @@
             // btnCancel
             // 
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.FlatAppearance.BorderSize = 0;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -474,6 +481,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(111)))), ((int)(((byte)(139)))));
             this.ClientSize = new System.Drawing.Size(692, 487);
+            this.Controls.Add(this.dgvAllShopping);
             this.Controls.Add(this.pnlProvider);
             this.Controls.Add(this.pnlFields);
             this.Controls.Add(this.dataGridView1);
@@ -484,7 +492,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnContinue);
-            this.Controls.Add(this.dgvAllShopping);
             this.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);

@@ -37,7 +37,6 @@
             this.txtNumberBill = new System.Windows.Forms.TextBox();
             this.btnConsult = new System.Windows.Forms.Button();
             this.dateStart = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.dateEnd = new System.Windows.Forms.DateTimePicker();
@@ -80,6 +79,7 @@
             // 
             // btnLogout
             // 
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLogout.Image = global::Presentation.Properties.Resources.previous2;
             this.btnLogout.Location = new System.Drawing.Point(10, 10);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
@@ -136,6 +136,7 @@
             // btnConsult
             // 
             this.btnConsult.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnConsult.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnConsult.FlatAppearance.BorderSize = 0;
             this.btnConsult.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsult.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,20 +152,11 @@
             // 
             // dateStart
             // 
+            this.dateStart.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateStart.Location = new System.Drawing.Point(251, 102);
             this.dateStart.Name = "dateStart";
             this.dateStart.Size = new System.Drawing.Size(200, 27);
             this.dateStart.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(224, 80);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(18, 19);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "o";
             // 
             // label3
             // 
@@ -188,6 +180,7 @@
             // 
             // dateEnd
             // 
+            this.dateEnd.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dateEnd.Location = new System.Drawing.Point(457, 102);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Size = new System.Drawing.Size(200, 27);
@@ -196,6 +189,7 @@
             // btnPrint
             // 
             this.btnPrint.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(43)))), ((int)(((byte)(45)))));
+            this.btnPrint.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPrint.FlatAppearance.BorderSize = 0;
             this.btnPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrint.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -219,7 +213,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.dateEnd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.dateStart);
             this.Controls.Add(this.btnConsult);
             this.Controls.Add(this.txtNumberBill);
@@ -254,7 +247,6 @@
         private System.Windows.Forms.TextBox txtNumberBill;
         private System.Windows.Forms.Button btnConsult;
         private System.Windows.Forms.DateTimePicker dateStart;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker dateEnd;

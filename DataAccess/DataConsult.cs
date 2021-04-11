@@ -200,6 +200,7 @@ namespace DataAccess
                             DataStoreCache.Nameowner = reader.GetString(2);
                             DataStoreCache.Phone = reader.GetString(3);
                             DataStoreCache.Address = reader.GetString(4);
+                            DataStoreCache.Nit = reader.GetString(5);
                         }
                         return true;
                     }

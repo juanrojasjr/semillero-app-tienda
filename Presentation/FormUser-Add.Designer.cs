@@ -217,6 +217,7 @@
             // 
             // btnBack
             // 
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBack.Image = global::Presentation.Properties.Resources.previous23;
             this.btnBack.Location = new System.Drawing.Point(12, 7);
             this.btnBack.Name = "btnBack";
@@ -259,6 +260,7 @@
             // 
             // cbCargo
             // 
+            this.cbCargo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbCargo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCargo.FormattingEnabled = true;
             this.cbCargo.Items.AddRange(new object[] {
@@ -268,6 +270,7 @@
             this.cbCargo.Name = "cbCargo";
             this.cbCargo.Size = new System.Drawing.Size(327, 27);
             this.cbCargo.TabIndex = 32;
+            this.cbCargo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cbCargo_KeyUp);
             // 
             // FormAddUser
             // 
