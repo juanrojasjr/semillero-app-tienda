@@ -115,6 +115,21 @@ UNIQUE NONCLUSTERED
 ) ON [PRIMARY]
 GO
 
-insert into Users values ('admin','admin','Juan','Rojas','Administrator','juandarojas01@gmail.com')
-insert into Users values ('user','user','Pedro','Ramires','User','soportinjap@gmail.com')
+-- Agregar usuarios por defecto
+insert into [dbo].[Users] values ('admin','admin','usuario','principal','Administrator','correo@ejemplo.com')
+GO
+
+insert into [dbo].[Users] values ('cajero','cajero','cajero','principal','User','correo@ejemplo.com')
+GO
+
+-- Agregar proveedores de ejemplo
+INSERT INTO [dbo].[DataProviders] VALUES ('Compañia 1','Juan Carlos','3101234567','correo@ejemplo.com')
+GO
+INSERT INTO [dbo].[DataProviders] VALUES ('Compañia 2','María Fernandez','3101234567','correo@ejemplo.com')
+GO
+
+INSERT INTO [dbo].[Products] VALUES(1,'Producto 1','Categoria 1',100,10,1000,2500)
+GO
+
+INSERT INTO [dbo].[Products] VALUES(2,'Producto 2','Categoria 1',100,10,1000,2500)
 GO
