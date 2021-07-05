@@ -6,7 +6,7 @@ go
 
 CREATE TABLE [dbo].[Bills](
 	[IdBill] [int] IDENTITY(1,1) NOT NULL,
-	[Date] [date] NULL,
+	[Date] [datetime] NULL,
 	[Seller] [nvarchar](50) NULL,
 	[PriceTotal] [float] NULL,
 	[Products] [text] NULL,
