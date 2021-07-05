@@ -65,10 +65,10 @@ namespace Presentation
             {
                 FormAddProvider fmaprv = new FormAddProvider();
                 fmaprv.Show();
-                fmaprv.txtNameCompany.Text = dataGridView1.CurrentRow.Cells["NameCompany"].Value.ToString();
-                fmaprv.txtName.Text = dataGridView1.CurrentRow.Cells["Name"].Value.ToString();
-                fmaprv.txtPhone.Text = dataGridView1.CurrentRow.Cells["Phone"].Value.ToString();
-                fmaprv.txtEmail.Text = dataGridView1.CurrentRow.Cells["Email"].Value.ToString();
+                fmaprv.txtNameCompany.Text = dataGridView1.CurrentRow.Cells["Compañía"].Value.ToString();
+                fmaprv.txtName.Text = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                fmaprv.txtPhone.Text = dataGridView1.CurrentRow.Cells["Teléfono"].Value.ToString();
+                fmaprv.txtEmail.Text = dataGridView1.CurrentRow.Cells["Correo electrónico"].Value.ToString();
                 fmaprv.idprov = dataGridView1.CurrentRow.Cells["ProveedoresID"].Value.ToString();
                 this.Hide();
             }

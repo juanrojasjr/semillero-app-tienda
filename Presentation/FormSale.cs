@@ -60,13 +60,13 @@ namespace Presentation
         {
             if (dataGridView1.SelectedRows.Count > 0)
             {
-                genFactura(dataGridView1.CurrentRow.Cells["IdBill"].Value.ToString(),
-                    dataGridView1.CurrentRow.Cells["Date"].Value.ToString(),
-                    dataGridView1.CurrentRow.Cells["Seller"].Value.ToString(),
-                    dataGridView1.CurrentRow.Cells["PriceTotal"].Value.ToString(),
-                    dataGridView1.CurrentRow.Cells["Products"].Value.ToString(),
-                    dataGridView1.CurrentRow.Cells["PriceChange"].Value.ToString(),
-                    dataGridView1.CurrentRow.Cells["PriceRecep"].Value.ToString());
+                genFactura(dataGridView1.CurrentRow.Cells["Factura"].Value.ToString(),
+                    dataGridView1.CurrentRow.Cells["Fecha"].Value.ToString(),
+                    dataGridView1.CurrentRow.Cells["Vendedor"].Value.ToString(),
+                    dataGridView1.CurrentRow.Cells["Total"].Value.ToString(),
+                    dataGridView1.CurrentRow.Cells["Productos"].Value.ToString(),
+                    dataGridView1.CurrentRow.Cells["Devuelto"].Value.ToString(),
+                    dataGridView1.CurrentRow.Cells["Recibido"].Value.ToString());
             }
             else
                 MessageBox.Show("Selecciona una fila");

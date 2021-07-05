@@ -507,7 +507,7 @@ namespace DataAccess
                         oDataBills.Vendedor = leer.GetString(2);
                         oDataBills.Total = leer.GetDouble(3);
                         oDataBills.Productos = leer.GetString(4);
-                        oDataBills.Revuelto = leer.GetDouble(5);
+                        oDataBills.Devuelto = leer.GetDouble(5);
                         oDataBills.Recibido = leer.GetDouble(6);
                         dataBills.Add(oDataBills);
                     }
@@ -631,7 +631,7 @@ namespace DataAccess
         public string Vendedor { get; set; }
         public double Total { get; set; }
         public string Productos { get; set; }
-        public double Revuelto { get; set; }
+        public double Devuelto { get; set; }
         public double Recibido { get; set; }
     }
 

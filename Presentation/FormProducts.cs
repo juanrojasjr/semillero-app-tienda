@@ -59,13 +59,13 @@ namespace Presentation
             {
                FormProductsAdd fmaproduct = new FormProductsAdd();
                 fmaproduct.Show();
-                fmaproduct.txtRef.Text = dataProduct.CurrentRow.Cells["Ref"].Value.ToString();
+                fmaproduct.txtRef.Text = dataProduct.CurrentRow.Cells["Ref."].Value.ToString();
                 fmaproduct.txtNombre.Text = dataProduct.CurrentRow.Cells["Nombre"].Value.ToString();
                 fmaproduct.txtCategoria.Text = dataProduct.CurrentRow.Cells["Categoria"].Value.ToString();
-                fmaproduct.txtCantStock.Text = dataProduct.CurrentRow.Cells["Stock"].Value.ToString();
-                fmaproduct.txtCantMin.Text = dataProduct.CurrentRow.Cells["CanMin"].Value.ToString();
-                fmaproduct.txtPrecioCompra.Text = dataProduct.CurrentRow.Cells["PriceProv"].Value.ToString();
-                fmaproduct.txtPrecioVenta.Text = dataProduct.CurrentRow.Cells["PriceSale"].Value.ToString();
+                fmaproduct.txtCantStock.Text = dataProduct.CurrentRow.Cells["Inventario"].Value.ToString();
+                fmaproduct.txtCantMin.Text = dataProduct.CurrentRow.Cells["Inv. Min"].Value.ToString();
+                fmaproduct.txtPrecioCompra.Text = dataProduct.CurrentRow.Cells["P. Proveedor"].Value.ToString();
+                fmaproduct.txtPrecioVenta.Text = dataProduct.CurrentRow.Cells["P. Venta"].Value.ToString();
                 fmaproduct.IdProduct = dataProduct.CurrentRow.Cells["IdProduct"].Value.ToString();
                 this.Hide();
             }
