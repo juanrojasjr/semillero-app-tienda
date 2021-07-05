@@ -105,7 +105,7 @@ namespace Presentation
             Paragraph p1 = new Paragraph(DataStoreCache.Namestore, times);
             p1.Alignment = Element.ALIGN_CENTER;
             doc.Add(p1);
-            Paragraph p2 = new Paragraph("NIT: " + "901.177.291-5", times);
+            Paragraph p2 = new Paragraph("NIT: " + DataStoreCache.Nit, times);
             p2.Alignment = Element.ALIGN_CENTER;
             doc.Add(p2);
             Paragraph p3 = new Paragraph(DataStoreCache.Address, times);
