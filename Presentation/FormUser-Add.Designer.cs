@@ -295,7 +295,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAddUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAgregarUsuarios";
+            this.Text = "Agregar usuario";
             this.Load += new System.EventHandler(this.FormAgregarUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

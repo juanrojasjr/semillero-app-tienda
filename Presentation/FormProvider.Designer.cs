@@ -259,7 +259,7 @@
             this.MaximizeBox = false;
             this.Name = "FormProvider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormProveedores";
+            this.Text = "Proveedores";
             this.Load += new System.EventHandler(this.FormProveedores_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

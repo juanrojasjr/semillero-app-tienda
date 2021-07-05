@@ -242,7 +242,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAddProvider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAgregarProveedor";
+            this.Text = "Agregar proveedor";
             this.Load += new System.EventHandler(this.FormAgregarProveedor_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

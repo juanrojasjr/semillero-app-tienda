@@ -258,7 +258,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormUsuarios";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.FormUsuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

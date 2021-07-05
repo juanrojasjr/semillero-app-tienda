@@ -224,7 +224,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormSale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBuys";
+            this.Text = "Ventas";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinApp)).EndInit();

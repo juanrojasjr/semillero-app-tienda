@@ -307,7 +307,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProductsAdd";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormAgregarProducto";
+            this.Text = "Agregar producto";
             this.Load += new System.EventHandler(this.FormAgregarProducto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

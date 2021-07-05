@@ -497,7 +497,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormShopping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FormBuy";
+            this.Text = "Compras";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picHistory)).EndInit();

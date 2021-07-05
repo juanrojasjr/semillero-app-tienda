@@ -237,7 +237,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormProducts";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "PanelProductos";
+            this.Text = "Productos";
             this.Load += new System.EventHandler(this.FormProductos_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
